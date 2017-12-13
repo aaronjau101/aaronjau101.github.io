@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "betiled.data.unityweb",
+"asmCodeUrl": "betiled.asm.code.unityweb",
+"asmMemoryUrl": "betiled.asm.memory.unityweb",
+"asmFrameworkUrl": "betiled.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}

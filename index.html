@@ -20,9 +20,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <img src="/photos/aj.png" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -114,7 +112,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       
     <div class="w3-row-padding w3-center w3-margin-top">
 
-    
     <div class="w3-third">
         <div class="w3-card w3-container" style="min-height:250px">
             <button class="w3-bar-item w3-button testbtn" onclick="openPlatform(event,'Unity')">
@@ -175,8 +172,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <h2>Unity</h2>
       <hr>
       <div class="w3-container">
-       <div class="w3-half">
-        <div class="w3-content w3-display-container">
+       <div class="w3-half w3-content w3-display-container">
+
           <img class="mySlides" src="photos/rollaball.jpg" height= 100% style="width:100%">
           <img class="mySlides" src="photos/rollaball1.png" height= 100% style="width:100%">  
           <img class="mySlides" src="photos/rollaball2.png" height= 100% style="width:100%">
@@ -184,16 +181,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             
           <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
           <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-        </div>
       </div>
 
-      <div class="w3-half">
-        <div class="w3-card white">
-          <div class="w3-container w3-theme">
-          </div>
-          <div class="w3-container">
+      <div class="w3-half w3-card white w3-container w3-theme">
+
+
           <h3 class="w3-text-theme">Super Rolla Ball</h3>
-          </div>
+
           <ul class="w3-ul w3-border-top">
             <li>
               <h3>Description</h3>
@@ -210,13 +204,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                 </div>
                  <div class="w3-third w3-center">
                      <br>
-                       <i class="fa fa-play" style="font-size:64px"></i>
+                       <a href="superrollaball/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
                 </div>
             </li>
           </ul>
         </div>
         </div>
-      </div>
+
       <hr>
        <div class="w3-container">
        <div class="w3-half">
@@ -248,7 +242,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                 </div>
                  <div class="w3-third w3-center">
                      <br>
-                       <i class="fa fa-play" style="font-size:64px"></i>
+                       <a href="rubix/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
                 </div>
             </li>
           </ul>
@@ -257,6 +251,44 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </div>
       <hr>
        
+             <div class="w3-container">
+       <div class="w3-half">
+        <div class="w3-content w3-display-container">
+            <img src="photos/betiled.png" width=100%>
+        </div>
+      </div>
+
+      <div class="w3-half">
+        <div class="w3-card white">
+          <div class="w3-container w3-theme">
+          </div>
+          <div class="w3-container">
+          <h3 class="w3-text-theme">Betiled</h3>
+          </div>
+          <ul class="w3-ul w3-border-top">
+            <li>
+              <h3>Description</h3>
+              <p>Betiled is based off many different versions of this type of game (Candy Crush and Bejeweled). I wanted to have a random size and shape to each level, but only have one playable level at the moment. </p>
+            </li>
+            <li>
+                <div class="w3-third">
+              <h3>Done?</h3>
+              <p>No.</p>
+                </div>
+                <div class="w3-third">
+              <h3>Playable?</h3>
+              <p>Yes.</p>
+                </div>
+                 <div class="w3-third w3-center">
+                     <br>
+                       <a href="betiled/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
+                </div>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      <hr>
        <div class="w3-container">
        <div class="w3-half">
         <div class="w3-content w3-display-container">
@@ -274,7 +306,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           <ul class="w3-ul w3-border-top">
             <li>
               <h3>Description</h3>
-              <p>A rollercoaster simulator/shooter game compatible with the Oculus Rift. Currently having trouble, being able to toggle between normal and VR mode. Non-VR mode is playable but not done.</p>
+              <p>A rollercoaster simulator/shooter game compatible with the Oculus Rift. Currently having trouble testing the VR mode because I don't own an Oculus Rift.</p>
             </li>
             <li>
                 <div class="w3-third">
@@ -283,49 +315,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                 </div>
                 <div class="w3-third">
               <h3>Playable?</h3>
-              <p>Yes.</p>
-                </div>
-                 <div class="w3-third w3-center">
-                     <br>
-                       <i class="fa fa-play" style="font-size:64px"></i>
-                </div>
-            </li>
-          </ul>
-        </div>
-        </div>
-      </div>
-      <hr>
-       <div class="w3-container">
-       <div class="w3-half">
-        <div class="w3-content w3-display-container">
-            <img src="photos/betiled.png" width=100%>
-        </div>
-      </div>
-
-      <div class="w3-half">
-        <div class="w3-card white">
-          <div class="w3-container w3-theme">
-          </div>
-          <div class="w3-container">
-          <h3 class="w3-text-theme">Betiled</h3>
-          </div>
-          <ul class="w3-ul w3-border-top">
-            <li>
-              <h3>Description</h3>
-              <p>Based off many different versions of this type of game (Candy Crush and Bejeweled). I wanted to have a random size and shape to each level, but only have one playable level at the moment.. </p>
-            </li>
-            <li>
-                <div class="w3-third">
-              <h3>Done?</h3>
               <p>No.</p>
-                </div>
-                <div class="w3-third">
-              <h3>Playable?</h3>
-              <p>Yes.</p>
-                </div>
-                 <div class="w3-third w3-center">
-                     <br>
-                       <i class="fa fa-play" style="font-size:64px"></i>
                 </div>
             </li>
           </ul>
@@ -350,7 +340,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           <ul class="w3-ul w3-border-top">
             <li>
               <h3>Description</h3>
-              <p>Most game designers have that project they dream about that is absurdly long with no hope in sight. Well... this is mine. Based from my experience as an office assistant, it's a RPG in an office environment. Right now, stuck on AI for the coworkers.</p>
+              <p>Most game designers have that project they dream about that is absurdly long with no hope in sight. Well... this is mine. Based from my experience as an office assistant, it's a RPG in an office environment. Right now, I'm stuck on AI for the coworkers.</p>
             </li>
             <li>
                 <div class="w3-third">
@@ -376,12 +366,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       
       <hr>
       <div class="w3-container">
-       <div class="w3-half">
-        <div class="w3-content w3-display-container">
-            <img src="photos/epr.png" width=100%>
-        </div>
-      </div>
-
+       <div class="w3-half w3-content w3-display-container">
+           <img src="photos/epr.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'">
+           <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+               <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+               <div class="w3-modal-content w3-animate-zoom">
+                    <img src="photos/epr.png" style="width:100%">
+                </div>
+            </div>
+    </div>
       <div class="w3-half">
         <div class="w3-card white">
           <div class="w3-container w3-theme">
@@ -405,7 +398,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                 </div>
                  <div class="w3-third w3-center">
                      <br>
-                       <i class="fa fa-play" style="font-size:64px"></i>
+                       <a href="epr/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
                 </div>
             </li>
           </ul>
@@ -432,16 +425,16 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </div>
        <div  class="w3-container w3-center">
            <h3>Python Programming Beginner Level</h3>
-      <video class="embed-responsive-item" controls=""> 
-        <!--replace this sample with your video-->
-        <source src="http://techknowhowkids.com/summer-camps/programming-coding/video/Python_1.mp4">
-          
-        </video>
+            <video class="embed-responsive-item" controls=""> 
+            <!--replace this sample with your video-->
+            <source src="http://techknowhowkids.com/summer-camps/programming-coding/video/Python_1.mp4">
+
+            </video>
            <h3>Python Programming Intermediate Level</h3>
-      <video class="embed-responsive-item" controls=""> 
-        <!--replace this sample with your video-->
-        <source src="http://techknowhowkids.com/summer-camps/programming-coding/video/Python_2.mp4">
-        </video>
+          <video class="embed-responsive-item" controls=""> 
+            <!--replace this sample with your video-->
+            <source src="http://techknowhowkids.com/summer-camps/programming-coding/video/Python_2.mp4">
+            </video>
       </div>
       <hr>
   </div> 
@@ -466,7 +459,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           <ul class="w3-ul w3-border-top">
             <li>
               <h3>Description</h3>
-              <p>A Second Studio Game, The Devil's Eight is a game about a warrior fighting his way down the eight rings of hell. The game features a novel feature of sounds being triggers to enemy attacks. The game is still being worked on by its creator Ruben Telles.</p>
+              <p>A Second Studio Game, The Devil's Eight is a game about a warrior fighting his way down the eight rings of hell. The game has a novel feature that the beats of the music trigger enemy attacks. The game is still being worked on by its creator Ruben Telles.</p>
             </li>
             <li>
                 <div class="w3-third">
