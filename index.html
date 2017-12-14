@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -51,10 +52,14 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+  <header class="w3-container w3-center w3-black" style="padding:340px" id="home">
     <h1 class="w3-jumbo"><span class="w3-hide-small"></span> Aaron Jauregui</h1>
     <p>Computer Game Programmer and Designer</p>
-    <img src="photos/grad.jpg" alt="boy" class="w3-image" width="992" height="1108">
+    <p style="page-break-after: always;">&nbsp;</p>
+    
+    <a href="#projects" class="btn btn-info btn-lg" >
+          <button class="w3-button w3-white w3-padding-large w3-large w3-margin-top">View Projects</button>
+        </a>
   </header>
 
   <!-- About Section -->
@@ -90,7 +95,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <div class="w3-dark-grey" style="height:28px;width:65%"></div>
     </div>
       <br>
-       <a href="AaronResume_12_11_2017.pdf" download>
+       <a href="aaronJaureguiResume.pdf" download>
     <button class="w3-button w3-light-grey w3-padding-large w3-section">
      <i class="fa fa-download"></i> Download Resume
     </button></a>
@@ -98,7 +103,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <!-- End About Section -->
   </div>
   
-  <!-- Portfolio Section -->
+  <!-- Projects Section -->
   <div class="w3-padding-64 w3-content" id="projects">
       
     <h2 class="w3-text-light-grey">My Projects</h2>
@@ -114,59 +119,73 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
     <div class="w3-third">
         <div class="w3-card w3-container" style="min-height:250px">
+            <a href="#games">
             <button class="w3-bar-item w3-button testbtn" onclick="openPlatform(event,'Unity')">
                 <h3>Unity</h3><br>
                 <img src="photos/unity_icon.png" style="height:128px" >
             </button>
+            </a>
         </div>
     </div>
     
     <div class="w3-third">
         <div class="w3-card w3-container" style="min-height:250px">
+            <a href="#games">
             <button class="w3-bar-item w3-button testbtn" onclick="openPlatform(event,'Javascript')">
                 <h3>Javascript</h3><br>
                 <img src="photos/js_icon.png" style="height:128px" >
             </button>
+            </a>
         </div>
     </div>
     
     <div class="w3-third">
         <div class="w3-card w3-container" style="min-height:250px">
+          <a href="#games">
           <button class=" w3-button testbtn" onclick="openPlatform(event,'Python')">
               <h3>Python</h3><br>
               <img src="photos/python_icon.png" style="height:128px" >
           </button>
+            </a>
         </div>
     </div>
         
     <div class="w3-third">
       <div class="w3-card w3-container" style="min-height:250px">
+          <a href="#games">
           <button class=" w3-button testbtn" onclick="openPlatform(event,'Unreal')">
               <h3>Unreal</h3><br>
               <img src="photos/unreal_icon.png" style="height:128px" >
           </button>
+          </a>
       </div>
     </div>
         
      <div class="w3-third">
       <div class="w3-card w3-container" style="min-height:250px">
+          <a href="#games">
           <button class=" w3-button testbtn" onclick="openPlatform(event,'Processing')">
               <h3>Processing</h3><br>
               <img src="photos/processing_logo.png" style="height:128px" >
           </button>
+          </a>
       </div>
     </div>
         
      <div class="w3-third">
       <div class="w3-card w3-container" style="min-height:250px">
+          <a href="#games">
           <button class=" w3-button testbtn" onclick="openPlatform(event,'Other')">
               <h3>Other</h3><br>
               <i class="fa fa-folder-open-o w3-margin-bottom w3-text-theme" style="font-size:128px"></i>
           </button>
+          </a>
         </div>
     </div>
   </div>
   <!-- End of Platforms Section -->
+    
+  <div id="games"></div>
       
   <div id="Unity" class="w3-container platform w3-animate-opacity w3-outline">
       <h2>Unity</h2>
@@ -174,13 +193,14 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <div class="w3-container">
        <div class="w3-half w3-content w3-display-container">
 
-          <img class="mySlides" src="photos/rollaball.jpg" height= 100% style="width:100%">
-          <img class="mySlides" src="photos/rollaball1.png" height= 100% style="width:100%">  
-          <img class="mySlides" src="photos/rollaball2.png" height= 100% style="width:100%">
-          <img class="mySlides" src="photos/rollaball3.png" height= 100% style="width:100%">
-            
-          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+          <img src="photos/rollaball.jpg" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'">
+           <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+               <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+               <div class="w3-modal-content w3-animate-zoom">
+                    <img src="photos/rollaball.jpg" style="width:100%">
+                </div>
+            </div>
+
       </div>
 
       <div class="w3-half w3-card white w3-container w3-theme">
@@ -215,7 +235,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
        <div class="w3-container">
        <div class="w3-half">
         <div class="w3-content w3-display-container">
-            <img src="photos/rubix.png" width=100%>
+            <img src="photos/rubix.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal02').style.display='block'">
+           <div id="modal02" class="w3-modal" onclick="this.style.display='none'">
+               <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+               <div class="w3-modal-content w3-animate-zoom">
+                    <img src="photos/rubix.png" style="width:100%">
+                </div>
+            </div>
         </div>
       </div>
 
@@ -254,7 +280,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
              <div class="w3-container">
        <div class="w3-half">
         <div class="w3-content w3-display-container">
-            <img src="photos/betiled.png" width=100%>
+            <img src="photos/betiled.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal03').style.display='block'">
+           <div id="modal03" class="w3-modal" onclick="this.style.display='none'">
+               <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+               <div class="w3-modal-content w3-animate-zoom">
+                    <img src="photos/betiled.png" style="width:100%">
+                </div>
+            </div>
         </div>
       </div>
 
@@ -292,7 +324,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
        <div class="w3-container">
        <div class="w3-half">
         <div class="w3-content w3-display-container">
-            <img src="photos/rollercoaster.png" width=100%>
+            <img src="photos/rollercoaster.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal04').style.display='block'">
+           <div id="modal04" class="w3-modal" onclick="this.style.display='none'">
+               <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+               <div class="w3-modal-content w3-animate-zoom">
+                    <img src="photos/rollercoaster.png" style="width:100%">
+                </div>
+            </div>
         </div>
       </div>
 
@@ -326,7 +364,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <div class="w3-container">
        <div class="w3-half">
         <div class="w3-content w3-display-container">
-            <img src="photos/officeshapes.jpg" width=100%>
+            <img src="photos/officeshapes.jpg" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal05').style.display='block'">
+           <div id="modal05" class="w3-modal" onclick="this.style.display='none'">
+               <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+               <div class="w3-modal-content w3-animate-zoom">
+                    <img src="photos/officeshapes.jpg" style="width:100%">
+                </div>
+            </div>
         </div>
       </div>
 
@@ -367,8 +411,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <hr>
       <div class="w3-container">
        <div class="w3-half w3-content w3-display-container">
-           <img src="photos/epr.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'">
-           <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+           <img src="photos/epr.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal06').style.display='block'">
+           <div id="modal06" class="w3-modal" onclick="this.style.display='none'">
                <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
                <div class="w3-modal-content w3-animate-zoom">
                     <img src="photos/epr.png" style="width:100%">
@@ -445,7 +489,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <div class="w3-container">
        <div class="w3-half">
         <div class="w3-content w3-display-container">
-            <img src="photos/td8.png" width=100%>
+            <img src="photos/td8.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal07').style.display='block'">
+           <div id="modal07" class="w3-modal" onclick="this.style.display='none'">
+               <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+               <div class="w3-modal-content w3-animate-zoom">
+                    <img src="photos/td8.png" style="width:100%">
+                </div>
+            </div>
         </div>
       </div>
 
@@ -492,7 +542,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <p>Other projects coming soon</p>
   </div> 
     
-  <!-- End Portfolio Section -->
+  <!-- End Projects Section -->
   </div>
 
   <!-- Contact Section -->
