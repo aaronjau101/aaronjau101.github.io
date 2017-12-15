@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Solar System</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    </style>
+    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+  </head>
+  <body class="w3-black">
+      
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <a href="../index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p>HOME</p>
+      </a>
+    </nav>
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="../index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+      </div>
+    </div>
+    
+    <div class="w3-container w3-center" style="padding-top: 25px">
+    <h1>Solar System</h1>
+    </div>
+      <hr>
+    <div class="w3-center">
+    <canvas id="mycanvas" style="padding-top: 7px"></canvas>
+        
+    <script>
+
+    var sketchProc = function(processingInstance) {
+        with (processingInstance) {
+            //keep track of frames
+            var t = 0;
+            var speed = 1;
+            var fps = 30;
+            //the number of seconds for a full earth circle
+            var earthYear = 300;
+
+            var setup = function(){
+              size(1000, 1000);
+              frameRate(fps);
+            };
+
+            var draw = function(){
+              t += speed;
+
+              background(0);
+
+              textAlign(CENTER, CENTER);
+              textSize(48);
+
+              fill(255,255,255);
+              rect(0,0,100,100);
+              rect(0,100,100,100);
+              rect(0,200,100,100);
+              text(speed, 150, 100);
+
+              fill(0);
+              text("+", 50, 50);
+              text("-", 50, 150);
+              text("0", 50, 250);
+
+
+              textSize(12);
+
+              //The sun
+              fill(255, 255, 0);
+              ellipse(500, 500, 100, 100);
+              fill(0);
+              textAlign(CENTER, CENTER);
+              text("Sun", 500, 500);
+
+              textAlign(LEFT);
+
+
+              //Mercury
+              var merT = (t/fps)*(2*PI)/(earthYear * 0.24);
+              var merX = 500 + (100 * sin(merT));
+              var merY = 500 + (100 * cos(merT));
+              fill(255, 0, 0);
+              ellipse(merX, merY, 10, 10);
+              text("Mercury", merX, merY - 10);
+
+              //Venus
+              var venT = (t/fps)*(2*PI)/(earthYear * 0.61);
+              var venX = 500 + (135 * sin(venT));
+              var venY = 500 + (135 * cos(venT));
+              fill(255, 0, 0);
+              ellipse(venX, venY, 20, 20);
+              text("Venus", venX, venY - 15);
+
+              //Earth
+              var earT = (t/fps)*(2*PI)/(earthYear);
+              var earX = 500 + (175 * sin(earT));
+              var earY = 500 + (175 * cos(earT));
+              fill(0, 0, 255);
+              ellipse(earX, earY, 22, 22);
+
+              //Earth's moon
+              var mooT = (t/fps)*(2*PI)/(earthYear * 0.002);
+              var mooX = earX + (18 * sin(mooT));
+              var mooY = earY + (18 * cos(mooT));
+              fill(255, 255, 255);
+              ellipse(mooX, mooY, 5, 5);
+              var years = (t/fps)/(earthYear);
+              var days = (years * 365) % 365;
+              text("Earth", earX + 30, earY - 15);
+              text(floor(years) + " years, " + floor(days) + " days", earX + 30, earY);
+
+              //Mars
+              var marT = (t/fps)*(2*PI)/(earthYear * 1.88);
+              var marX = 500 + (210 * sin(marT));
+              var marY = 500 + (210 * cos(marT));
+              fill(255, 0, 0);
+              ellipse(marX, marY, 11, 11);
+              text("Mars", marX, marY - 10);
+
+              //Jupiter
+              var jupT = (t/fps)*(2*PI)/(earthYear * 11.86);
+              var jupX = 500 + (255 * sin(jupT));
+              var jupY = 500 + (255 * cos(jupT));
+              fill(255, 0, 255);
+              ellipse(jupX, jupY, 50, 50);
+              text("Jupiter", jupX, jupY - 27);
+
+              //Saturn
+              var satT = (t/fps)*(2*PI)/(earthYear * 29.46);
+              var satX = 500 + (315 * sin(satT));
+              var satY = 500 + (315 * cos(satT));
+              fill(255, 0, 100);
+              ellipse(satX, satY, 40, 40);
+              text("Saturn", satX, satY - 22);
+
+              //Uranus
+              var uraT = (t/fps)*(2*PI)/(earthYear * 84.01);
+              var uraX = 500 + (365 * sin(uraT));
+              var uraY = 500 + (365 * cos(uraT));
+              fill(0, 0, 100);
+              ellipse(uraX, uraY, 30, 30);
+              fill(255, 255, 255);
+              text("Uranus", uraX, uraY - 15);
+
+              //Neptune
+              var nepT = (t/fps)*(2*PI)/(earthYear * 164.79);
+              var nepX = 500 + (410 * sin(nepT));
+              var nepY = 500 + (410 * cos(nepT));
+              fill(150, 150, 255);
+              ellipse(nepX, nepY, 25, 25);
+              text("Neptune", nepX, nepY - 15);
+            };
+
+            var mousePressed = function(){
+              if(mouseX < 100){
+                if(mouseY < 100){
+                  if(speed < 100)
+                    speed ++;
+                }else if(mouseY < 200){
+                  if(speed > 0)
+                    speed --;
+                }else if(mouseY < 300){
+                  t = 0;
+                }
+              }
+            };
+        }
+    }
+
+    var canvas = document.getElementById("mycanvas"); 
+    var processingInstance = new Processing(canvas, sketchProc); 
+
+    </script>
+    </div>  
+    </body>
+    
+</html>

@@ -52,7 +52,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
-  <header class="w3-container w3-center w3-black" style="padding:340px" id="home">
+  <header class="w3-container w3-center w3-black" id="home">
     <h1 class="w3-jumbo"><span class="w3-hide-small"></span> Aaron Jauregui</h1>
     <p>Computer Game Programmer and Designer</p>
     <p style="page-break-after: always;">&nbsp;</p>
@@ -117,121 +117,105 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       
     <div class="w3-row-padding w3-center w3-margin-top">
 
-    <div class="w3-third">
-        <div class="w3-card w3-container" style="min-height:250px">
-            <a href="#games">
+    <div class="w3-card w3-container w3-third" style="min-height:250px">
+        <a href="#games">
             <button class="w3-bar-item w3-button testbtn" onclick="openPlatform(event,'Unity')">
                 <h3>Unity</h3><br>
                 <img src="photos/unity_icon.png" style="height:128px" >
             </button>
-            </a>
-        </div>
+        </a>
     </div>
     
-    <div class="w3-third">
-        <div class="w3-card w3-container" style="min-height:250px">
-            <a href="#games">
+    <div class="w3-card w3-container w3-third" style="min-height:250px">
+        <a href="#games">
             <button class="w3-bar-item w3-button testbtn" onclick="openPlatform(event,'Javascript')">
                 <h3>Javascript</h3><br>
                 <img src="photos/js_icon.png" style="height:128px" >
             </button>
-            </a>
-        </div>
+        </a>
     </div>
     
-    <div class="w3-third">
-        <div class="w3-card w3-container" style="min-height:250px">
-          <a href="#games">
-          <button class=" w3-button testbtn" onclick="openPlatform(event,'Python')">
-              <h3>Python</h3><br>
-              <img src="photos/python_icon.png" style="height:128px" >
-          </button>
-            </a>
-        </div>
+    <div class="w3-card w3-container w3-third" style="min-height:250px">
+        <a href="#games">
+            <button class=" w3-button testbtn" onclick="openPlatform(event,'Python')">
+                <h3>Python</h3><br>
+                <img src="photos/python_icon.png" style="height:128px" >
+            </button>
+        </a>
     </div>
         
-    <div class="w3-third">
-      <div class="w3-card w3-container" style="min-height:250px">
-          <a href="#games">
+    <div class="w3-card w3-container w3-third" style="min-height:250px">
+        <a href="#games">
           <button class=" w3-button testbtn" onclick="openPlatform(event,'Unreal')">
               <h3>Unreal</h3><br>
               <img src="photos/unreal_icon.png" style="height:128px" >
           </button>
-          </a>
-      </div>
+        </a>
     </div>
-        
-     <div class="w3-third">
-      <div class="w3-card w3-container" style="min-height:250px">
-          <a href="#games">
+
+    <div class="w3-card w3-container w3-third" style="min-height:250px">
+        <a href="#games">
           <button class=" w3-button testbtn" onclick="openPlatform(event,'Processing')">
               <h3>Processing</h3><br>
               <img src="photos/processing_logo.png" style="height:128px" >
           </button>
-          </a>
-      </div>
+        </a>
     </div>
         
-     <div class="w3-third">
-      <div class="w3-card w3-container" style="min-height:250px">
-          <a href="#games">
+    <div class="w3-card w3-container w3-third" style="min-height:250px">
+        <a href="#games">
           <button class=" w3-button testbtn" onclick="openPlatform(event,'Other')">
               <h3>Other</h3><br>
               <i class="fa fa-folder-open-o w3-margin-bottom w3-text-theme" style="font-size:128px"></i>
           </button>
-          </a>
-        </div>
+        </a>
     </div>
   </div>
-  <!-- End of Platforms Section -->
+    <!-- End of Platforms Section -->
     
-  <div id="games"></div>
+    <!-- Games Section -->
+    <div id="games"></div>
       
-  <div id="Unity" class="w3-container platform w3-animate-opacity w3-outline">
-      <h2>Unity</h2>
-      <hr>
-      <div class="w3-container">
-       <div class="w3-half w3-content w3-display-container">
-
-          <img src="photos/rollaball.jpg" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'">
-           <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-               <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-               <div class="w3-modal-content w3-animate-zoom">
-                    <img src="photos/rollaball.jpg" style="width:100%">
-                </div>
-            </div>
-
-      </div>
-
-      <div class="w3-half w3-card white w3-container w3-theme">
-
-
-          <h3 class="w3-text-theme">Super Rolla Ball</h3>
-
-          <ul class="w3-ul w3-border-top">
-            <li>
-              <h3>Description</h3>
-              <p>My first complete Unity project. Based off Super Monkey Ball, the player is a hedgehog trying to collect all the bananas in a race against time at three exciting levels.</p>
-            </li>
-            <li>
-                <div class="w3-third">
-              <h3>Done?</h3>
-              <p>Yes.</p>
-                </div>
-                <div class="w3-third">
-              <h3>Playable?</h3>
-              <p>Yes.</p>
-                </div>
-                 <div class="w3-third w3-center">
-                     <br>
-                       <a href="superrollaball/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
-                </div>
-            </li>
-          </ul>
+    <div id="Unity" class="w3-container platform w3-animate-opacity">
+        <h2>Unity</h2>
+        <hr>
+        <div class="w3-container">
+        <div class="w3-half w3-content w3-display-container">
+        <img src="photos/rollaball.jpg" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'">
+        <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+        <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+        <div class="w3-modal-content w3-animate-zoom">
+        <img src="photos/rollaball.jpg" style="width:100%">
+        </div>
         </div>
         </div>
 
-      <hr>
+        <div class="w3-half w3-card white w3-container w3-theme">
+            <h3 class="w3-text-theme">Super Rolla Ball</h3>
+            <ul class="w3-ul w3-border-top">
+                <li>
+                    <h3>Description</h3>
+                    <p>My first complete Unity project. Based off Super Monkey Ball, the player is a hedgehog trying to collect all the bananas in a race against time at three exciting levels.</p>
+                </li>
+                <li>
+                    <div class="w3-third">
+                        <h3>Done?</h3>
+                        <p>Yes.</p>
+                    </div>
+                    <div class="w3-third">
+                        <h3>Playable?</h3>
+                        <p>Yes.</p>
+                    </div>
+                    <div class="w3-third w3-center">
+                        <br>
+                        <a href="superrollaball/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
        <div class="w3-container">
        <div class="w3-half">
         <div class="w3-content w3-display-container">
@@ -404,7 +388,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
        <hr>
   </div>  
   
-  <div id="Javascript" class="w3-container platform w3-animate-opacity">
+    <div id="Javascript" class="w3-container platform w3-animate-opacity">
       
       <h2>Javascript</h2>
       
@@ -452,7 +436,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
        <hr>
   </div> 
   
-  <div id="Python" class="w3-container platform w3-animate-opacity">
+    <div id="Python" class="w3-container platform w3-animate-opacity">
       <h2>Python</h2>
       <hr>
       <div class="w3-container">
@@ -483,7 +467,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <hr>
   </div> 
 
-  <div id="Unreal" class="w3-container platform w3-animate-opacity">
+    <div id="Unreal" class="w3-container platform w3-animate-opacity">
       <h2>Unreal</h2>
       <hr>
       <div class="w3-container">
@@ -532,18 +516,19 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
        <hr>
   </div> 
       
-  <div id="Processing" class="w3-container platform w3-animate-opacity">
+    <div id="Processing" class="w3-container platform w3-animate-opacity">
       <h2>Processing</h2>
       <p>Processing projects coming soon</p>
   </div> 
 
-  <div id="Other" class="w3-container platform w3-animate-opacity">
+    <div id="Other" class="w3-container platform w3-animate-opacity">
       <h2>Other</h2>
       <p>Other projects coming soon</p>
   </div> 
-    
-  <!-- End Projects Section -->
+    <!-- End of Games Section -->
+      
   </div>
+  <!-- End Projects Section -->
 
   <!-- Contact Section -->
   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
@@ -553,65 +538,42 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <div class="w3-section">
       <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Redwood City, CA</p>
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> jauregui.aaron@gmail.com</p>
-    </div><br>
-    
-  <!-- End Contact Section -->
+    </div>
+    <br>
   </div>
+  <!-- End Contact Section -->
   
-    <!-- Footer -->
+  <!-- Footer -->
   <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
       <a href="https://www.facebook.com/aaron.jauregui.98"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
       <a href="https://www.twitter.com/jaureguiaaaron"><i class="fa fa-twitter w3-hover-opacity"></i></a>
       <a href="https://www.linkedin.com/in/aaronjauregui/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
       <a href="https://github.com/aaronjau101"> <i class="fa fa-github w3-hover-opacity"></i></a>
       <a href="http://steamcommunity.com/profiles/76561198037416894"><i class="fa fa-steam w3-hover-opacity"></i></a>
-    
-  <!-- End footer -->
   </footer>
+  <!-- End Footer -->
     
-  <script>
+    <script>
 
     // Tabs
     function openPlatform(evt, platformName) {
-      var i;
-      var x = document.getElementsByClassName("platform");
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";
-      }
-      var activebtn = document.getElementsByClassName("testbtn");
-      for (i = 0; i < x.length; i++) {
-          activebtn[i].platformName = activebtn[i].className.replace(" w3-black", "");
-      }
-      document.getElementById(platformName).style.display = "block";
-      evt.currentTarget.className += " w3-black";
+        var i;
+        var x = document.getElementsByClassName("platform");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        var activebtn = document.getElementsByClassName("testbtn");
+        for (i = 0; i < x.length; i++) {
+            activebtn[i].platformName = activebtn[i].className.replace(" w3-black", "");
+        }
+        document.getElementById(platformName).style.display = "block";
+        evt.currentTarget.className += " w3-black";
     }
-
-    var mybtn = document.getElementsByClassName("testbtn")[0];
-    mybtn.click();
-
-
-    var slideIndex = 1;
-    showDivs(slideIndex);
-
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
-
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      if (n > x.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = x.length}
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";  
-      }
-      x[slideIndex-1].style.display = "block";  
-    }
-      
-</script>
+        
+    </script>
     
-<!-- END PAGE CONTENT -->
 </div>
+<!-- END PAGE CONTENT -->
     
 </body>
 </html>

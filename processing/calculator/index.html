@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    </style>
+    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+  </head>
+  <body class="w3-black">
+      
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <a href="../index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p>HOME</p>
+      </a>
+    </nav>
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="../index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+      </div>
+    </div>
+    
+    <div class="w3-container w3-center" style="padding-top: 25px">
+    <h1>Calculator</h1>
+    </div>
+      <hr>
+    <div class="w3-center">
+    <canvas id="mycanvas" style="padding-top: 7px"></canvas>
+        
+    <script>
+
+    var sketchProc = function(processingInstance) {
+        with (processingInstance) {
+            var button1 = {
+              xpos: 0,
+              ypos: 100,
+              width: 100,
+              height: 100,
+              string: "1",
+              color: color(255, 255, 255)
+            };
+
+            var button2 = {
+              xpos: 100,
+              ypos: 100,
+              width: 100,
+              height: 100,
+              string: "2",
+              color: color(255, 255, 255)
+            };
+
+            var button3 = {
+              xpos: 200,
+              ypos: 100,
+              width: 100,
+              height: 100,
+              string: "3",
+              color: color(255, 255, 255)
+            };
+
+            var button4 = {
+              xpos: 0,
+              ypos: 200,
+              width: 100,
+              height: 100,
+              string: "4",
+              color: color(255, 255, 255)
+            };
+
+            var button5 = {
+              xpos: 100,
+              ypos: 200,
+              width: 100,
+              height: 100,
+              string: "5",
+              color: color(255, 255, 255)
+            };
+
+            var button6 = {
+              xpos: 200,
+              ypos: 200,
+              width: 100,
+              height: 100,
+              string: "6"
+            };
+
+            var button7 = {
+              xpos: 0,
+              ypos: 300,
+              width: 100,
+              height: 100,
+              string: "7",
+              color: color(255, 255, 255)
+            };
+
+            var button8 = {
+              xpos: 100,
+              ypos: 300,
+              width: 100,
+              height: 100,
+              string: "8",
+              color: color(255, 255, 255)
+            };
+
+            var button9 = {
+              xpos: 200,
+              ypos: 300,
+              width: 100,
+              height: 100,
+              string: "9"
+            };
+
+            var button0 = {
+              xpos: 0,
+              ypos: 400,
+              width: 100,
+              height: 100,
+              string: "0",
+              color: color(255, 255, 255)
+            };
+
+            var buttonPeriod = {
+              xpos: 100,
+              ypos: 400,
+              width: 100,
+              height: 100,
+              string: ".",
+              color: color(255, 255, 255)
+            };
+
+            var buttonEquals = {
+              xpos: 200,
+              ypos: 400,
+              width: 100,
+              height: 100,
+              string: "=",
+              color: color(255, 255, 255)
+            };
+
+            var buttonPlus = {
+              xpos: 300,
+              ypos: 400,
+              width: 100,
+              height: 100,
+              string: "+",
+              color: color(255, 255, 255)
+            };
+
+            var buttonMinus = {
+              xpos: 300,
+              ypos: 300,
+              width: 100,
+              height: 100,
+              string: "-",
+              color: color(255, 255, 255)
+            };
+
+            var buttonDivide = {
+              xpos: 300,
+              ypos: 200,
+              width: 100,
+              height: 100,
+              string: "/",
+              color: color(255, 255, 255)
+            };
+
+            var buttonMultiply = {
+              xpos: 300,
+              ypos: 100,
+              width: 100,
+              height: 100,
+              string: "*",
+              color: color(255, 255, 255)
+            };
+
+            var buttons = [button1, button2, button3, button4, button5, 
+            button6, button7, button8, button9, button0, 
+            buttonPeriod, buttonEquals, 
+            buttonPlus, buttonMinus, buttonDivide, buttonMultiply];
+
+            var number1 = [];
+            var number2 = [];
+            var n1 = 0;
+            var n2 = 0;
+            var symbol = "";
+            var finished = false;
+            var result = 0;
+
+            var setup = function()
+            {
+              size(401, 501);
+            };
+
+            var draw = function()
+            {
+              background(200, 200, 200);
+              drawButtons();
+              drawResult();
+              checkMouse();
+
+            };
+
+            var convertArrayToString = function(array)
+            {
+              var string = "";
+              for(var i = 0; i < array.length; i++){
+                string += array[i];
+              }
+              return string;
+            };
+
+            var setN1 = function() {
+              if(number1.length === 0)
+                n1 = 0;
+              n1 = parseFloat(convertArrayToString(number1));
+            };
+
+            var setN2 = function() {
+              if(number1.length === 0)
+                n2 = 0;
+              n2 = parseFloat(convertArrayToString(number2));
+            };
+
+            var drawResult = function() {
+              var string = "";
+              if(finished)
+                string = result.toFixed(3);
+              else if(number2.length !== 0)
+                 string = convertArrayToString(number1) + symbol + convertArrayToString(number2);
+              else if (symbol !== "")
+                string = convertArrayToString(number1) + symbol;
+              else if(number1.length !== 0)
+                string = convertArrayToString(number1);
+              textAlign(LEFT, CENTER);
+              text(string, 50, 50);
+            };
+
+            var checkMouse = function()
+            {
+              for(var i = 0; i < buttons.length; i++){
+                var bi = buttons[i];
+                if(mouseX > bi.xpos && mouseX < bi.xpos+bi.width && mouseY > bi.ypos && mouseY < bi.ypos+bi.height)
+                  bi.color = color(125, 125, 125);
+                else
+                  bi.color = color(255, 255, 255);
+              }
+            };
+
+            var calculateResult = function (){
+              setN2();
+              if(symbol == "+")
+                result = n1 + n2;
+              else if(symbol == "-")
+                result = n1 - n2;
+              else if(symbol == "*")
+                result = n1 * n2;
+              else if(symbol == "/" && n2 !== 0)
+                result = n1 / n2;
+              else
+                result = "ERROR";
+              finished = true;
+            };
+
+            var mousePressed = function() {
+              for(var i = 0; i < buttons.length; i++){
+                var bi = buttons[i];
+                if(mouseX > bi.xpos && mouseX < bi.xpos+bi.width && mouseY > bi.ypos && mouseY < bi.ypos+bi.height)
+                  if(bi.string == "+" || bi.string == "-" || bi.string == "*" || bi.string == "/"){
+                    if(finished){
+                      var temp = result.toFixed(3);
+                      reset();
+                      number1.push(temp);
+                    }
+                    symbol = bi.string;
+                    setN1();
+                  }else if (symbol === "")
+                    number1.push(bi.string);
+                  else if(bi.string == "=")
+                    calculateResult();
+                  else if (finished){
+                    reset();
+                    number1.push(bi.string);
+                  }
+                  else
+                    number2.push(bi.string);
+              }
+            };
+
+            var reset = function()
+            {
+              number1 = [];
+              number2 = [];
+              n1 = 0;
+              n2 = 0;
+              symbol = "";
+              finished = false;
+              result = 0;
+            };
+            var drawButtons= function()
+            {
+              for(var i = 0; i < buttons.length; i++){
+                fill(buttons[i].color);
+                rect(buttons[i].xpos, buttons[i].ypos, buttons[i].width, buttons[i].height);
+                fill(0, 0, 0);
+                textSize(48);
+                textAlign(CENTER, CENTER);
+                text(buttons[i].string, buttons[i].xpos+buttons[i].width/2, buttons[i].ypos+buttons[i].height/2);
+              }
+            };
+        }
+    }
+
+    var canvas = document.getElementById("mycanvas"); 
+    var processingInstance = new Processing(canvas, sketchProc); 
+
+    </script>
+    </div>  
+    </body>
+    
+</html>

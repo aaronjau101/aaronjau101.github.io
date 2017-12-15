@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Dear Aaron</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    </style>
+    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+  </head>
+  <body class="w3-black">
+      
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <a href="../index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p>HOME</p>
+      </a>
+    </nav>
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="../index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+      </div>
+    </div>
+    
+    <div class="w3-container w3-center" style="padding-top: 25px">
+    <h1>Dear Aaron</h1>
+    </div>
+      <hr>
+    <div class="w3-center">
+    <canvas id="mycanvas" style="padding-top: 7px"></canvas>
+        
+    <script>
+
+    var sketchProc = function(processingInstance) {
+        with (processingInstance) {
+            size(500, 500);
+            var input = [];
+            var answer = [];
+            var question = ["D", "e", "a", "r", " ", "A", "a", "r", "o", "n"];
+            var index = 0;
+            var secret = false;
+            var readyToAnswer = false;
+            var answered = false;
+
+            var answers = ["My mind is tired, please try  later", "Yeah... I'm not gonna answer  that", "Wouldnt you like to know?"];
+            var error = "Did not start the question    with 'Dear Aaron' so I could  not answer";
+
+            var keyPressed = function()
+            {
+              if(keyCode == ENTER)
+                readyToAnswer = true;
+              if(secret)
+              {
+
+                if(keyCode == 18){
+                  if(index < question.length)
+                    input.push(question[index]);
+                  secret = false;
+                }
+                else{
+                     if(appropriateKey(keyCode)){
+                      answer.push(key);
+                      if(index < question.length){
+                        input.push(question[index]);
+                        index++;
+                      }
+                    }
+                }
+              }else{
+                if(appropriateKey(keyCode))
+                  input.push(key);
+                if(keyCode == 127)
+                  input = shorten(input);
+                if(keyCode == ALT && input.length === 0){
+                 input.push(question[index]);
+                 index++;
+                 secret = true;
+                }
+              }
+            };
+
+            var appropriateKey = function(keyCode)
+            {
+              if((keyCode >= 97 && keyCode <= 122) || (keyCode >= 65 && keyCode <= 90))
+                return true;
+              if(keyCode >= 48 && keyCode <= 57) 
+                return true;
+              if(keyCode == 191)
+                return true;
+              if(keyCode == 32)
+                return true;
+              if(keyCode == 188)
+                return true;
+              if(keyCode == 222)
+                return true;
+              return false;
+            };
+
+            var matching = function(a, b, c){
+              if(a.length < c || b.length < c)
+                return false;
+
+              for(var i = 0; i < c; i++){
+                if(str(a[i]) != b[i]){
+                    return false;
+                }
+
+              }
+              return true;
+            };
+            var draw = function()
+            {
+              if(answered === false){
+                background(50);
+                textSize(32);
+                var textInput = "";
+                for(var i = 0; i < input.length; i++){
+                  textInput += str(input[i]);
+                }
+                drawText(textInput, 20, 40);
+
+                var textAnswer = "";
+                for(var i = 0; i < answer.length; i++){
+                  textAnswer += str(answer[i]);
+                }
+                if(readyToAnswer){
+                  if (matching(input, question, 10) === false){
+                    textAnswer = error;
+                  }
+                  else if(answer.length === 0){
+                    var rand = round(random(0, 2));
+                    textAnswer = answers[rand];
+                  }
+                  drawText(textAnswer, 20, 200);
+                  text("Click mouse to reset", 20, 450);
+                  answered = true;
+                }else{
+                   text("Type a question and press enter", 20, 450);
+                }
+              }
+            };
+            var drawText = function(t, x, y)
+            {
+              if(t.length < 30)
+                text(t, x, y);
+              else if(t.length < 60){
+                var line1 = subset(t, 0, 30);
+                var line2 = subset(t, 30, t.length-30);
+                text(line1, x, y);
+                text(line2, x, y+50);
+              }
+              else if(t.length < 90){
+                var line1 = subset(t, 0, 30);
+                var line2 = subset(t, 30, 30);
+                var line3 = subset(t, 60, t.length-60);
+                text(line1, x, y);
+                text(line2, x, y+50);
+                text(line3, x, y+100);
+              }
+            };
+
+            var mousePressed = function(){
+              answered = false;
+              readyToAnswer = false;
+              input = [];
+              answer = [];
+              index = 0;
+            };
+        }
+    }
+
+    var canvas = document.getElementById("mycanvas"); 
+    var processingInstance = new Processing(canvas, sketchProc); 
+
+    </script>
+    </div>  
+    </body>
+    
+</html>

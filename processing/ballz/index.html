@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Ballz</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    </style>
+    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+  </head>
+  <body class="w3-black">
+      
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <a href="../index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p>HOME</p>
+      </a>
+    </nav>
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="../index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+      </div>
+    </div>
+    
+    <div class="w3-container w3-center" style="padding-top: 25px">
+    <h1>Ballz</h1>
+    </div>
+      <hr>
+    <div class="w3-center">
+    <canvas id="mycanvas" style="padding-top: 7px"></canvas>
+        
+    <script>
+
+    var sketchProc = function(processingInstance) {
+        with (processingInstance) {
+            var wid = 500;
+            var hei = 500;
+            var space = 50/8;
+            var moving = false;
+            var score = 1;
+            var ballXspeed;
+            var ballYspeed;
+            var ballXpos = wid/2;
+            var ballYpos = hei - 10;
+            var startX;
+            var startY;
+            var timer = 0;
+            var reset = false;
+
+            var balls = [{
+              xpos: ballXpos,
+              ypos: ballYpos,
+              size: 20,
+              xspeed: 0,
+              yspeed: 0,
+              color: color(255, 0, 0),
+              move: false
+            }];
+
+            var blocks = [];
+
+            var setup = function(){
+              size(wid + 1, hei + 1);
+              frameRate(120);
+              spawnRowOfBlocks(1);
+              drawScene();
+            };
+
+            var draw = function() {
+              if(gameOver())
+                drawGameOver();
+              else{
+                if(moving){
+                  triggerBalls();
+                  moveBalls();
+                  drawScene();
+                  drawScore();
+                  if(reset){
+                    if(checkBalls()){
+                      moving = false;
+                      reset = false;
+                    }else{
+                      resetBalls();
+                    }
+                  }
+                }
+              }
+            };
+
+            var drawInstructions = function() {
+              textAlign(CENTER, CENTER);
+              fill(0);
+              text("Drag Mouse to Shoot Ball to Hit Blocks", wid/2, hei/2);
+            };
+
+            var gameOver = function() {
+               for(var i = 0; i < blocks.length; i++) {
+                var block = blocks[i];
+                if(block.ypos >= hei - ((block.size/2) + (i*space)))
+                  return true;
+               }
+               return false;
+            };
+
+            var drawGameOver = function() {
+              fill(0);
+              rect(wid/2 - 75, hei/2 - 25, 150, 50);
+              textAlign(CENTER, CENTER);
+              fill(255, 255, 255);
+              text("GAME OVER", 250, 250);
+            };
+
+            var resetGame = function() {
+              score = 1;
+              ballXpos = wid/2;
+              timer = 0;
+              moving = false;
+              reset = false;
+
+              blocks = [];
+              balls = [{
+                xpos: ballXpos,
+                ypos: ballYpos,
+                size: 20,
+                xspeed: 0,
+                yspeed: 0,
+                color: color(255, 0, 0),
+                move: false
+              }];
+
+              spawnRowOfBlocks(1);
+              drawScene();
+            };
+            var drawScene = function() {
+              background(255, 255, 255);
+              drawBalls();
+              drawBlocks();
+              if(score == 1)
+                drawInstructions();
+            };
+
+            var checkBalls = function() {
+              for(var i = 0; i < balls.length; i++)
+              {
+                var ball = balls[i];
+                if(ball.xpos != ballXpos)
+                  return false;
+              }
+              return true;
+            };
+
+            var resetBalls = function() {
+              for(var i = 0; i < balls.length; i++)
+              {
+                var ball = balls[i];
+                if(ball.xpos != ballXpos){
+                  if(abs(ball.xpos - ballXpos) < 10)
+                    ball.xpos = ballXpos;
+                  else if(ball.xpos < ballXpos)
+                    ball.xpos += 10;
+                  else
+                    ball.xpos -= 10;
+                }
+              }
+            };
+
+            var mousePressed = function() {
+              if(moving === false){
+                startX = mouseX;
+                startY = mouseY;
+              }
+            };
+
+            var mouseDragged = function(){
+              if(moving === false){
+                var d = dist(mouseX, mouseY, startX, startY);
+                var t = atan((mouseY - startY)/(mouseX - startX));
+                var x = d * cos(t);
+                var y = d * sin(t);
+                x = mouseX < startX ? -x : x;
+                y = mouseX < startX ? -y : y;
+                drawScene();
+                if(y > -5)
+                  return;
+
+                line(ballXpos, ballYpos, ballXpos + x, ballYpos + y);
+              }
+            };
+
+            var mouseReleased = function() {
+              if(moving === false){
+                if(mouseX == startX){
+                  drawScene();
+                  return;
+                }
+                var d = dist(mouseX, mouseY, startX, startY);
+                var t = atan((mouseY - startY)/(mouseX - startX));
+                var x = d * cos(t);
+                var y = d * sin(t);
+                x = mouseX < startX ? -x : x;
+                y = mouseX < startX ? -y : y;
+                if(y > -5){
+                  drawScene();
+                  return;
+                }
+                ballXspeed = x/100;
+                ballYspeed = y/100;
+                for(var i = 0; i < balls.length; i++) {
+                  balls[i].xspeed = ballXspeed;
+                  balls[i].yspeed = ballYspeed;
+                }
+                moving = true;
+                timer = 0;
+              }
+              if(gameOver())
+                resetGame();
+            };
+
+            var triggerBalls = function() {
+              if(moving) {
+                for(var i = 0; i < balls.length; i++){
+                  var ball = balls[i];
+                  if(timer == i*30){
+                    ball.move = true;
+                  }
+                }
+                timer ++;
+              }
+            };
+
+            var drawBalls = function() {
+              for(var i = 0; i < balls.length; i++){
+                var ball = balls[i];
+                fill(ball.color);
+                ellipse(ball.xpos, ball.ypos, ball.size, ball.size);
+              }
+            };
+
+            var landedBalls = function() {
+              var count = 0;
+              for(var i = 0; i < balls.length; i++){
+                var ball = balls[i];
+                if(ball.ypos == hei - ball.size/2)
+                  count++;
+              }
+              return count;
+            };
+
+            var drawScore = function(){
+              if(landedBalls() !== 0)
+                text(landedBalls(), ballXpos, ballYpos - 50);
+            };
+
+            var drawBlocks = function() {
+              for(var i = 0; i < blocks.length; i++) {
+                var block = blocks[i];
+                fill(block.color);
+                rect(block.xpos - block.size/2, block.ypos - block.size/2, block.size, block.size);
+                fill(0);
+                textAlign(CENTER, CENTER);
+                textSize(20);
+                text(block.life, block.xpos, block.ypos);
+              }
+            };
+
+            var shiftBlocksDown = function() {
+              for(var i = 0; i < blocks.length; i++) {
+                var block = blocks[i];
+                block.ypos += block.size + space;
+              }
+            };
+
+            var spawnRowOfBlocks = function(n) {
+              var count = 0;
+              for(var i = 0; i < 9; i++) {
+                var force = count === 0 || i == 9;
+                var skip = round(random(0, 1)) === 0 ? true : false;
+                if(skip || force) {
+                  count ++;
+                  var life = round(random(0, 1)) === 0 ? n : n*2;
+                  blocks.push({
+                    xpos: 25 + (i * (50+space)),
+                    ypos: 25,
+                    size: 50,
+                    color: color(0, 255, 0),
+                    life: life
+                  });
+                }
+              }
+            };
+
+            var pushBall = function(){
+              balls.push(
+                {
+                  xpos: ballXpos,
+                  ypos: ballYpos,
+                  size: 20,
+                  xspeed: 0,
+                  yspeed: 0,
+                  color: color(255, 0, 0),
+                  move: false
+                });
+            };
+
+            var moveBalls = function() {
+              for(var j = 0; j < balls.length; j++){
+                var ball = balls[j];
+                if(ball.move === true){
+                  ball.xpos+=ball.xspeed;
+                  ball.ypos+=ball.yspeed;
+                  if(ball.xpos < ball.size/2 || ball.xpos > wid - ball.size/2)
+                    ball.xspeed *= -1;
+                  if(ball.ypos < ball.size/2)
+                    ball.yspeed *= -1;
+                  if(ball.ypos >= hei - ball.size/2){
+                    ball.ypos = hei - ball.size/2;
+                    ball.move = false;
+                    if(landedBalls() === 1)
+                      ballXpos = ball.xpos;
+                    if(landedBalls() == balls.length){
+                      reset = true;
+                      shiftBlocksDown();
+                      spawnRowOfBlocks(score);
+                      pushBall();
+                      score ++;
+                    }
+                  }
+
+                  for(var i = 0; i < blocks.length; i++) {
+                    var block = blocks[i];
+                    if(hitBlock(ball, block)){
+                      bounceBall(ball, block);
+                      block.life -= 1;
+                      if(block.life === 0)
+                        blocks.splice(i, 1);
+                    }
+                  }
+                }
+              }
+            };
+
+            var bounceBall = function(ba, bl) {
+              var baX = ba.xpos;
+              var baY = ba.ypos;
+              var baR = ba.size/2;
+              var blX = bl.xpos;
+              var blY = bl.ypos;
+              var blR = bl.size/2;
+              if(baX - baR >= blX - blR && baX - baR <= blX + blR && baY >= blY - blR && baY <= blY + blR){
+                ba.xspeed *= -1;
+              }else if(baX + baR >= blX - blR && baX + baR <= blX + blR && baY >= blY - blR && baY <= blY + blR){
+                ba.xspeed *= -1;
+              }else if(baY - baR >= blY - blR && baY - baR <= blY + blR && baX >= blX - blR && baX <= blX + blR){
+                ba.yspeed *= -1;
+              }else if(baY + baR >= blY - blR && baY + baR <= blY + blR && baX >= blX - blR && baX <= blX + blR){
+                ba.yspeed *= -1;
+              }else if(dist(blX - blR, blY - blR, baX, baY) <= baR){
+                ba.xspeed = -abs(ba.xspeed);
+                ba.yspeed = -abs(ba.yspeed);
+              }else if(dist(blX + blR, blY - blR, baX, baY) <= baR){
+                ba.xspeed = abs(ba.xspeed);
+                ba.yspeed = -abs(ba.yspeed);
+              }else if(dist(blX - blR, blY + blR, baX, baY) <= baR){
+                ba.xspeed = -abs(ba.xspeed);
+                ba.yspeed = abs(ba.yspeed);
+              }else if(dist(blX + blR, blY + blR, baX, baY) <= baR){
+                ba.xspeed = abs(ba.xspeed);
+                ba.yspeed = abs(ba.yspeed);
+              }
+            };
+
+            var hitBlock = function(ba, bl) {
+              var num = 36;
+              for(var i = 0; i < num; i++) {
+                var x = ba.xpos + (ba.size/2 * cos(i * 2 * PI * (1/num)));
+                var y = ba.ypos + (ba.size/2 * sin(i * 2 * PI * (1/num)));
+                if(x >= bl.xpos - bl.size/2 && x <= bl.xpos + bl.size/2 && y >= bl.ypos - bl.size/2 && y <= bl.ypos + bl.size/2)
+                  return true;
+              }
+              return false;
+            };
+        }
+    }
+
+    var canvas = document.getElementById("mycanvas"); 
+    var processingInstance = new Processing(canvas, sketchProc); 
+
+    </script>
+    </div>  
+    </body>
+    
+</html>
