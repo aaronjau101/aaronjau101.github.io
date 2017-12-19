@@ -128,6 +128,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     
     <div class="w3-card w3-container w3-third" style="min-height:250px">
         <a href="#games">
+          <button class=" w3-button testbtn" onclick="openPlatform(event,'Unreal')">
+              <h3>Unreal</h3><br>
+              <img src="photos/unreal_icon.png" style="height:128px" >
+          </button>
+        </a>
+    </div>
+        
+    <div class="w3-card w3-container w3-third" style="min-height:250px">
+        <a href="#games">
             <button class="w3-bar-item w3-button testbtn" onclick="openPlatform(event,'Javascript')">
                 <h3>Javascript</h3><br>
                 <img src="photos/js_icon.png" style="height:128px" >
@@ -137,24 +146,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     
     <div class="w3-card w3-container w3-third" style="min-height:250px">
         <a href="#games">
-            <button class=" w3-button testbtn" onclick="openPlatform(event,'Python')">
-                <h3>Python</h3><br>
-                <img src="photos/python_icon.png" style="height:128px" >
-            </button>
-        </a>
-    </div>
-        
-    <div class="w3-card w3-container w3-third" style="min-height:250px">
-        <a href="#games">
-          <button class=" w3-button testbtn" onclick="openPlatform(event,'Unreal')">
-              <h3>Unreal</h3><br>
-              <img src="photos/unreal_icon.png" style="height:128px" >
-          </button>
-        </a>
-    </div>
-
-    <div class="w3-card w3-container w3-third" style="min-height:250px">
-        <a href="#games">
           <button class=" w3-button testbtn" onclick="openPlatform(event,'Processing')">
               <h3>Processing</h3><br>
               <img src="photos/processing_logo.png" style="height:128px" >
@@ -162,6 +153,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         </a>
     </div>
         
+    <div class="w3-card w3-container w3-third" style="min-height:250px">
+        <a href="#games">
+            <button class=" w3-button testbtn" onclick="openPlatform(event,'Python')">
+                <h3>Python</h3><br>
+                <img src="photos/python_icon.png" style="height:128px" >
+            </button>
+        </a>
+    </div>
+           
     <div class="w3-card w3-container w3-third" style="min-height:250px">
         <a href="#games">
           <button class=" w3-button testbtn" onclick="openPlatform(event,'Other')">
@@ -180,40 +180,40 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         <h2>Unity</h2>
         <hr>
         <div class="w3-container">
-        <div class="w3-half w3-content w3-display-container">
-        <img src="photos/rollaball.jpg" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'">
-        <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-        <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-        <div class="w3-modal-content w3-animate-zoom">
-        <img src="photos/rollaball.jpg" style="width:100%">
-        </div>
-        </div>
-        </div>
+            <div class="w3-half w3-content w3-display-container">
+                <img src="photos/rollaball.jpg" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'">
+                <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img src="photos/rollaball.jpg" style="width:100%">
+                    </div>
+                </div>
+            </div>
 
-        <div class="w3-half w3-card white w3-container w3-theme">
-            <h3 class="w3-text-theme">Super Rolla Ball</h3>
-            <ul class="w3-ul w3-border-top">
-                <li>
-                    <h3>Description</h3>
-                    <p>My first complete Unity project. Based off Super Monkey Ball, the player is a hedgehog trying to collect all the bananas in a race against time at three exciting levels.</p>
-                </li>
-                <li>
-                    <div class="w3-third">
-                        <h3>Done?</h3>
-                        <p>Yes.</p>
-                    </div>
-                    <div class="w3-third">
-                        <h3>Playable?</h3>
-                        <p>Yes.</p>
-                    </div>
-                    <div class="w3-third w3-center">
-                        <br>
-                        <a href="superrollaball/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
-                    </div>
-                </li>
-            </ul>
+            <div class="w3-half w3-card white w3-container w3-theme">
+                <h3 class="w3-text-theme">Super Rolla Ball</h3>
+                <ul class="w3-ul w3-border-top">
+                    <li>
+                        <h3>Description</h3>
+                        <p>My first complete Unity project. Based off Super Monkey Ball, the player is a hedgehog trying to collect all the bananas in a race against time at three exciting levels.</p>
+                    </li>
+                    <li>
+                        <div class="w3-third">
+                            <h3>Done?</h3>
+                            <p>Yes.</p>
+                        </div>
+                        <div class="w3-third">
+                            <h3>Playable?</h3>
+                            <p>Yes.</p>
+                        </div>
+                        <div class="w3-third w3-center">
+                            <br>
+                            <a href="superrollaball/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
 
     <hr>
        <div class="w3-container">
@@ -387,86 +387,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </div>
        <hr>
   </div>  
-  
-    <div id="Javascript" class="w3-container platform w3-animate-opacity">
       
-      <h2>Javascript</h2>
-      
-      <hr>
-      <div class="w3-container">
-       <div class="w3-half w3-content w3-display-container">
-           <img src="photos/epr.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal06').style.display='block'">
-           <div id="modal06" class="w3-modal" onclick="this.style.display='none'">
-               <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-               <div class="w3-modal-content w3-animate-zoom">
-                    <img src="photos/epr.png" style="width:100%">
-                </div>
-            </div>
-    </div>
-      <div class="w3-half">
-        <div class="w3-card white">
-          <div class="w3-container w3-theme">
-          </div>
-          <div class="w3-container">
-          <h3 class="w3-text-theme">Elastic Polymer Rampage</h3>
-          </div>
-          <ul class="w3-ul w3-border-top">
-            <li>
-              <h3>Description</h3>
-                <p>EPR is a college project I lead a team of four fellow students. Based off the movie Rubber, EPR is a sidescrolling shooter where the player is a tire going on a killing rampage. <a href="http://impactjs.com/">Powered by Impact JS. </a></p>
-            </li>
-            <li>
-                <div class="w3-third">
-              <h3>Done?</h3>
-              <p>Yes.</p>
-                </div>
-                <div class="w3-third">
-              <h3>Playable?</h3>
-              <p>Yes.</p>
-                </div>
-                 <div class="w3-third w3-center">
-                     <br>
-                       <a href="epr/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
-                </div>
-            </li>
-          </ul>
-        </div>
-        </div>
-      </div>
-       <hr>
-  </div> 
-  
-    <div id="Python" class="w3-container platform w3-animate-opacity">
-      <h2>Python</h2>
-      <hr>
-      <div class="w3-container">
-      <div class="w3-container w3-half">
-          <img src="https://versatilekids-com-prod.s3-us-west-1.amazonaws.com/media/1472577792_07_half_logo.jpg" width=100%>
-      </div>
-      <div class="w3-container w3-half">
-          
-          <h3>Tech Know How Kids</h3>
-          <p>During my contract job at Tech Know How Kids, I designed and created many Python games for kids to create and learn about programming.</p>
-          <p>Below are two videos showcasing the games I created for beginners and intermediate level coders.</p>
-          
-      </div>
-      </div>
-       <div  class="w3-container w3-center">
-           <h3>Python Programming Beginner Level</h3>
-            <video class="embed-responsive-item" controls=""> 
-            <!--replace this sample with your video-->
-            <source src="http://techknowhowkids.com/summer-camps/programming-coding/video/Python_1.mp4">
-
-            </video>
-           <h3>Python Programming Intermediate Level</h3>
-          <video class="embed-responsive-item" controls=""> 
-            <!--replace this sample with your video-->
-            <source src="http://techknowhowkids.com/summer-camps/programming-coding/video/Python_2.mp4">
-            </video>
-      </div>
-      <hr>
-  </div> 
-
     <div id="Unreal" class="w3-container platform w3-animate-opacity">
       <h2>Unreal</h2>
       <hr>
@@ -515,10 +436,305 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </div>
        <hr>
   </div> 
+  
+    <div id="Javascript" class="w3-container platform w3-animate-opacity">
+      
+      <h2>Javascript</h2>
+      
+      <hr>
+      <div class="w3-container">
+       <div class="w3-half w3-content w3-display-container">
+           <img src="photos/epr.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal06').style.display='block'">
+           <div id="modal06" class="w3-modal" onclick="this.style.display='none'">
+               <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+               <div class="w3-modal-content w3-animate-zoom">
+                    <img src="photos/epr.png" style="width:100%">
+                </div>
+            </div>
+    </div>
+      <div class="w3-half">
+        <div class="w3-card white">
+          <div class="w3-container w3-theme">
+          </div>
+          <div class="w3-container">
+          <h3 class="w3-text-theme">Elastic Polymer Rampage</h3>
+          </div>
+          <ul class="w3-ul w3-border-top">
+            <li>
+              <h3>Description</h3>
+                <p>EPR is a college project I lead a team of four fellow students. Based off the movie Rubber, EPR is a sidescrolling shooter where the player is a tire going on a killing rampage. <a href="http://impactjs.com/">Powered by Impact JS. </a></p>
+            </li>
+            <li>
+                <div class="w3-third">
+              <h3>Done?</h3>
+              <p>Yes.</p>
+                </div>
+                <div class="w3-third">
+              <h3>Playable?</h3>
+              <p>Yes.</p>
+                </div>
+                 <div class="w3-third w3-center">
+                     <br>
+                       <a href="epr/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
+                </div>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+       <hr>
+  </div>    
       
     <div id="Processing" class="w3-container platform w3-animate-opacity">
       <h2>Processing</h2>
-      <p>Processing projects coming soon</p>
+      <hr>
+        <div class="w3-container">
+            <div class="w3-half w3-content w3-display-container">
+                <img src="photos/ballz.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal08').style.display='block'">
+                <div id="modal08" class="w3-modal" onclick="this.style.display='none'">
+                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img src="photos/ballz.png" style="width:100%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-half w3-card white w3-container w3-theme">
+                <h3 class="w3-text-theme">Ballz</h3>
+                <ul class="w3-ul w3-border-top">
+                    <li>
+                        <h3>Description</h3>
+                        <p>My attempt to copy a popular iPhone app game by the same name. Still need to put a menu and collectible in game.</p>
+                    </li>
+                    <li>
+                        <div class="w3-third">
+                            <h3>Done?</h3>
+                            <p>No.</p>
+                        </div>
+                        <div class="w3-third">
+                            <h3>Playable?</h3>
+                            <p>Yes.</p>
+                        </div>
+                        <div class="w3-third w3-center">
+                            <br>
+                            <a href="processing/ballz/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="w3-container">
+            <div class="w3-half w3-content w3-display-container">
+                <img src="photos/calculator.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal09').style.display='block'">
+                <div id="modal09" class="w3-modal" onclick="this.style.display='none'">
+                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img src="photos/calculator.png" style="width:100%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-half w3-card white w3-container w3-theme">
+                <h3 class="w3-text-theme">Calculator</h3>
+                <ul class="w3-ul w3-border-top">
+                    <li>
+                        <h3>Description</h3>
+                        <p>A basic calculator. Still needs work to have the option of inputting a negative number.</p>
+                    </li>
+                    <li>
+                        <div class="w3-third">
+                            <h3>Done?</h3>
+                            <p>No.</p>
+                        </div>
+                        <div class="w3-third">
+                            <h3>Playable?</h3>
+                            <p>Yes.</p>
+                        </div>
+                        <div class="w3-third w3-center">
+                            <br>
+                            <a href="processing/calculator/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="w3-container">
+            <div class="w3-half w3-content w3-display-container">
+                <img src="photos/dearaaron.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal10').style.display='block'">
+                <div id="modal10" class="w3-modal" onclick="this.style.display='none'">
+                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img src="photos/dearaaron.png" style="width:100%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-half w3-card white w3-container w3-theme">
+                <h3 class="w3-text-theme">Dear Aaron</h3>
+                <ul class="w3-ul w3-border-top">
+                    <li>
+                        <h3>Description</h3>
+                        <p>Based off a website, Peter Answers, I discovered as a kid, Dear Aaron will answer any question as long as you are worthy enough to ask it.</p>
+                    </li>
+                    <li>
+                        <div class="w3-third">
+                            <h3>Done?</h3>
+                            <p>Yes.</p>
+                        </div>
+                        <div class="w3-third">
+                            <h3>Playable?</h3>
+                            <p>Yes.</p>
+                        </div>
+                        <div class="w3-third w3-center">
+                            <br>
+                            <a href="processing/dearaaron/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="w3-container">
+            <div class="w3-half w3-content w3-display-container">
+                <img src="photos/lunarlander.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal11').style.display='block'">
+                <div id="modal11" class="w3-modal" onclick="this.style.display='none'">
+                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img src="photos/lunarlander.png" style="width:100%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-half w3-card white w3-container w3-theme">
+                <h3 class="w3-text-theme">Lunar Lander</h3>
+                <ul class="w3-ul w3-border-top">
+                    <li>
+                        <h3>Description</h3>
+                        <p>A classic arcade game that utilizes gravity.</p>
+                    </li>
+                    <li>
+                        <div class="w3-third">
+                            <h3>Done?</h3>
+                            <p>Yes.</p>
+                        </div>
+                        <div class="w3-third">
+                            <h3>Playable?</h3>
+                            <p>Yes.</p>
+                        </div>
+                        <div class="w3-third w3-center">
+                            <br>
+                            <a href="processing/lunarlander/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="w3-container">
+            <div class="w3-half w3-content w3-display-container">
+                <img src="photos/solarsystem.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal12').style.display='block'">
+                <div id="modal12" class="w3-modal" onclick="this.style.display='none'">
+                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img src="photos/solarsystem.png" style="width:100%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-half w3-card white w3-container w3-theme">
+                <h3 class="w3-text-theme">Solar System</h3>
+                <ul class="w3-ul w3-border-top">
+                    <li>
+                        <h3>Description</h3>
+                        <p>A program that depicts our solar system and each planet's orbit around the sun. The size and path of the planets may not be to scale, but the time ratios to circle the sun are roughly to scale.</p>
+                    </li>
+                    <li>
+                        <div class="w3-third">
+                            <h3>Done?</h3>
+                            <p>Yes.</p>
+                        </div>
+                        <div class="w3-third">
+                            <h3>Playable?</h3>
+                            <p>Yes.</p>
+                        </div>
+                        <div class="w3-third w3-center">
+                            <br>
+                            <a href="processing/solarsystem/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="w3-container">
+            <div class="w3-half w3-content w3-display-container">
+                <img src="photos/unicode.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('modal13').style.display='block'">
+                <div id="modal13" class="w3-modal" onclick="this.style.display='none'">
+                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img src="photos/unicode.png" style="width:100%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-half w3-card white w3-container w3-theme">
+                <h3 class="w3-text-theme">Unicode</h3>
+                <ul class="w3-ul w3-border-top">
+                    <li>
+                        <h3>Description</h3>
+                        <p>A basic program that shows the Processing values for keyCode, key, and the string for any key on the keyboard. </p>
+                    </li>
+                    <li>
+                        <div class="w3-third">
+                            <h3>Done?</h3>
+                            <p>Yes.</p>
+                        </div>
+                        <div class="w3-third">
+                            <h3>Playable?</h3>
+                            <p>Yes.</p>
+                        </div>
+                        <div class="w3-third w3-center">
+                            <br>
+                            <a href="processing/unicode/index.html"><i class="fa fa-play" style="font-size:64px"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+  </div> 
+      
+    <div id="Python" class="w3-container platform w3-animate-opacity">
+      <h2>Python</h2>
+      <hr>
+      <div class="w3-container">
+      <div class="w3-container w3-half">
+          <img src="https://versatilekids-com-prod.s3-us-west-1.amazonaws.com/media/1472577792_07_half_logo.jpg" width=100%>
+      </div>
+      <div class="w3-container w3-half">
+          
+          <h3>Tech Know How Kids</h3>
+          <p>During my contract job at Tech Know How Kids, I designed and created many Python games for kids to create and learn about programming.</p>
+          <p>Below are two videos showcasing the games I created for beginners and intermediate level coders.</p>
+          
+      </div>
+      </div>
+       <div  class="w3-container w3-center">
+           <h3>Python Programming Beginner Level</h3>
+            <video class="embed-responsive-item" controls=""> 
+            <!--replace this sample with your video-->
+            <source src="http://techknowhowkids.com/summer-camps/programming-coding/video/Python_1.mp4">
+
+            </video>
+           <h3>Python Programming Intermediate Level</h3>
+          <video class="embed-responsive-item" controls=""> 
+            <!--replace this sample with your video-->
+            <source src="http://techknowhowkids.com/summer-camps/programming-coding/video/Python_2.mp4">
+            </video>
+      </div>
+      <hr>
   </div> 
 
     <div id="Other" class="w3-container platform w3-animate-opacity">
@@ -554,6 +770,24 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <!-- End Footer -->
     
     <script>
+    
+    // Slideshows
+    var slideIndex = 1;
+
+    function plusDivs(n) {
+        slideIndex = slideIndex + n;
+        showDivs(slideIndex);
+    }
+
+    function showDivs(n) {
+        var x = document.getElementsByClassName("processingSlides");
+        if (n > x.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+    }
 
     // Tabs
     function openPlatform(evt, platformName) {
