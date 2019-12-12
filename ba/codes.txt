@@ -1,0 +1,48 @@
+-------------
+Wave 1:
+	Call One: 1 - 1
+-------------
+Wave 2:
+	Call One: 2 - 2 - 4
+-------------
+Wave 3:
+	Call One: 1 - 6 - [1]
+    Call Two: 0 - 0 - [4]
+-------------
+Wave 4:
+	Call One: 1 - 4 - 3
+	Call Two: 0 - 0 - 0 - [7]
+-------------
+Wave 5:
+	Call One: 1 - 4 - 2 - 1
+    Call Two: 0 - 0 - 0 - 1 - [7]
+-------------
+Wave 6:
+	Call One: 2(18) - 4 - 1 - 1
+	Henke Early Restock
+	Call Two: 0 - 0 - 1 - 1 - [5] - [1]
+	Call Three: 0 - 0 - 0 - 0 - [0] - [8]
+-------------
+Wave 7:
+	Call One: 2(21) - 4(24) - 1 - 1
+	Call Two: 1(33) - 1 - 1 - 1 - [3](48) - [1]
+	Restock
+	Call Three: 0 - 0 - 0 - 0 - [1] - [3] - [6]
+-------------
+Wave 8:
+	Call One: 2 - 4(24) - 1 - 1
+	Call Two: 1 - 1 - 1 - 1 - 2 - [1]
+	Restock
+	Call Three: 0 - 0 - 0 - 0 - 0 - [4] - [7]
+-------------
+Wave 9:
+	Call One: 2(18) - 4(24) - 1 - 1
+	Call Two: 1(33) - 2 - 1 - 1 - 1 - 1 - [1]
+	Restock
+	Call Three: 0 - 0 - 0 - 0 - 1 - 2 - [4] - [6]
+-------------
+Wave 10:
+	Call One: 2(21) - 4(24) - 1 - 1
+	Call Two: 1(33) - 1 - 1 - 1 - [3](48) - [1]
+	Restock
+	Call Three: 0 - 0 - 0 - 0 - [1] - [3] - [6]
