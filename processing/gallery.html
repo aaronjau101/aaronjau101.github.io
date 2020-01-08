@@ -1,0 +1,50 @@
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>p5.js Games</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+  </style>
+  <script src="gallery.js"></script>  
+</head>
+
+<body class="w3-black"> 
+  <div class="w3-bar">
+    <a href="../index.html" class="w3-bar-item w3-button">Home</a>
+  </div>
+  <div class="w3-text-white w3-padding-32 w3-center">
+    <h1>p5.js Games (Javascript)</h1>
+  </div>
+  <div class="w3-text-grey w3-center">
+    <div class="w3-row w3-container">
+      <div class="w3-container w3-center"  style="width:50%;margin:auto;">
+        <h2 class="w3-text-light-grey">About</h2>
+
+        <p><a href="https://p5js.org/" target="_blank">p5.js</a> is a JavaScript library for creative coding, with a focus on making coding accessible.</p>
+      </div>
+    </div>
+    <hr>
+    <div class= "w3-row">
+      <a href="#gameCanvas">
+        <div class="w3-quarter w3-button w3-center" onclick="includeHTML()">
+          <img class="w3-image" src="../photos/2048.png">
+          <h2>2048</h2>
+        </div>  
+      </a>
+
+    </div>
+    <hr>
+    <div class="gameCanvas"></div>
+    <h1>Game Title</h1>
+
+    <div w3-include-html="projects/2048/index.html"></div>
+      <h2>Instructions</h2>
+    <p style="margin-bottom: 500px">How to play the game.</p>
+    
+  </body>
+  </html>

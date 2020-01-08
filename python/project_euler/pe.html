@@ -1,68 +1,64 @@
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Project Euler</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Project Euler</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
     body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     .w3-row-padding img {margin-bottom: 12px}
-    </style>
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous">
-    </script>
-      
-  </head>
-    
-  <body class="w3-black"> 
-      <script src="pe.js"></script>
-      <div class="w3-bar w3-black">
-  <a href="/index.html" class="w3-bar-item w3-button">Home</a>
-</div>
-      <div class="w3-text-white w3-padding-32 w3-center">
-      <h1>Project Euler Answers (Python)</h1>
-      </div>
-   <div class="w3-text-grey w3-center">
-    <div class="w3-row w3-container">
-        <div class="w3-container w3-center"  style="width:50%;margin:auto;">
-            <h2 class="w3-text-light-grey">About</h2>
+  </style>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+  </script>
+  <script src="pe.js"></script>  
+</head>
 
-            <p><a class="w3-text-blue" href="https://projecteuler.net/" target="_blank">Project Euler</a> is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve.</p>
-        </div>
+<body class="w3-black" onload="updateProblem()"> 
+
+  <div class="w3-bar">
+    <a href="../../index.html" class="w3-bar-item w3-button">Home</a>
+  </div>
+  <div class="w3-text-white w3-padding-32 w3-center">
+    <h1>Project Euler Answers (Python)</h1>
+  </div>
+  <div class="w3-text-grey w3-center">
+    <div class="w3-row w3-container">
+      <div class="w3-container w3-center"  style="width:50%;margin:auto;">
+        <h2 class="w3-text-light-grey">About</h2>
+
+        <p><a class="w3-text-blue" href="https://projecteuler.net/" target="_blank">Project Euler</a> is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve.</p>
+      </div>
     </div>
-       
-       
+    <hr>
     <div class= "w3-row">
 
-        <a class="w3-white w3-left w3-btn w3-margin-left" onclick="changeIndex(-1)">
-            Previous
-        </a>
-        
-        <a class="w3-white w3-middle w3-btn" href="https://gist.github.com/aaronjau101/bb0e4c28e0177d3815783041f8993b91">
-            See All
-        </a>
-        
-        <a class="w3-white w3-right w3-btn w3-margin-right" onclick="changeIndex(1)">
-            Next
-        </a>
-        
-        <div class="w3-container"  style="height:100%">
-            <div id="textDiv">  </div>
+      <a class="w3-white w3-left w3-btn w3-margin-left" onclick="changeIndex(-1)">
+        Previous
+      </a>
+
+      <a class="w3-white w3-middle w3-btn" href="https://gist.github.com/aaronjau101/bb0e4c28e0177d3815783041f8993b91">
+        See All
+      </a>
+
+      <a class="w3-white w3-right w3-btn w3-margin-right" onclick="changeIndex(1)">
+        Next
+      </a>
+      <hr>
+      <div class="w3-container"  style="height:100%">
+        <div id="textDiv">  </div>
         <div class="w3-container w3-center">
-        <div id="gistDiv">
+          <div id="gistDiv">
+          </div>
         </div>
-        </div>
-        </div>
-
-
-
+      </div>
     </div>  
-   </div>
-      
-       <!-- End About Section -->
-  </body>
+  </div>
+
+  <!-- End About Section -->
+</body>
 </html>

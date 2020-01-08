@@ -1,7 +1,7 @@
-$(document).ready(function(){
+$().ready(function(){
     $.ajax({url: "problems.txt", 
-    success: function(result){
-        processData(result);
+    success: function(data){
+        processData(data);
     }
     });
 });
@@ -82,7 +82,7 @@ function updateProblem() {
     changeFrame();
 }
 
-setTimeout(updateProblem, 100)
+//setTimeout(updateProblem, 100)
 	
 function adjustIframeSize(newHeight) {
     var i = document.getElementById("gistFrame");
