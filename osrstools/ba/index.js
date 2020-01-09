@@ -85,7 +85,6 @@ function processData(allText) {
     console.log(data);
 }   
 
-
 /*************************************
 Trying to organize the data into JSON
 **************************************/

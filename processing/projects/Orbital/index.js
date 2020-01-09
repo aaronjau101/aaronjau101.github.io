@@ -6,6 +6,8 @@ var UP = 38;
 
 var start = true;
 
+var ballDrag = 0.15;
+
 var setup = function() {
   createCanvas(500, 500).parent("gameCanvas");
   balls = [];
@@ -80,22 +82,27 @@ var moveBall = function() {
   var ball = balls[balls.length - 1];
   ball.x += ball.speed * cos(ball.angle);
   ball.y += ball.speed * sin(ball.angle);
+  //Bounce off the top of the screen
   if(ball.y < ball.size/2) {
     ball.y = ball.size/2;
     ball.angle = (PI * 2) - ball.angle;
   }
+  //Bounce off the sides
   if(ball.x < ball.size/2 || ball.x > 500 - (ball.size/2)) {
     ball.x = max(ball.size/2, min(500 - (ball.size/2), ball.x));
     ball.angle = (PI) - ball.angle;
   }
+  //Iterate all other balls
   for(var i = 0; i < balls.length - 1; i++) {
     var b = balls[i];
+    //Check if ball collision
     if(dist(b.x, b.y, ball.x, ball.y) < (b.size/2) + (ball.size/2)) {
       b.strength--;
       var angle = atan2(ball.y - b.y, ball.x - b.x);
       ball.x = b.x + (((b.size/2) + (ball.size/2)) * cos(angle));
       ball.y = b.y + (((b.size/2) + (ball.size/2)) * sin(angle));
       ball.angle = angle + (angle - (ball.angle + PI));
+      //Check if other ball is destroyed
       if(ballDestroyed()) {
         score += multiplier;
         multiplier += 1;
@@ -103,7 +110,8 @@ var moveBall = function() {
       balls = balls.filter((p) => {return p.strength > 0});
     }
   }
-  ball.speed = ball.speed <= 0.1 ? 0 : ball.speed - 0.1;
+  //Slow down ball and see if it stopped
+  ball.speed = ball.speed <= ballDrag ? 0 : ball.speed - ballDrag;
   if(ball.speed === 0) {
     ball.size = max(getClosestEdge(ball) * 2, ball.size);
   }

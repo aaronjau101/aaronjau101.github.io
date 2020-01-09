@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <title>Experience Calculator</title>
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body class="w3-margin-left">
+	<h1>Runescape Helper</h1>
+	<h4>Enter starting experience/level here</h4>
+	<input type="radio" name="start" id= "startExp" autocomplete="off">Experience<br>
+    <input type="radio" name="start" id= "startLvl" checked="true" autocomplete="off">Level<br>
+    <br>
+    <input id="startInput" autocomplete="off"></input>
+    <h4>Enter target level here</h4>
+    <input id="lvlInput" autocomplete="off"></input>
+    <h4>Enter average experience per action</h4>
+    <input id="epaInput" autocomplete="off"></input>
+    <h4>Enter average cost per action</h4>
+    <input id="cpaInput" autocomplete="off"></input>
+    <br><br>
+    <button onclick="checkResult()">Submit</button>
+    <p id="result"></p>
+</body>

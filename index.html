@@ -72,7 +72,6 @@
         helping my future competition (1st to 10th graders) to create computer games and websites. 
       </p>
     </div>
-    <!-- End About Section -->
 
     <!-- Projects Section -->
     <div class="w3-padding-64 w3-content" id="projects">
@@ -80,367 +79,336 @@
       <h2 class="w3-text-light-grey">My Projects</h2>
       
       <hr style="width:200px" class="w3-opacity">
+          
+      <h2 class="w3-center">Platforms</h2>
       
-      <!-- Platform Buttons Section -->
-      <div class="w3-center">
-        <h2>Platforms</h2>
-      </div>
-      
-      <div class="w3-row-padding w3-center w3-margin-top">
+      <!-- Platform Button Section -->
+      <div class="w3-row w3-center w3-margin-top">
         <!-- Unity Button -->
-        <div class="w3-card w3-container w3-quarter" style="min-height:250px">
+        <div class="w3-quarter" style="min-height:250px">
+          <a href="#projects">
             <button class="w3-button" onclick="openPlatform(event,'Unity')">
               <h3>Unity</h3><br>
-              <img src="photos/unity_icon.png" style="height:128px" >
+              <img class="w3-image" src="photos/unity_icon.png" style="height:128px" >
             </button>
+          </a>
         </div>
         <!-- Unreal Button -->
-        <div class="w3-card w3-container w3-quarter" style="min-height:250px">
+        <div class="w3-quarter" style="min-height:250px">
+          <a href="#projects">
             <button class=" w3-button" onclick="openPlatform(event,'Unreal')">
               <h3>Unreal</h3><br>
-              <img src="photos/unreal_icon.png" style="height:128px" >
+              <img class="w3-image" src="photos/unreal_icon.png" style="height:128px" >
             </button>
+          </a>
         </div>
         <!-- Javascript Button -->
-        <div class="w3-card w3-container w3-quarter" style="min-height:250px">
+        <div class="w3-quarter" style="min-height:250px">
+          <a href="#projects">
             <button class="w3-button" onclick="openPlatform(event,'Javascript')">
-              <h3>Javascript</h3><br>
-              <img src="photos/js_icon.png" style="height:128px" >
+              <h3>JS</h3><br>
+              <img class="w3-image" src="photos/js_icon.png" style="height:128px" >
             </button>
+          </a>
         </div>
         <!-- Python Button -->
-        <div class="w3-card w3-container w3-quarter" style="min-height:250px">
+        <div class="w3-quarter" style="min-height:250px">
+          <a href="#projects">
             <button class="w3-button" onclick="openPlatform(event,'Python')">
               <h3>Python</h3><br>
-              <img src="photos/python_icon.png" style="height:128px" >
+              <img class="w3-image" src="photos/python_icon.png" style="height:128px" >
             </button>
+          </a>
         </div>
       </div>
+      <!-- Unity Games -->
+      <div id="Unity" class="w3-center w3-container platform">
+        <h2>Unity</h2>
 
-    <!-- End of Platform Buttons Section -->
+        <hr>
 
-    <!-- Unity Games -->
-    <div id="Unity" class="w3-center w3-container platform">
-      <h2>Unity</h2>
-
-      <hr>
-
-      <!-- Super Roll a Ball -->
-      <div class="w3-container">
-        <!-- Picture Left Side -->
-        <div class="w3-half w3-content w3-display-container">
-          <img src="photos/rollaball.jpg" width=100% style="cursor:zoom-in" onclick="document.getElementById('unity01').style.display='block'">
-          <div id="unity01" class="w3-modal" onclick="this.style.display='none'">
-            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-            <div class="w3-modal-content w3-animate-zoom">
-              <img src="photos/rollaball.jpg" style="width:100%">
+        <!-- Super Roll a Ball -->
+        <div class="w3-container">
+          <!-- Picture Left Side -->
+          <div class="w3-half w3-content w3-display-container">
+            <img src="photos/rollaball.jpg" width=100% style="cursor:zoom-in" onclick="document.getElementById('unity01').style.display='block'">
+            <div id="unity01" class="w3-modal" onclick="this.style.display='none'">
+              <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+              <div class="w3-modal-content w3-animate-zoom">
+                <img src="photos/rollaball.jpg" style="width:100%">
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Info Right Side -->
-        <div class="w3-half w3-card white w3-container w3-theme">
-          <h3 class="w3-text-theme">Super Rolla Ball</h3>
-          <ul class="w3-ul w3-border-top">
-            <li>
-              <h3>Description</h3>
-              <p>My first complete Unity project. Based off Super Monkey Ball, the player is a hedgehog trying to collect all the bananas in a race against time at three exciting levels.</p>
-            </li>
-            <li>
-              <div class="w3-third">
-                <h3>Done?</h3>
-                <p>Yes.</p>
-              </div>
-              <div class="w3-third">
-                <h3>Playable?</h3>
-                <p>Yes.</p>
-              </div>
-              <div class="w3-third">
-                <br>
-                <a href="superrollaball/index.html"><i class="fa fa-play" style="font-size:64px; margin-left:32px;"></i></a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <hr>
-
-      <!-- Rubix -->
-      <div class="w3-container">
-        <!-- Picture Left Side -->
-        <div class="w3-half w3-content w3-display-container">
-          <img src="photos/rubix.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('unity02').style.display='block'">
-          <div id="unity02" class="w3-modal" onclick="this.style.display='none'">
-            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-            <div class="w3-modal-content w3-animate-zoom">
-              <img src="photos/rubix.png" style="width:100%">
-            </div>
+          <!-- Info Right Side -->
+          <div class="w3-half w3-card white w3-container w3-theme">
+            <h3 class="w3-text-theme">Super Rolla Ball</h3>
+            <ul class="w3-ul w3-border-top">
+              <li>
+                <h3>Description</h3>
+                <p>My first complete Unity project. Based off Super Monkey Ball, the player is a hedgehog trying to collect all the bananas in a race against time at three exciting levels.</p>
+              </li>
+              <li>
+                <div class="w3-center">
+                  <button class="w3-button w3-grey" onclick="window.location.href = 'superrollaball/index.html';">Click Here</button>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
-        <!-- Info Right Side -->
-        <div class="w3-half w3-card white w3-container w3-theme">
-          <h3 class="w3-text-theme">Rubix</h3>
-          <ul class="w3-ul w3-border-top">
-            <li>
-              <h3>Description</h3>
-              <p>After learning how to solve the Rubik's cube, I had no choice but to build a simulator game. Had trouble making the scroll work nicely, so only full turns allowed at the moment.</p>
-            </li>
-            <li>
-              <div class="w3-third">
-                <h3>Done?</h3>
-                <p>No.</p>
-              </div>
-              <div class="w3-third">
-                <h3>Playable?</h3>
-                <p>Yes.</p>
-              </div>
-              <div class="w3-third">
-                <br>
-                <a href="rubix/index.html"><i class="fa fa-play" style="font-size:64px; margin-left:32px;"></i></a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
 
-      <hr>
+        <hr>
 
-      <!-- Betiled -->
-      <div class="w3-container">
-        <!-- Picture Left Side -->
-        <div class="w3-half w3-content w3-display-container">
-          <img src="photos/betiled.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('unity03').style.display='block'">
-          <div id="unity3" class="w3-modal" onclick="this.style.display='none'">
-            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-            <div class="w3-modal-content w3-animate-zoom">
-              <img src="photos/betiled.png" style="width:100%">
+        <!-- Rubix -->
+        <div class="w3-container">
+          <!-- Picture Left Side -->
+          <div class="w3-half w3-content w3-display-container">
+            <img src="photos/rubix.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('unity02').style.display='block'">
+            <div id="unity02" class="w3-modal" onclick="this.style.display='none'">
+              <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+              <div class="w3-modal-content w3-animate-zoom">
+                <img src="photos/rubix.png" style="width:100%">
+              </div>
             </div>
           </div>
+          <!-- Info Right Side -->
+          <div class="w3-half w3-card white w3-container w3-theme">
+            <h3 class="w3-text-theme">Rubix</h3>
+            <ul class="w3-ul w3-border-top">
+              <li>
+                <h3>Description</h3>
+                <p>After learning how to solve the Rubik's cube, I had no choice but to build a simulator game. Had trouble making the scroll work nicely, so only full turns allowed at the moment.</p>
+              </li>
+              <li>
+                <div class="w3-center">
+                  <button class="w3-button w3-grey" onclick="window.location.href = 'rubix/index.html';">Click Here</button>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <!-- Info Right Side -->
-        <div class="w3-half w3-card white w3-container w3-theme">
-          <h3 class="w3-text-theme">Betiled</h3>
-          <ul class="w3-ul w3-border-top">
-            <li>
-              <h3>Description</h3>
-              <p>Betiled is based off many different versions of this type of game (Candy Crush and Bejeweled). I wanted to have a random size and shape to each level, but only have one playable level at the moment. </p>
-            </li>
-            <li>
-              <div class="w3-third">
-                <h3>Done?</h3>
-                <p>No.</p>
+
+        <hr>
+
+        <!-- Betiled -->
+        <div class="w3-container">
+          <!-- Picture Left Side -->
+          <div class="w3-half w3-content w3-display-container">
+            <img src="photos/betiled.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('unity03').style.display='block'">
+            <div id="unity03" class="w3-modal" onclick="this.style.display='none'">
+              <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+              <div class="w3-modal-content w3-animate-zoom">
+                <img src="photos/betiled.png" style="width:100%">
               </div>
-              <div class="w3-third">
-                <h3>Playable?</h3>
-                <p>Yes.</p>
-              </div>
-              <div class="w3-third">
-                <br>
-                <a href="betiled/index.html"><i class="fa fa-play" style="font-size:64px; margin-left:32px;"></i></a>
-              </div>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <!-- Info Right Side -->
+          <div class="w3-half w3-card white w3-container w3-theme">
+            <h3 class="w3-text-theme">Betiled</h3>
+            <ul class="w3-ul w3-border-top">
+              <li>
+                <h3>Description</h3>
+                <p>Betiled is based off many different versions of this type of game (Candy Crush and Bejeweled). I wanted to have a random size and shape to each level, but only have one playable level at the moment. </p>
+              </li>
+              <li>
+                <div class="w3-center">
+                  <button class="w3-button w3-grey" onclick="window.location.href = 'betiled/index.html';">Click Here</button>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
+        <hr>
       </div>
-    <hr>
+
+      <!-- Unreal Games -->
+      <div id="Unreal" class="w3-center w3-container platform">
+        <h2>Unreal</h2>
+
+        <hr>
+
+        <!-- The Devil's Eight -->
+        <div class="w3-container">
+          <!-- Picture Left Side -->
+          <div class="w3-half w3-content w3-display-container">
+            <img src="photos/td8.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('unreal01').style.display='block'">
+            <div id="unreal01" class="w3-modal" onclick="this.style.display='none'">
+              <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+              <div class="w3-modal-content w3-animate-zoom">
+                <img src="photos/td8.png" style="width:100%">
+              </div>
+            </div>
+          </div>
+          <!-- Info Right Side -->
+          <div class="w3-half w3-card white w3-container w3-theme">
+            <h3 class="w3-text-theme">The Devil's Eight</h3>
+            <ul class="w3-ul w3-border-top">
+              <li>
+                <h3>Description</h3>
+                <p>A Second Studio Game, The Devil's Eight is a game about a warrior fighting his way down the eight rings of hell. The game has a novel feature that the beats of the music trigger enemy attacks. The game is still being worked on by its creator Ruben Telles.</p>
+              </li>
+              <li>
+                <div class="w3-center">
+                  <button class="w3-button w3-grey" onclick="window.location.href = 'https://secondstepstudios.itch.io/the-devils-eight';">Click Here</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+
+      <!-- Javascript Games -->
+      <div id="Javascript" class="w3-center w3-container platform">
+
+        <h2>JavaScript</h2>
+
+        <hr>
+
+        <!-- Elastic Polymer Rampage -->
+        <div class="w3-container">
+          <!-- Picture Left Side -->
+          <div class="w3-half w3-content w3-display-container">
+            <img src="photos/epr.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('js01').style.display='block'">
+            <div id="js01" class="w3-modal" onclick="this.style.display='none'">
+              <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+              <div class="w3-modal-content w3-animate-zoom">
+                <img src="photos/epr.png" style="width:100%">
+              </div>
+            </div>
+          </div>
+          <!-- Info Right Side -->
+          <div class="w3-half w3-card white w3-container w3-theme">
+            <h3 class="w3-text-theme">Elastic Polymer Rampage</h3>
+            <ul class="w3-ul w3-border-top">
+              <li>
+                <h3>Description</h3>
+                <p>EPR is a college project I lead a team of four fellow students. Based off the movie Rubber, EPR is a sidescrolling shooter where the player is a tire going on a killing rampage. <a href="http://impactjs.com/">Powered by Impact JS. </a></p>
+              </li>
+              <li>
+                <div class="w3-center">
+                  <button class="w3-button w3-grey" onclick="window.location.href = 'epr/index.html';">Click Here</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <hr>
+
+        <!-- p5.js Games -->
+        <div class="w3-container">
+          <!-- Picture Left Side -->
+          <div class="w3-half w3-content w3-display-container">
+            <img src="photos/p5js.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('js02').style.display='block'">
+            <div id="js02" class="w3-modal" onclick="this.style.display='none'">
+              <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+              <div class="w3-modal-content w3-animate-zoom">
+                <img src="photos/p5js.png" style="width:100%">
+              </div>
+            </div>
+          </div>
+          <!-- Info Right Side -->
+          <div class="w3-half w3-card white w3-container w3-theme">
+            <h3 class="w3-text-theme">p5.js Games</h3>
+            <ul class="w3-ul w3-border-top">
+              <li>
+                <h3>Description</h3>
+                <p><a href="https://p5js.org/" target="_blank">p5.js</a> is a JavaScript library that I used to create many games such as Minesweeper, 2048, etc.</p>
+              </li>
+              <li>
+                <div class="w3-center">
+                  <button class="w3-button w3-grey" onclick="window.location.href = 'processing/gallery.html';">Click Here</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <hr>
+
+        <!-- OSRS Tools -->
+        <div class="w3-container">
+          <!-- Picture Left Side -->
+          <div class="w3-half w3-content w3-display-container">
+            <img src="photos/osrs.jpg" width=100% style="cursor:zoom-in" onclick="document.getElementById('js03').style.display='block'">
+            <div id="js03" class="w3-modal" onclick="this.style.display='none'">
+              <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+              <div class="w3-modal-content w3-animate-zoom">
+                <img src="photos/osrs.jpg" style="width:100%">
+              </div>
+            </div>
+          </div>
+          <!-- Info Right Side -->
+          <div class="w3-half w3-card white w3-container w3-theme">
+            <h3 class="w3-text-theme">OSRS Tools</h3>
+            <ul class="w3-ul w3-border-top">
+              <li>
+                <h3>Description</h3>
+                <p>Old School Runescape is a medieval glorified Cookie Clicker MMORPG.</p>
+                <p>I made some QoL tools.</p>
+              </li>
+              <li>
+                <div class="w3-center">
+                  <button class="w3-button w3-grey" onclick="window.location.href = 'osrstools/index.html';">Click Here</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <hr>
+      </div>
+
+      <!-- Python Games -->
+      <div id="Python" class="w3-center w3-container platform">
+
+        <h2>Python</h2>
+
+        <hr>
+
+        <!-- Project Euler -->
+        <div class="w3-container">
+          <!-- Picture Left Side -->
+          <div class="w3-half w3-content w3-display-container">
+            <img src="photos/euler.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('python01').style.display='block'">
+            <div id="python01" class="w3-modal" onclick="this.style.display='none'">
+              <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+              <div class="w3-modal-content w3-animate-zoom">
+                <img src="photos/euler.png" style="width:100%">
+              </div>
+            </div>
+          </div>
+          <!-- Info Right Side -->
+          <div class="w3-half w3-card white w3-container w3-theme">
+            <h3 class="w3-text-theme">Project Euler</h3>
+            <ul class="w3-ul w3-border-top">
+              <li>
+                <h3>Description</h3>
+                <p><a href="https://projecteuler.net/" target="_blank">Project Euler</a> is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve.</p>
+              </li>
+              <li>
+                <div class="w3-center">
+                  <button class="w3-button w3-grey" onclick="window.location.href = 'python/project_euler/pe.html';">Click Here</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
     </div>
-
-    <!-- Unreal Games -->
-    <div id="Unreal" class="w3-center w3-container platform">
-      <h2>Unreal</h2>
-
-      <hr>
-
-      <!-- The Devil's Eight -->
-      <div class="w3-container">
-        <!-- Picture Left Side -->
-        <div class="w3-half w3-content w3-display-container">
-          <img src="photos/td8.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('unreal01').style.display='block'">
-          <div id="unreal01" class="w3-modal" onclick="this.style.display='none'">
-            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-            <div class="w3-modal-content w3-animate-zoom">
-              <img src="photos/td8.png" style="width:100%">
-            </div>
-          </div>
-        </div>
-        <!-- Info Right Side -->
-        <div class="w3-half w3-card white w3-container w3-theme">
-          <h3 class="w3-text-theme">The Devil's Eight</h3>
-          <ul class="w3-ul w3-border-top">
-            <li>
-              <h3>Description</h3>
-              <p>A Second Studio Game, The Devil's Eight is a game about a warrior fighting his way down the eight rings of hell. The game has a novel feature that the beats of the music trigger enemy attacks. The game is still being worked on by its creator Ruben Telles.</p>
-            </li>
-            <li>
-              <div class="w3-third">
-                <h3>Done?</h3>
-                <p>No.</p>
-              </div>
-              <div class="w3-third">
-                <h3>Playable?</h3>
-                <p>Yes.</p>
-              </div>
-              <div class="w3-third">
-                <br>
-                <a href="https://secondstepstudios.itch.io/the-devils-eight" target="_blank"> <i class="fa fa-link" style="font-size:64px; margin-left:32px;"></i></a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    <hr>
-    </div>
-
-    <!-- Javascript Games -->
-    <div id="Javascript" class="w3-center w3-container platform">
-
-      <h2>Javascript</h2>
-
-      <hr>
-
-      <!-- Elastic Polymer Rampage -->
-      <div class="w3-container">
-        <!-- Picture Left Side -->
-        <div class="w3-half w3-content w3-display-container">
-          <img src="photos/epr.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('js01').style.display='block'">
-          <div id="js01" class="w3-modal" onclick="this.style.display='none'">
-            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-            <div class="w3-modal-content w3-animate-zoom">
-              <img src="photos/epr.png" style="width:100%">
-            </div>
-          </div>
-        </div>
-        <!-- Info Right Side -->
-        <div class="w3-half w3-card white w3-container w3-theme">
-          <h3 class="w3-text-theme">Elastic Polymer Rampage</h3>
-          <ul class="w3-ul w3-border-top">
-            <li>
-              <h3>Description</h3>
-              <p>EPR is a college project I lead a team of four fellow students. Based off the movie Rubber, EPR is a sidescrolling shooter where the player is a tire going on a killing rampage. <a href="http://impactjs.com/">Powered by Impact JS. </a></p>
-            </li>
-            <li>
-              <div class="w3-third">
-                <h3>Done?</h3>
-                <p>Yes.</p>
-              </div>
-              <div class="w3-third">
-                <h3>Playable?</h3>
-                <p>Yes.</p>
-              </div>
-              <div class="w3-third">
-                <br>
-                <a href="epr/index.html" target="_blank"><i class="fa fa-link" style="font-size:64px; margin-left:32px;"></i></a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-      <hr>
-
-      <!-- p5.js Games -->
-      <div class="w3-container">
-        <!-- Picture Left Side -->
-        <div class="w3-half w3-content w3-display-container">
-          <img src="photos/p5js.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('js02').style.display='block'">
-          <div id="js02" class="w3-modal" onclick="this.style.display='none'">
-            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-            <div class="w3-modal-content w3-animate-zoom">
-              <img src="photos/p5js.png" style="width:100%">
-            </div>
-          </div>
-        </div>
-        <!-- Info Right Side -->
-        <div class="w3-half w3-card white w3-container w3-theme">
-          <h3 class="w3-text-theme">p5.js Games</h3>
-          <ul class="w3-ul w3-border-top">
-            <li>
-              <h3>Description</h3>
-              <p><a href="https://p5js.org/" target="_blank">p5.js</a> is a Javascript library that I used to create many games such as Minesweeper, 2048, etc.</p>
-            </li>
-            <li>
-              <div class="w3-third">
-                <h3>Done?</h3>
-                <p>No.</p>
-              </div>
-              <div class="w3-third">
-                <h3>Playable?</h3>
-                <p>Yes.</p>
-              </div>
-              <div class="w3-third">
-                <br>
-                <a href="processing/gallery.html"><i class="fa fa-play" style="font-size:64px; margin-left:32px;"></i></a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-      <hr>
-    </div>
-
-    <!-- Python Games -->
-    <div id="Python" class="w3-center w3-container platform">
-
-      <h2>Python</h2>
-
-      <hr>
-
-      <!-- Project Euler -->
-      <div class="w3-container">
-        <!-- Picture Left Side -->
-        <div class="w3-half w3-content w3-display-container">
-          <img src="photos/euler.png" width=100% style="cursor:zoom-in" onclick="document.getElementById('python01').style.display='block'">
-          <div id="python01" class="w3-modal" onclick="this.style.display='none'">
-            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-            <div class="w3-modal-content w3-animate-zoom">
-              <img src="photos/euler.png" style="width:100%">
-            </div>
-          </div>
-        </div>
-        <!-- Info Right Side -->
-        <div class="w3-half w3-card white w3-container w3-theme">
-          <h3 class="w3-text-theme">Project Euler</h3>
-          <ul class="w3-ul w3-border-top">
-            <li>
-              <h3>Description</h3>
-              <p><a href="https://projecteuler.net/" target="_blank">Project Euler</a> is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve.</p>
-            </li>
-            <li>
-              <div class="w3-third">
-                <h3>Done?</h3>
-                <p>No.</p>
-              </div>
-              <div class="w3-third">
-                <h3>Playable?</h3>
-                <p>Yes.</p>
-              </div>
-              <div class="w3-third">
-                <br>
-                <a href="./python/project_euler/pe.html"> <i class="fa fa-play" style="font-size:64px; margin-left:32px;"></i></a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    <hr>
-    </div>
-
-    </div>
-    <!-- End Projects Section -->
 
     <!-- Contact Section -->
     <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
+      <h2 class="w3-text-light-grey">Contact Me</h2>
+      <hr style="width:200px" class="w3-opacity">
 
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Redwood City, CA</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> jauregui.aaron@gmail.com</p>
+      <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Redwood City, CA</p>
+        <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> jauregui.aaron@gmail.com</p>
+      </div>
+      <br>
     </div>
-    <br>
-    </div>
-    <!-- End Contact Section -->
 
   <!-- Footer -->
   <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
@@ -450,8 +418,6 @@
     <a href="https://github.com/aaronjau101"> <i class="fa fa-github w3-hover-opacity"></i></a>
     <a href="http://steamcommunity.com/profiles/76561198037416894"><i class="fa fa-steam w3-hover-opacity"></i></a>
   </footer>
-  <!-- End Footer -->
   </div>
-  <!-- END PAGE CONTENT -->
 </body>
 </html>
