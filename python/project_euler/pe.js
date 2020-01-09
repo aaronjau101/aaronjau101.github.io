@@ -30,6 +30,7 @@ function processData(allText) {
             problems.push({id: n, text: problem});
         }
     }
+    updateProblem();
 }   
 
 function changeIndex(value){

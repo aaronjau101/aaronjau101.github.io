@@ -1,17 +1,37 @@
-var blockSize = 150;
-var borderSize = 10;
+var blockSize = 120;
+var borderSize = 4;
 var gameSize = (blockSize * 4) + (borderSize * 5);
 var playing = true;
 var grid = [];
+var LEFT_ARROW = 37;
+var RIGHT_ARROW = 39;
+var UP = 38;
+var DOWN = 40;
+var start = false;
 
 var setup = function() {
   createCanvas(gameSize, gameSize);
-  makeGrid();
-  addNewBlock();
-  addNewBlock();
-  background(0);
-  drawGrid();
+  startScreen();
 };
+
+function mousePressed() {
+  if(start == false) {
+    start = true;
+    makeGrid();
+    addNewBlock();
+    addNewBlock();
+    background(0);
+    drawGrid();      
+  }
+}
+
+function startScreen() {
+  background('orange');
+  fill('black');
+  textSize(48);
+  textAlign(CENTER, CENTER);
+  text("CLICK ON\nTHE SCREEN\nTO START", 250, 250);
+}
 
 var makeGrid = function() {
   for(var row = 0; row < 4; row++){
@@ -135,26 +155,30 @@ var getTextFill = function(v){
 };
 
 var keyPressed = function() {
-  if(playing && (keyCode == LEFT || keyCode == RIGHT || keyCode == UP || keyCode == DOWN)){
-    if(keyCode == LEFT)
-      moveLeft();
-    if(keyCode == RIGHT)
-      moveRight();
-    if(keyCode == UP)
+  if(playing && (keyCode == LEFT_ARROW || keyCode == RIGHT_ARROW || keyCode == UP || keyCode == DOWN)){
+    if(keyCode == LEFT_ARROW) {
+      moveLEFT_ARROW();
+    }
+    if(keyCode == RIGHT_ARROW) {
+      moveRIGHT_ARROW();
+    }
+    if(keyCode == UP) {
       moveUp();
-    if(keyCode == DOWN)
+    }
+    if(keyCode == DOWN) {
       moveDown();
-    if(checkLose()){
+    }
+    if(checkLose()) {
       drawLose();
       playing = false;
     }
   }
 };
 
-var moveLeft = function(){
+var moveLEFT_ARROW = function(){
   var moves = 0;
   for(var row = 0; row < 4; row++){
-   moves += moveRowLeft(row, 0, 0);
+   moves += moveRowLEFT_ARROW(row, 0, 0);
   }
   if(moves !== 0){
     addNewBlock();
@@ -165,39 +189,39 @@ var moveLeft = function(){
   }
 };
 
-var moveRowLeft = function(r, c, m) {
+var moveRowLEFT_ARROW = function(r, c, m) {
   var block = grid[r][c];
   var blocks = [];
   for(var col = c + 1; col < 4; col++){
     blocks.push(grid[r][col]);
   }
-  var blockRight = nextBlock(blocks);
-  if(blockRight == -1)
+  var blockRIGHT_ARROW = nextBlock(blocks);
+  if(blockRIGHT_ARROW == -1)
       return m;
-  var bR = blocks[blockRight];
+  var bR = blocks[blockRIGHT_ARROW];
   if(block.value === 0){
     block.value = bR.value;
     bR.value = 0;
-    return m + moveRowLeft(r, c, m + 1);
+    return m + moveRowLEFT_ARROW(r, c, m + 1);
   }else if(block.value == bR.value){
     block.value *= 2;
     bR.value = 0;
     if(c == 2)
       return m + 1;
     else
-      return m + moveRowLeft(r, c + 1, m + 1);
+      return m + moveRowLEFT_ARROW(r, c + 1, m + 1);
   }else{
     if(c == 2)
       return m;
     else
-      return m + moveRowLeft(r, c + 1, m);
+      return m + moveRowLEFT_ARROW(r, c + 1, m);
   }
 };
 
-var moveRight = function(){
+var moveRIGHT_ARROW = function(){
   var moves = 0;
   for(var row = 0; row < 4; row++){
-    moves += moveRowRight(row, 3, 0);
+    moves += moveRowRIGHT_ARROW(row, 3, 0);
   }
   if(moves !== 0){
     addNewBlock();
@@ -208,32 +232,32 @@ var moveRight = function(){
   }
 };
 
-var moveRowRight = function(r, c, m) {
+var moveRowRIGHT_ARROW = function(r, c, m) {
   var block = grid[r][c];
   var blocks = [];
   for(var col = c - 1; col > -1; col--){
     blocks.push(grid[r][col]);
   }
-  var blockLeft = nextBlock(blocks);
-  if(blockLeft == -1)
+  var blockLEFT_ARROW = nextBlock(blocks);
+  if(blockLEFT_ARROW == -1)
       return m;
-  var bL = blocks[blockLeft];
+  var bL = blocks[blockLEFT_ARROW];
   if(block.value === 0){
     block.value = bL.value;
     bL.value = 0;
-    return m + moveRowRight(r, c, m + 1);
+    return m + moveRowRIGHT_ARROW(r, c, m + 1);
   }else if(block.value == bL.value){
     block.value *= 2;
     bL.value = 0;
     if(c == 1)
       return m + 1;
     else
-      return m + moveRowRight(r, c - 1, m + 1);
+      return m + moveRowRIGHT_ARROW(r, c - 1, m + 1);
   }else{
     if(c == 1)
       return m;
     else
-      return m + moveRowRight(r, c - 1, m);
+      return m + moveRowRIGHT_ARROW(r, c - 1, m);
   }
 };
 
@@ -331,3 +355,9 @@ var nextBlock = function(blocks) {
   }
   return -1;
 };
+
+window.addEventListener("keydown", function(e) {
+    if([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);

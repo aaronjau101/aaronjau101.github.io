@@ -30,21 +30,34 @@
     </div>
     <hr>
     <div class= "w3-row">
-      <a href="#gameCanvas">
-        <div class="w3-quarter w3-button w3-center" onclick="includeHTML()">
+      <a href="#gameTitle">
+        <div class="w3-quarter w3-button w3-center" onclick="loadFrame(0)">
           <img class="w3-image" src="../photos/2048.png">
           <h2>2048</h2>
         </div>  
       </a>
-
+      <a href="#gameTitle">
+        <div class="w3-quarter w3-button w3-center" onclick="loadFrame(1)">
+          <img class="w3-image" src="../photos/life.png">
+          <h2>Game of Life</h2>
+        </div>  
+      </a>
+      <a href="#gameTitle">
+        <div class="w3-quarter w3-button w3-center" onclick="loadFrame(2)">
+          <img class="w3-image" src="../photos/minesweeper.png">
+          <h2>Minesweeper</h2>
+        </div>  
+      </a>
+      <a href="#gameTitle">
+        <div class="w3-quarter w3-button w3-center" onclick="loadFrame(3)">
+          <img class="w3-image" src="../photos/orbital.png">
+          <h2>Orbital</h2>
+        </div>  
+      </a>
     </div>
     <hr>
-    <div class="gameCanvas"></div>
-    <h1>Game Title</h1>
-
-    <div w3-include-html="projects/2048/index.html"></div>
-      <h2>Instructions</h2>
-    <p style="margin-bottom: 500px">How to play the game.</p>
-    
+    <div id="gameTitle"></div>
+    <div id="gameFrame"></div>
+    <div id="gameInstructions" style="margin-bottom: 500px"></div>
   </body>
   </html>
