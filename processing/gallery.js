@@ -1,3 +1,10 @@
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+//When game button is pressed it loads an iframe
 function loadFrame(index) {
     let project = projects[index];
     
@@ -9,6 +16,8 @@ function loadFrame(index) {
 
     let instructionsString = "<h2>Instructions</h2><br><p>" + project.instructions + "</p>";
     document.getElementById("gameInstructions").innerHTML = instructionsString;
+
+    document.getElementById("topButton").style.display = "block";;
 }
 
 let projects = 
