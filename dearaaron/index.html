@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Dear Aaron</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body, h1,h2,h3,h4,h5,h6 {
+      font-family: "Montserrat", sans-serif
+    }
+    .myBtn {
+      position: fixed; /* Fixed/sticky position */
+      bottom: 20px; /* Place the button at the bottom of the page */
+      right: 30px; /* Place the button 30px from the right */
+      z-index: 99; /* Make sure it does not overlap */
+      border: none; /* Remove borders */
+      outline: none; /* Remove outline */
+      background-color: grey; /* Set a background color */
+      color: white; /* Text color */
+      cursor: pointer; /* Add a mouse pointer on hover */
+      padding: 15px; /* Some padding */
+      border-radius: 10px; /* Rounded corners */
+      font-size: 18px; /* Increase font size */
+    }
+  </style>
+  <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+  
+</head>
+
+<body class="w3-black"> 
+  <div class="w3-bar">
+    <a href="../index.html" class="w3-bar-item w3-button">
+      Home
+    </a>
+  </div>
+  <div class="w3-text-white w3-padding-32 w3-center">
+    <h1>Dear Aaron</h1>
+  </div>
+  <div class="w3-text-white w3-center">
+    <div class="w3-row">
+      <div class="w3-center"  style="width:50%;margin:auto;">
+        <p>Ask the mystical being, Aaron, a question of your desire and it may answer you... if it deems you worthy.</p>
+        <p>If you don't start the answer with "Dear Aaron" and end it with a question mark, then it will not answer regardless.</p>
+        <p>Begin typing when you are ready.</p>
+      </div>
+    </div>
+    <hr>
+    <h2 id="question"></h2>
+    <h2 id="response"></h2>
+    <button class="myBtn w3-button" onclick="reset()">Reset</button>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
