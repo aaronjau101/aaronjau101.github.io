@@ -1,0 +1,21 @@
+Ideas for Website:
+
+Copyright thing at bottom
+OSRS Treasure Trails simulator
+Zombie Shooter p5
+Tower Defense p5
+keyCode info helper
+selenium python portal
+blog
+comment system for blog/projects
+osrs ba tutorial
+pokemon battle website
+pokemon p5
+lunar lander p5
+hacking simulator
+ai dungeon/talker
+scrabble helper
+
+Things to fix:
+navigation for all pages (mobile resize)
+clicking platform should not scroll

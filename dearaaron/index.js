@@ -86,6 +86,32 @@ function lineSize() {
   return s;
 }
 
+function backspaced() {
+  //if answered, reset answer but only delete "?""
+  if(answered) {
+    let temp = question.slice(0, question.length - 1)
+    reset();
+    question = temp;
+  }else if(secret) {
+    question = question.slice(0, question.length - 1);
+    answer = answer.slice(0, answer.length - 1);
+    index -= 1;
+    if(index <= 1) {
+      reset();
+    }
+  } else {
+    if(lineSize() == 1) {
+      question = question.slice(0, question.length - 4);
+    }else{
+      question = question.slice(0, question.length - 1);
+    }
+    if(question == "") {
+      reset();
+    }
+  }  
+  questionInput.innerHTML = question;
+}
+
 addEvent(document, "keypress", function (e) {
     e = e || window.event;
     typing(e);
@@ -93,14 +119,8 @@ addEvent(document, "keypress", function (e) {
 
 addEvent(document, "keydown", function (e) {
     e = e || window.event;
-    if(e.keyCode == 8 && !answered) {
-      if(lineSize() == 1) {
-        question = question.slice(0, question.length - 4);
-      }else{
-        question = question.slice(0, question.length - 1);
-      }
-      
-      questionInput.innerHTML = question;
+    if(e.keyCode == 8) {
+      backspaced();  
     }
 });
 
