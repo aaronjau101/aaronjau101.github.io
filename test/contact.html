@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aaron Jauregui: Contact</title>
+    <link rel="icon" href="../photos/iconv2.png" type="image/icon type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+    	// Used to toggle the menu on smaller screens when clicking on the menu button
+		function openNav() {
+			var x = document.getElementById("navSmall");
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			} else { 
+				x.className = x.className.replace(" w3-show", "");
+			}
+		}
+    </script>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <navbar class="w3-top">
+      <div class="w3-bar w3-theme-d2">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-green w3-padding-large" 
+         href="JavaScript:void(0);" onclick="openNav()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="./index.html" class="w3-left w3-bar-item w3-button w3-hover-green w3-padding-large">
+          <img src="../photos/iconv2.png" class="w3-image w3-margin-right" style="height: 20px; width: 20px;">
+          Aaron Jauregui
+        </a>
+        <a href="./contact.html" class="w3-right w3-bar-item w3-button w3-hide-small w3-hover-green w3-padding-large">Contact</a>
+        <a href="./projects.html" class="w3-right w3-bar-item w3-button w3-hide-small w3-hover-green w3-padding-large">Projects</a>
+        <a href="./about.html" class="w3-right w3-bar-item w3-button w3-hide-small w3-hover-green w3-padding-large">About</a>
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div id="navSmall" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+        <a href="./about.html" class="w3-bar-item w3-button w3-hover-green">About</a>
+        <a href="./projects.html" class="w3-bar-item w3-button w3-hover-green">Projects</a>
+        <a href="./contact.html" class="w3-bar-item w3-button w3-hover-green">Contact</a>
+      </div>
+    </navbar>
+
+    <!-- Footer -->
+    <footer class="w3-bottom w3-right-align w3-container w3-theme-d2">
+      <i class="fa fa-copyright"></i> 
+      2019-2020 Aaron Jauregui. Much 
+      <i class="fa fa-heart"></i> 
+      to 
+      <a href="https://www.w3schools.com/" style="text-decoration: none;">W3</a>
+    </footer>
+  </body>
+</html>

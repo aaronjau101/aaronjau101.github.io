@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Aaron Jauregui: About</title>
+		<link rel="icon" href="../photos/iconv2.png" type="image/icon type">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+		<style>
+			.accordion {
+			  background-color: #eee;
+			  color: #444;
+			  cursor: pointer;
+			  padding: 18px;
+			  width: 100%;
+			  border: none;
+			  text-align: left;
+			  outline: none;
+			  font-size: 15px;
+			  transition: 0.4s;
+			}
+
+			.active, .accordion:hover {
+			  background-color: #ccc;
+			}
+
+			.accordion:after {
+			  content: '\002B';
+			  color: #777;
+			  font-weight: bold;
+			  float: right;
+			  margin-left: 5px;
+			}
+
+			.active:after {
+			  content: "\2212";
+			}
+
+			.panel {
+			  padding: 0 18px;
+			  background-color: white;
+			  max-height: 0;
+			  overflow: hidden;
+			  transition: max-height 0.2s ease-out;
+			}
+		</style>
+		<script src="about.js"></script>
+	</head>
+  	<body>
+  		
+	    <!-- Navbar -->
+	    <navbar class="w3-top">
+	      <div class="w3-bar w3-theme-d2">
+	        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-green w3-padding-large" 
+	         href="JavaScript:void(0);" onclick="openNav()">
+	          <i class="fa fa-bars"></i>
+	        </a>
+	        <a href="./index.html" class="w3-left w3-bar-item w3-button w3-hover-green w3-padding-large">
+	          <img src="../photos/iconv2.png" class="w3-image w3-margin-right" style="height: 20px; width: 20px;">
+	          Aaron Jauregui
+	        </a>
+	        <a href="./contact.html" class="w3-right w3-bar-item w3-button w3-hide-small w3-hover-green w3-padding-large">Contact</a>
+	        <a href="./projects.html" class="w3-right w3-bar-item w3-button w3-hide-small w3-hover-green w3-padding-large">Projects</a>
+	        <a href="./about.html" class="w3-right w3-bar-item w3-button w3-hide-small w3-hover-green w3-padding-large">About</a>
+	      </div>
+
+	      <!-- Navbar on small screens -->
+	      <div id="navSmall" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+	        <a href="./about.html" class="w3-bar-item w3-button w3-hover-green">About</a>
+	        <a href="./projects.html" class="w3-bar-item w3-button w3-hover-green">Projects</a>
+	        <a href="./contact.html" class="w3-bar-item w3-button w3-hover-green">Contact</a>
+	      </div>
+	    </navbar>
+	    <!-- Header -->
+	    <header class = "w3-container w3-padding-48 w3-white w3-margin-left">
+	    	<h1>About Aaron Jauregui</h1>
+	    	<p>Who is this guy?</p>
+	    </header>
+	    <hr>
+	    <!-- Main -->
+	    <main class="w3-content w3-padding-large" style="max-width:700px">
+	    	<div id="lifeStory">
+		    	<h2>Short story long, my life story:</h2>
+		    	<br>
+		    	<div class="w3-row">
+		    		<div class="w3-half">
+		    			<p class="aboutTextLeft" style="margin-top: 0px;">Well, I'd say it all starts with 6 year old me playing Mario Kart 64 in my cousin's basement. That Christmas, I begged my parents for a Gameboy Color and they complied. Little did they know, they unknowingly signed a binding contract to purchase thousands of dollars worth of video games.</p>
+		    		</div>
+		    		<div class="w3-half w3-center w3-hide-small">
+		    			<img src="../photos/N64.png" alt="Nintendo 64" class="w3-image">
+		    			<em>Nintendo 64</em>
+		    		</div>
+		    	</div>
+		    	<br>
+		    	<div class="w3-row">
+		    		<div class="w3-quarter w3-center w3-hide-small">
+		    			<img src="../photos/2147.png" alt="2147M" class="w3-image">
+		    			<em>Runescape Gold</em>
+		    		</div>
+		    		<div class="w3-threequarter">
+		    			<p class="aboutTextRight" style="margin-top: 0px;">Fast forward to middle school a.k.a. the beginning of my juvenile record. I discover Runescape with my friends. We instantly begin scamming people for their hard-earned gold. I try using programs online to edit my in-game money to no avail. To this day, I'm pretty sure my friends and I are the reason new security measures were put in place to Runescape.</p>
+		    		</div>
+		    	</div>
+		    	<br>
+		    	<div class="w3-row">
+		    		<div class="w3-twothird">
+		    			<p class="aboutTextLeft" style="margin-top: 0px;">High school begins. The amount of time I played Call of Duty or Halo is more than twice the amount of the time I spend studying. My senior year, I take a computer class where I first get my feet wet in coding. We use ActionScript to create these small Flash animations. I spend hours creating an animation, that had nothing to do with a school assignment, to create something I could laugh at with my friends for a couple minutes. This was the start of something huge...</p>
+		    		</div>
+		    		<div class="w3-third w3-center w3-hide-small">
+		    			<img src="../photos/mac.jpg" alt="Mac" class="w3-image">
+		    			<em>Mac Aaron Photoshop</em>
+		    		</div>
+		    	</div>
+		    	<br>
+		    	<div class="w3-row">
+		    		<div class="w3-third w3-center w3-hide-small">
+		    			<img src="../photos/ucsc.jpg" alt="Slugs" class="w3-image">
+		    			<em>Go Slugs!</em>
+		    		</div>
+		    		<div class="w3-twothird">
+		    			<p class="aboutTextRight" style="margin-top: 0px;">UC Santa Cruz, the punch of reality into my fragile face. My first few months, I learned Javascript using the Processing library to make some cute drawings and games. UCSC: "Oh, so you like coding do you? Here's C and Java". Cue the countless hours of me looking at broken code with nothing but existential questions in my head. I survived my way past the programming fundamentals and made it to the motherland. Unity and Unreal! I graduate with a Bachelors of Science in Computer Science: Game Design.</p>
+		    		</div>
+		    	</div>
+		    	<br>
+		    	<div class="w3-row">
+		    		<div class="w3-twothird">
+		    			<p class="aboutTextLeft" style="margin-top: 0px;">Present Day. I am a Coding Instructor teaching my future competition. I spend my free time creating computer games using Unity and Javascript. I regained my love for Runescape (this time for moral reasons) and also dabble with a variety of Steam games. My dream job is to get a steady pay creating video games in my pajamas. My hope is that my career will one day inspire a kid playing my game in his cousin's basement to follow in my footsteps.</p>
+		    		</div>
+		    		<div class="w3-third w3-center w3-hide-small">
+		    			<img src="../photos/mvcode.png" alt="mvcode" class="w3-image">
+		    			<em>MV Code School</em>
+		    		</div>
+		    	</div>
+		    </div>
+	    	<hr>
+	    	<div id="faq">
+	    		<h2>Frequently Asked Questions</h2>
+	    		<br>
+	    		<button class="accordion">How do you pronounce your last name?</button>
+				<div class="panel">
+				  <p>I've been seen all the butcherings of my last name so I honestly don't take offsense anymore.</p>
+				  <p>It's not technically correct but the easiest pronounciation is <em>How-Ray-Gi</em></p>
+				</div>
+				<br>
+				<button class="accordion">What are your favorite video games?</button>
+				<div class="panel">
+				  <p>I've gone through so many game transitions in my life that many genres have a special place in my heart</p>
+				  <p>Currently, my favorite games are Civilization V, Rust, Old School Runescape, Fifa, and Call of Duty Zombies</p>
+				</div>
+	    	</div>
+	    	<hr>
+	    </main>
+	    <!-- Footer -->
+	    <footer class="w3-bottom w3-right-align w3-container w3-theme-d2">
+	      <i class="fa fa-copyright"></i> 
+	      2019-2020 Aaron Jauregui. Much 
+	      <i class="fa fa-heart"></i> 
+	      to 
+	      <a href="https://www.w3schools.com/" style="text-decoration: none;">W3</a>
+	    </footer>
+  	</body>
+</html>

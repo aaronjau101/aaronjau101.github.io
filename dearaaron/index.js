@@ -1,5 +1,6 @@
 var questionInput = document.getElementById("question");
 var answerInput = document.getElementById("response");
+var resetButton = document.getElementById("myBtn");
 var question = "";
 var answer = "You are not worthy";
 var prompt = "Dear Aaron";
@@ -20,6 +21,7 @@ function reset() {
     secret = false;
     answered = false;
     questionInput.innerHTML = question;
+    resetButton.active = false;
 }
 
 function typing(e){
