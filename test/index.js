@@ -45,7 +45,7 @@ class Ball {
 		this.x = mouseX;
 		this.y = mouseY;
 		this.size = random(5, 15);
-		this.tint = random(-50, 50);
+		this.opacity = 100;
 		this.xv = random (-5, 5);
 		this.yv = random(-5, -1);
 		this.gravity = random(0.001, 0.1);
@@ -57,7 +57,8 @@ class Ball {
 	}
 
 	draw() {
-		fill(0, 150 + this.tint, 0, 50);
+		noStroke();
+		fill(23, 54, 25, this.opacity);
 		ellipse(this.x, this.y, this.size, this.size);
 	}
 
@@ -65,6 +66,7 @@ class Ball {
 		this.yv += this.gravity;
 		this.y += this.yv;
 		this.x += this.xv;
+		this.opacity -= 0.5;
 	}
 
 	onScreen() {
