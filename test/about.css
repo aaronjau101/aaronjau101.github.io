@@ -1,7 +1,7 @@
+/* FAQ accordion style/transition */
 .accordion {
-  background-color: #eee;
-  color: #444;
   cursor: pointer;
+  color: white;
   padding: 18px;
   width: 100%;
   border: none;
@@ -9,10 +9,6 @@
   outline: none;
   font-size: 15px;
   transition: 0.4s;
-}
-
-.active, .accordion:hover {
-  background-color: #ccc;
 }
 
 .accordion:after {
@@ -35,22 +31,18 @@
   transition: max-height 0.2s ease-out;
 }
 
-/* Style the buttons */
+/* Short and Long Story buttons */
 .sb {
   background-color: white;
   cursor: pointer;
 }
 
-/* Style the active class (and buttons on mouse-over) */
 .sbActive, .sb:hover {
-  background-color: green;
+  background-color:#3d8b40;
   color: white;
 }
 
+/* No underline for icons */
 .nodecoration {
 	text-decoration: none;
-}
-
-.footerIcon {
-	margin-right: 10px;
 }

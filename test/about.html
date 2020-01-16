@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Aaron Jauregui | About</title>
-	<link rel="icon" href="../photos/iconv2.png" type="image/icon type">
+	<link rel="icon" href="../photos/star_small.png" type="image/icon type">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,67 +12,63 @@
 	<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
 </head>
 <body>
-<!-- Navbar -->
-<navbar class="w3-top">
-		<div class="w3-bar w3-theme-d2">
-			<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-green w3-padding-large" 
-			href="JavaScript:void(0);" onclick="openNav()">
-			<i class="fa fa-bars"></i>
+	<!-- Navbar -->
+	<navbar class="w3-top w3-theme-d2">
+		<!-- Navbar on bigger screens -->
+		<div class="w3-bar">
+		  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-green w3-padding-large" 
+		  href="JavaScript:void(0);" onclick="openNav()">
+		    <i class="fa fa-bars"></i>
+		  </a>
+		  <a href="./index.html" class="w3-left w3-bar-item w3-button w3-hover-green w3-padding-large">
+		  Aaron Jauregui</a>
+		  <a href="./about.html" class="w3-right w3-bar-item w3-button w3-hide-small w3-hover-green w3-padding-large">About</a>
+		  <a href="./projects.html" class="w3-right w3-bar-item w3-button w3-hide-small w3-hover-green w3-padding-large">Projects</a>
+		</div>
+		<!-- Navbar on small screens -->
+		<div id="navSmall" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+		  <a href="./projects.html" class="w3-bar-item w3-button w3-hover-green">Projects</a>
+		  <a href="./about.html" class="w3-bar-item w3-button w3-hover-green">About</a>
+		</div>
+	</navbar>
+	<!-- Header -->
+	<header class = "w3-container w3-padding-48 w3-white w3-margin-left">
+		<h1>Aaron Jauregui | About</h1>
+		<a href="https://github.com/aaronjau101" title="GitHub"target="_blank" class="nodecoration w3-button w3-padding-large">
+			<i class="fa fa-github fa-4x" style="color:#3d8b40;"></i>
 		</a>
-		<a href="./index.html" class="w3-left w3-bar-item w3-button w3-hover-green w3-padding-large">
-			<img src="../photos/iconv2.png" class="w3-image w3-margin-right" style="height: 20px; width: 20px;">
-			Aaron Jauregui
+		<a href="https://www.linkedin.com/in/aaronjauregui/" title="LinkedIn" target="_blank" class="nodecoration w3-button w3-padding-large">
+			<i class="fa fa-linkedin fa-4x" style="color:#3d8b40;"></i>
 		</a>
-		<a href="./contact.html" class="w3-right w3-bar-item w3-button w3-hide-small w3-hover-green w3-padding-large">Contact</a>
-		<a href="./projects.html" class="w3-right w3-bar-item w3-button w3-hide-small w3-hover-green w3-padding-large">Projects</a>
-		<a href="./about.html" class="w3-right w3-bar-item w3-button w3-hide-small w3-hover-green w3-padding-large">About</a>
-	</div>
-
-	<!-- Navbar on small screens -->
-	<div id="navSmall" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-		<a href="./about.html" class="w3-bar-item w3-button w3-hover-green">About</a>
-		<a href="./projects.html" class="w3-bar-item w3-button w3-hover-green">Projects</a>
-		<a href="./contact.html" class="w3-bar-item w3-button w3-hover-green">Contact</a>
-	</div>
-</navbar>
-<!-- Header -->
-<header class = "w3-container w3-padding-48 w3-white w3-margin-left">
-	<h1>Aaron Jauregui | About</h1>
-	<a href="https://github.com/aaronjau101" title="GitHub"target="_blank" class="nodecoration w3-button">
-		<i class="fa fa-github fa-4x"></i>
-	</a>
-	<a href="https://www.linkedin.com/in/aaronjauregui/" title="LinkedIn" target="_blank" class="nodecoration w3-button">
-		<i class="fa fa-linkedin fa-4x"></i>
-	</a>
-	<a href="../aaronJaureguiResume.pdf" title="Resume" target="_blank" class="nodecoration w3-button">
-		<i class="fa fa-file fa-4x"></i>
-	</a>
-</header>
-<hr>
-<!-- Main -->
-<main class="w3-content w3-padding-large" style="max-width:700px">
-	<div id="faq">
-		<h2>Frequently Asked Questions</h2>
-		<br>
-		<button class="accordion w3-theme">How do you pronounce your last name?</button>
-		<div class="panel">
-			<p>I've seen all the butcherings of my last name so I honestly don't take offsense anymore.</p>
-			<p>It's not technically correct, but the easiest pronounciation is <em>How-Ray-Gi</em></p>
-			<p>If you want to get fancy, then listen to the audio below:</p>	
-			<audio controls>
-				<source src="jauregui.mp3" type="audio/mpeg">
+		<a href="../aaronJaureguiResume.pdf" title="Resume" target="_blank" class="nodecoration w3-button w3-padding-large">
+			<i class="fa fa-file fa-4x" style="color:#3d8b40;"></i>
+		</a>
+	</header>
+	<hr>
+	<!-- Main -->
+	<main class="w3-content w3-padding-large" style="max-width:700px">
+		<div id="faq">
+			<h2>Frequently Asked Questions</h2>
+			<br>
+			<button class="accordion w3-theme-d2">How do you pronounce your last name?</button>
+			<div class="panel">
+				<p>I've seen all the butcherings of my last name so I honestly don't take offsense anymore.</p>
+				<p>It's not technically correct, but the easiest pronounciation is <em>How-Ray-Gi</em></p>
+				<p>If you want to get fancy, then listen to the audio below:</p>	
+				<audio controls>
+					<source src="jauregui.mp3" type="audio/mpeg">
 					Your browser does not support the audio element.
 				</audio>			
 			</div>
 			<br>
-			<button class="accordion w3-theme">What are your favorite games?</button>
+			<button class="accordion w3-theme-d2">What are your favorite games?</button>
 			<div class="panel">
 				<p>I've gone through so many video game transitions in my life that many genres have a special place in my heart.</p>
 				<p>Currently, my favorite video games are Civilization V, Rust, Old School Runescape, FIFA, and Call of Duty Zombies.</p>
 				<p>If we're talking about favorite board games then it's Settlers of Catan hands down.</p>
 			</div>
 			<br>
-			<button class="accordion w3-theme">Where do you see yourself in five years?</button>
+			<button class="accordion w3-theme-d2">Where do you see yourself in five years?</button>
 			<div class="panel">
 				<p>I can see myself working as a game programmer for a small indie gaming company.</p>
 				<p>I can also see myself starting a very small gaming company.</p>
@@ -83,8 +79,8 @@
 		<hr>
 		<div class="w3-row" id="storyButtons">
 			<h2>My Life Story</h2>
-			<span class="w3-half w3-button sb sbActive" onclick="openStory('short')">Short</span>
-			<span class="w3-half w3-button sb" onclick="openStory('long')">Long</span>
+			<span class="w3-half w3-button w3-hover-green sb sbActive" onclick="openStory('short')">Short</span>
+			<span class="w3-half w3-button w3-hover-green sb" onclick="openStory('long')">Long</span>
 		</div>
 		<hr>
 		<div id="lifeStory" class="w3-hide">
@@ -147,10 +143,9 @@
 			</p>
 			<hr>
 		</div>
-
 		<div class="w3-center">
 			<a href="./projects.html">
-				<button class="w3-theme w3-button w3-center">
+				<button class="w3-theme-d2 w3-button w3-center">
 					Go To Projects
 				</button>
 			</a>
@@ -158,12 +153,14 @@
 		<hr>
 	</main>
 	<!-- Footer -->
-	<footer class="w3-bottom w3-right-align w3-container w3-theme-d2">
-		<i class="fa fa-copyright"></i> 
-		2019-2020 Aaron Jauregui. Much 
-		<i class="fa fa-heart"></i> 
-		to 
-		<a href="https://www.w3schools.com/" style="text-decoration: none;">W3</a>
+	<footer class="w3-bottom w3-container w3-theme-d2">
+		<div class="w3-left">
+		  <i class="fa fa-copyright"></i> 
+		  2020 Aaron Jauregui. Much 
+		  <i class="fa fa-heart"></i> 
+		  to 
+		  <a href="https://www.w3schools.com/" title="W3 Schools" style="text-decoration: none;">W3</a>
+		</div>
 	</footer>
 </body>
 <script src="about.js"></script>
