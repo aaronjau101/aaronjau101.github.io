@@ -8,17 +8,8 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script>
-  	// Used to toggle the menu on smaller screens when clicking on the menu button
-	function openNav() {
-		var x = document.getElementById("navSmall");
-		if (x.className.indexOf("w3-show") == -1) {
-			x.className += " w3-show";
-		} else { 
-			x.className = x.className.replace(" w3-show", "");
-		}
-	}
-  </script>
+  <link rel="stylesheet" type="text/css" href="project.css">
+  <script src="project.js"></script>
 </head>
 <body>
   <!-- Navbar -->
@@ -44,76 +35,191 @@
   <!-- Header -->
   <header class = "w3-container w3-padding-48 w3-white w3-margin-left">
     <h1>Aaron Jauregui | Projects</h1>
-    <span class="w3-button w3-hover-green w3-border w3-margin-top">See All</span>
-    <span class="w3-button w3-hover-green w3-border w3-margin-top">Tags</span>
-    <div id="tags">
+    <span onclick="hideTags()" class="w3-button w3-hover-green w3-border w3-margin-top">See All</span>
+    <span onclick="toggle('tags')" class="w3-button w3-hover-green w3-border w3-margin-top">Tags</span>
+    <div id="tags" class="w3-hide">
       <hr>
-      <span class="w3-theme-d2 w3-border w3-tag w3-padding-small w3-margin-bottom">Javascript</span>
-      <span class="w3-theme-d2 w3-border w3-tag w3-padding-small w3-margin-bottom">Games<span class="w3-margin-left w3-badge w3-white">6</span></span>
-      <span class="w3-theme-d2 w3-border w3-tag w3-padding-small w3-margin-bottom">Unity</span>
-      <span class="w3-theme-d2 w3-border w3-tag w3-padding-small w3-margin-bottom">Unreal</span>
-      <span class="w3-theme-d2 w3-border w3-tag w3-padding-small w3-margin-bottom">C++</span>
-      <span class="w3-theme-d2 w3-border w3-tag w3-padding-small w3-margin-bottom">C#</span>
+      <span onclick="openTaggedProjects('Games')" class="w3-theme-d2 w3-border w3-tag w3-padding-small w3-margin-bottom">
+        Games
+        <span class="w3-badge w3-white">
+          6
+        </span>
+      </span>
+      <span onclick="openTaggedProjects('Javascript')" class="w3-theme-d2 w3-border w3-tag w3-padding-small w3-margin-bottom">
+        Javascript
+        <span class="w3-badge w3-white">
+          4
+        </span>
+      </span>
+      <span onclick="openTaggedProjects('Unity')" class="w3-theme-d2 w3-border w3-tag w3-padding-small w3-margin-bottom">
+        Unity
+        <span class="w3-badge w3-white">
+          3
+        </span>
+      </span>
+      <span onclick="openTaggedProjects('C#')" class="w3-theme-d2 w3-border w3-tag w3-padding-small w3-margin-bottom">
+        C#
+        <span class="w3-badge w3-white">
+          3
+        </span>
+      </span>
+      <span onclick="openTaggedProjects('Unreal')" class="w3-theme-d2 w3-border w3-tag w3-padding-small w3-margin-bottom">
+        Unreal
+        <span class="w3-badge w3-white">
+          1
+        </span>
+      </span>
+      <span onclick="openTaggedProjects('Python')" class="w3-theme-d2 w3-border w3-tag w3-padding-small w3-margin-bottom">
+        Python
+        <span class="w3-badge w3-white">
+          1
+        </span>
+      </span>
+      <span onclick="openTaggedProjects('C++')" class="w3-theme-d2 w3-border w3-tag w3-padding-small w3-margin-bottom">
+        C++
+        <span class="w3-badge w3-white">
+          1
+        </span>
+      </span>
+      <span onclick="openTaggedProjects('Tools')" class="w3-theme-d2 w3-border w3-tag w3-padding-small w3-margin-bottom">
+        Tools
+        <span class="w3-badge w3-white">
+          1
+        </span>
+      </span>
     </div>
   </header>
   <hr>
 
   <!-- Main -->
   <main class="w3-content w3-padding-large" style="max-width:700px">
-    <div class="project">
+    <div class="w3-margin w3-hide" id="currentTag">
+      <span class="w3-jumbo" id="currentTagText">Current Tag</span>
+      <hr>
+    </div>
+    <div class="project w3-hide w3-show" data-tags="Unreal C++ Games">
       <div class="w3-row">
         <image src="../photos/tde300.png" class="w3-image w3-quarter w3-hide-small"></image>
         <div class="w3-threequarter">
           <div class="w3-margin-left">
             <h2>The Devil's Eight</h2>
-            <span class="w3-theme-d2 w3-border w3-padding-small">Unreal</span>
-            <span class="w3-theme-d2 w3-border w3-padding-small">C++</span>
-            <span class="w3-theme-d2 w3-border w3-padding-small">Games</span>
+            <span onclick="openTaggedProjects('Unreal')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Unreal</span>
+            <span onclick="openTaggedProjects('C++')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">C++</span>
+            <span onclick="openTaggedProjects('Games')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Games</span>
             <p>Based off Dante's Inferno, TD8 is an award-winning, fast-paced platformer where the player must battle its way through the circles of hell.</p>
           </div>
         </div>
       </div>  
       <hr>
     </div>
-    <div class="project">
+    <div class="project w3-hide w3-show" data-tags="Unity C# Games">
       <div class="w3-row">
         <image src="../photos/srb300.png" class="w3-image w3-quarter w3-hide-small"></image>
         <div class="w3-threequarter">
           <div class="w3-margin-left">
             <h2>Super Rolla Ball</h2>
-            <span class="w3-theme-d2 w3-border w3-padding-small">Unity</span>
-            <span class="w3-theme-d2 w3-border w3-padding-small">C#</span>
-            <span class="w3-theme-d2 w3-border w3-padding-small">Games</span>
+            <span onclick="openTaggedProjects('Unity')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Unity</span>
+            <span onclick="openTaggedProjects('C#')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">C#</span>
+            <span onclick="openTaggedProjects('Games')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Games</span>
             <p>Based off Super Monkey Ball, SRB is a fun-packed game where the player must roll its way to the finish line.</p>
           </div>
         </div>
       </div>  
       <hr>
     </div>
-
-    <div class="project">
+    <div class="project w3-hide w3-show" data-tags="Javascript Games">
       <div class="w3-row">
         <image src="../photos/epr300.png" class="w3-image w3-quarter w3-hide-small"></image>
         <div class="w3-threequarter">
           <div class="w3-margin-left">
             <h2>Elastic Polymer Rampage</h2>
-            <span class="w3-theme-d2 w3-border w3-padding-small">Javascript</span>
-            <span class="w3-theme-d2 w3-border w3-padding-small">Games</span>
+            <span onclick="openTaggedProjects('Javascript')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Javascript</span>
+            <span onclick="openTaggedProjects('Games')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Games</span>
             <p>Based off the movie Rubber, EPR is a sidescrolling shooter where the player is a tire going on a killing rampage</p>
           </div>
         </div>
       </div>  
       <hr>
     </div>
-    <div class="project">
+    <div class="project w3-hide w3-show" data-tags="Javascript Games">
       <div class="w3-row">
         <image src="../photos/p5js.png" class="w3-image w3-quarter w3-hide-small"></image>
         <div class="w3-threequarter">
           <div class="w3-margin-left">
             <h2>p5.js Games</h2>
-            <span class="w3-theme-d2 w3-border w3-padding-small">Javascript</span>
-            <span class="w3-theme-d2 w3-border w3-padding-small">Games</span>
+            <span onclick="openTaggedProjects('Javascript')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Javascript</span>
+            <span onclick="openTaggedProjects('Games')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Games</span>
             <p>p5.js is a JavaScript library that I used to create many games such as Minesweeper, 2048, etc.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="project w3-hide w3-show" data-tags="Unity C# Games">
+      <div class="w3-row">
+        <image src="../photos/rubix300.png" class="w3-image w3-quarter w3-hide-small"></image>
+        <div class="w3-threequarter">
+          <div class="w3-margin-left">
+            <h2>Rubix</h2>
+            <span onclick="openTaggedProjects('Unity')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Unity</span>
+            <span onclick="openTaggedProjects('C#')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">C#</span>
+            <span onclick="openTaggedProjects('Games')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Games</span>
+            <p>Rubix is a my take on a Rubik's cube simulator.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="project w3-hide w3-show" data-tags="Unity C# Games">
+      <div class="w3-row">
+        <image src="../photos/betiled300.png" class="w3-image w3-quarter w3-hide-small"></image>
+        <div class="w3-threequarter">
+          <div class="w3-margin-left">
+            <h2>Betiled</h2>
+            <span onclick="openTaggedProjects('Unity')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Unity</span>
+            <span onclick="openTaggedProjects('C#')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">C#</span>
+            <span onclick="openTaggedProjects('Games')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Games</span>
+            <p>Betiled is a puzzle game where the player has to line up matching colored tiles.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="project w3-hide w3-show" data-tags="Javascript Tools">
+      <div class="w3-row">
+        <image src="../photos/osrs300.png" class="w3-image w3-quarter w3-hide-small"></image>
+        <div class="w3-threequarter">
+          <div class="w3-margin-left">
+            <h2>OSRS Tools</h2>
+            <span onclick="openTaggedProjects('Javascript')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Javascript</span>
+            <span onclick="openTaggedProjects('Tools')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Tools</span>
+            <p>Some quality of life tools I made for playing Old School Runescape.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="project w3-hide w3-show" data-tags="Python">
+      <div class="w3-row">
+        <image src="../photos/euler300.png" class="w3-image w3-quarter w3-hide-small"></image>
+        <div class="w3-threequarter">
+          <div class="w3-margin-left">
+            <h2>Euler Project</h2>
+            <span onclick="openTaggedProjects('Python')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Python</span>
+            <p>Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="project w3-hide w3-show" data-tags="Javascript">
+      <div class="w3-row">
+        <image src="../photos/dearaaron300.png" class="w3-image w3-quarter w3-hide-small"></image>
+        <div class="w3-threequarter">
+          <div class="w3-margin-left">
+            <h2>Dear Aaron</h2>
+            <span onclick="openTaggedProjects('Javascript')" class="w3-theme-d2 w3-border w3-padding-small w3-tag">Javascript</span>
+            <p>Ask the mystical being named Aaron a question and it may respond if it deems you worthy...</p>
           </div>
         </div>
       </div>
