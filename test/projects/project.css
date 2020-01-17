@@ -1,0 +1,13 @@
+.w3-tag {
+	cursor: pointer;
+}
+
+/* Short and Long Story buttons */
+.tag {
+  background-color: white;
+}
+
+.tagActive, .tag:hover {
+  background-color:#3d8b40;
+  color: white;
+}
