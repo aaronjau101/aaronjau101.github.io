@@ -1,13 +1,32 @@
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-	var x = document.getElementById("navSmall");
-	if (x.className.indexOf("w3-show") == -1) {
-		x.className += " w3-show";
-	} else { 
-		x.className = x.className.replace(" w3-show", "");
-	}
+//Hide an element
+function hideElement(element) {
+    if (element.className.indexOf("w3-show") != -1) {
+        element.className = element.className.replace(" w3-show", "");
+    }
 }
 
+//Show an element
+function showElement(element) {
+    if (element.className.indexOf("w3-show") == -1) {
+        element.className += " w3-show";
+    }
+}
+
+//Highlight a game
+function highlight(gameID) {
+	hideElement(document.getElementById("header"))
+	showElement(document.getElementById("projects"));
+	showElement(document.getElementById(gameID));
+}
+
+//Unighlight all games
+function unhighlight() {
+	hideElement(document.getElementById("tde"))
+	hideElement(document.getElementById("projects"));
+	showElement(document.getElementById("header"));
+}
+
+//Easter Egg p5js canvas running in background
 var balls = [];
 var w, h;
 var mouseDown = false;

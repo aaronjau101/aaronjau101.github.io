@@ -1,8 +1,3 @@
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-	toggle("navSmall");
-}
-
 //Open accordion panels when aaccordion clicked
 var acc = document.getElementsByClassName("accordion");
 console.log(acc.length)
@@ -18,17 +13,6 @@ for (var i = 0; i < acc.length; i++) {
   });
 }
 
-
-// Toggle an element to show or hide
-function toggle(id) {
-    let element = document.getElementById(id);
-    if (element.className.indexOf("w3-show") == -1) {
-        element.className += " w3-show";
-    } else { 
-        element.className = element.className.replace(" w3-show", "");
-    }
-}
-
 // Hide an element
 function hide(id) {
     let element = document.getElementById(id);
@@ -36,7 +20,6 @@ function hide(id) {
         element.className = element.className.replace(" w3-show", "");
     }
 }
-
 
 // Open the correct story
 function openStory(length) {

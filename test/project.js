@@ -1,18 +1,4 @@
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-	toggle("navSmall");
-}
-
-// Toggle an element to show or hide
-function toggle(id) {
-    let element = document.getElementById(id);
-    if (element.className.indexOf("w3-show") == -1) {
-        element.className += " w3-show";
-    } else { 
-        element.className = element.className.replace(" w3-show", "");
-    }
-}
-
+//Hide an element
 function hideElement(element) {
     if (element.className.indexOf("w3-show") != -1) {
         element.className = element.className.replace(" w3-show", "");
@@ -26,15 +12,16 @@ function showElement(element) {
     }
 }
 
+//Hide the tags for projects
 function hideTags() {
     hideElement(document.getElementById("tags"));
-    hideElement(document.getElementById("currentTag"));
     let elements = document.getElementsByClassName("project");
     for(var elem of elements) {
         showElement(elem);
     }
 }
 
+//Display all projects with a certain tag
 function openTaggedProjects(tag) {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -46,7 +33,4 @@ function openTaggedProjects(tag) {
         else
             hideElement(elem);
     }
-    let currentTagText = document.getElementById("currentTagText");
-    currentTagText.innerHTML = tag;
-    showElement(document.getElementById("currentTag"));
 }
