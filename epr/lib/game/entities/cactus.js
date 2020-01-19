@@ -24,7 +24,7 @@ EntityCactus = ig.Entity.extend({
 	flip: false,
 	
 	animSheet: new ig.AnimationSheet( 'media/sprites/cactus_small.png', 64, 128 ),
-	sfxDie: new ig.Sound( 'media/sounds/blob-die.*' ),
+	//sfxDie: new ig.Sound( 'media/sounds/blob-die.*' ),
 	
 	
 	init: function( x, y, settings ) {
@@ -43,7 +43,7 @@ EntityCactus = ig.Entity.extend({
 			ig.game.player.gainRage(5);
 			}
 			
-		this.sfxDie.play();
+		//this.sfxDie.play();
 		this.parent();
 		
 	},

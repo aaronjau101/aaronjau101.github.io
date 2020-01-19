@@ -86,18 +86,8 @@ ig.module(
 		ragePromptMessage: "PRESS 'R' TO ENTER RAGE MODE",
 		ragePromt: false,
 		
-		musicOn: true,
 
 		init : function() {
-			ig.music.loop = true;
-			
-			ig.music.add('media/sounds/doft.ogg', 'bok');
-			ig.music.volume = 0;
-
-			if(this.musicOn == true){
-				ig.music.play('bok');
-			}
-
 			ig.input.bind(ig.KEY.LEFT_ARROW, 'left');
 			ig.input.bind(ig.KEY.RIGHT_ARROW, 'right');
 
@@ -398,7 +388,6 @@ ig.module(
 
 				if (ig.input.pressed('exitlevel')) {
 					this.paused = false;
-					ig.music.stop();
 					ig.system.setGame(MyTitle);
 				}
 			}
@@ -535,7 +524,7 @@ ig.module(
 		//clearColor: "#d0f4f7",
 		//gravity: 1000,
 		clearColor : "#000000",
-		themes : new ig.Sound('media/sounds/theme.ogg'),
+
 
 		// The title image
 		title : new ig.Image('media/sprites/mainlogo.png'),
@@ -549,22 +538,10 @@ ig.module(
 			borderSize : 2
 		}),
 		
-		musicOn: true,
         
         
 		init : function() {
-			// Bind keys
-			//this.sfxTheme.play();
 
-			ig.music.loop = true;
-			ig.music.add(this.themes, 'theme');
-			//ig.music.add( 'media/gang.ogg', 'theme' );
-			ig.music.volume = 0;
-			//ig.music.stop();
-			if(this.musicOn == true){
-				ig.music.play('theme');
-			}
-			//this.themes.play();
 			
 		
 			/*
@@ -608,22 +585,18 @@ ig.module(
 			// Check for buttons; start the game if pressed
 			
 			if (ig.input.pressed('select')) {
-				ig.music.stop('theme');
 				ig.system.setGame(MyGame);
 				return;
 			}
 			if (ig.input.pressed('how')) {
-				ig.music.stop('theme');
 				ig.system.setGame(HowToPlay);
 				return;
 			}
 			if (ig.input.pressed('quit')) {
-				ig.music.stop('theme');
 				ig.system.setGame(MyGame);
 				return;
 			}
 			if (ig.input.pressed('credits')) {
-				ig.music.stop('theme');
 				ig.system.setGame(Credits);
 				return;
 			}
@@ -678,7 +651,7 @@ ig.module(
 
 	Credits = ig.Game.extend({
 		clearColor : "#000000",
-		themes : new ig.Sound('media/sounds/theme.ogg'),
+
 
 		// Credit Listings:
 		congrats : "CONGRATULATIONS!",
@@ -700,10 +673,6 @@ ig.module(
 		artSource3 : "www.opengameart.com",
 		artSource4 : "www.wikipedia.org",
 
-		soundHeader : "Featuring Sound From",
-		soundSource1 : "www.soundcloud.com/dualtrax",
-		soundSource2 : "commons.wikimedia.org",
-
 		specialThanks : "Special Thanks to our TA's and testers",
 
 		closer1 : "This game was made as a part of CMPS 20: Game Design Experience",
@@ -721,15 +690,8 @@ ig.module(
 			borderSize : 2
 		}),
 		
-		musicOn: true,
 
 		init : function() {
-			ig.music.loop = true;
-			ig.music.add(this.themes, 'theme');
-			ig.music.volume = 0;
-			if(this.musicOn == true){
-				ig.music.play('theme');
-			}
 
 			ig.input.bind(ig.KEY.ESC, 'exit');
 			ig.input.bind(ig.KEY.Q, 'quit');
@@ -740,12 +702,10 @@ ig.module(
 		update : function() {
 			// Check for buttons
 			if (ig.input.pressed('exit')) {
-				ig.music.stop('theme');
 				ig.system.setGame(MyTitle);
 				return;
 			}
 			if (ig.input.pressed('quit')) {
-				ig.music.stop('theme');
 				ig.system.setGame(MyTitle);
 				return;
 			}
@@ -777,10 +737,6 @@ ig.module(
 			this.font.draw(this.artSource2, ig.system.width/2, this.startY + this.yBuffer*13, ig.Font.ALIGN.CENTER);
 			this.font.draw(this.artSource3, ig.system.width/2, this.startY + this.yBuffer*14, ig.Font.ALIGN.CENTER);
 			this.font.draw(this.artSource4, ig.system.width/2, this.startY + this.yBuffer*15, ig.Font.ALIGN.CENTER);
-
-			this.font.draw(this.soundHeader, ig.system.width/2, this.startY + this.yBuffer*17, ig.Font.ALIGN.CENTER);
-			this.font.draw(this.soundSource1, ig.system.width/2, this.startY + this.yBuffer*18, ig.Font.ALIGN.CENTER);
-			this.font.draw(this.soundSource2, ig.system.width/2, this.startY + this.yBuffer*19, ig.Font.ALIGN.CENTER);
 
 			this.font.draw(this.specialThanks, ig.system.width/2, this.startY + this.yBuffer*34, ig.Font.ALIGN.CENTER);
 

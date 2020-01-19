@@ -19,7 +19,7 @@ EntityGuardtower = ig.Entity.extend({
 	speed: 0,
 	flip: true,
 	animSheet: new ig.AnimationSheet( 'media/sprites/guardtowers.png', 64, 256 ),
-	sfxDie: new ig.Sound( 'media/sounds/blob-die.*' ),
+	//sfxDie: new ig.Sound( 'media/sounds/blob-die.*' ),
 	playerRef: null,
 	
 	

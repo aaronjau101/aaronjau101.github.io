@@ -14,7 +14,7 @@ EntityCoin = ig.Entity.extend({
 	collides: ig.Entity.COLLIDES.NEVER,
 	
 	animSheet: new ig.AnimationSheet( 'media/sprites/energy2.png', 36, 36 ),
-	sfxCollect: new ig.Sound( 'media/sounds/coin.*' ),
+	//sfxCollect: new ig.Sound( 'media/sounds/coin.*' ),
 	
 	
 	init: function( x, y, settings ) {
@@ -41,7 +41,7 @@ EntityCoin = ig.Entity.extend({
 			if (other.energy < other.maxEnergy) {
 				other.giveCoins(1);
 				other.gainCoinEnergy(15);
-				this.sfxCollect.play();
+				//this.sfxCollect.play();
 				this.kill();
 			}
 		}

@@ -24,7 +24,7 @@ EntitySpear = ig.Entity.extend({
 	collides: ig.Entity.COLLIDES.PASSIVE,
 		
 	animSheet: new ig.AnimationSheet( 'media/sprites/spear64x16.png', 64, 16 ),
-	sfxSpawn: new ig.Sound( 'media/sounds/fireball.*' ),
+	//sfxSpawn: new ig.Sound( 'media/sounds/fireball.*' ),
 
 	blobRef: null,
 	
@@ -44,7 +44,7 @@ EntitySpear = ig.Entity.extend({
 			this.currentAnim.angle = 0;
 		}
 		this.blobRef = settings.blobRef;
-		this.sfxSpawn.play();
+		//this.sfxSpawn.play();
 		
 	},
 	
@@ -56,7 +56,7 @@ EntitySpear = ig.Entity.extend({
 		this.vel.x = (settings.flip ? -this.maxVel.x : this.maxVel.x);
 		this.vel.y = 0;
 		
-		this.sfxSpawn.play();
+		//this.sfxSpawn.play();
 		
 		// Remember, this a used entity, so we have to reset our bounceCounter
 		// as well

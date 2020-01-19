@@ -24,7 +24,7 @@ EntityBolt = ig.Entity.extend({
 	collides: ig.Entity.COLLIDES.PASSIVE,
 		
 	animSheet: new ig.AnimationSheet( 'media/sprites/bolt.png', 64, 64 ),
-	sfxSpawn: new ig.Sound( 'media/sounds/fireball.*' ),
+	//sfxSpawn: new ig.Sound( 'media/sounds/fireball.*' ),
 
 	playerRef: null,
 	relativexdist: 0,
@@ -47,7 +47,7 @@ EntityBolt = ig.Entity.extend({
 		}
 		
 		
-		this.sfxSpawn.play();
+		//this.sfxSpawn.play();
 		this.initplayerx = this.playerRef.pos.x;
 		
 	},
@@ -62,7 +62,7 @@ EntityBolt = ig.Entity.extend({
 		this.vel.x = (settings.flip ? -this.maxVel.x : this.maxVel.x);
 		this.vel.y = 0;
 		this.playerRef = settings.playerRef;
-		this.sfxSpawn.play();
+		//this.sfxSpawn.play();
 		
 		// Remember, this a used entity, so we have to reset our bounceCounter
 		// as well

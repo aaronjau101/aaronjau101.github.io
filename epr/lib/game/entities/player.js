@@ -27,8 +27,8 @@ EntityPlayer = ig.Entity.extend({
 	
 	//animSheet: new ig.AnimationSheet( 'media/sprites/placeholder_tire_64.png', 64, 64),	
 	animSheet: new ig.AnimationSheet( 'media/sprites/tires.png', 64, 64),	
-	sfxHurt: new ig.Sound( 'media/sounds/hurt.mp3' ),
-	sfxJump: new ig.Sound( 'media/sounds/jump.mp3' ),
+	//sfxHurt: new ig.Sound( 'media/sounds/hurt.mp3' ),
+	//sfxJump: new ig.Sound( 'media/sounds/jump.mp3' ),
 	
 	
 	health: 5,
@@ -116,13 +116,13 @@ EntityPlayer = ig.Entity.extend({
 		// jump
 		if( this.standing && ig.input.pressed('jump') ) {
 			this.vel.y = -this.jump;
-			this.sfxJump.play();
+			//this.sfxJump.play();
 		}
 
 		//double jump
 		else if( this.standing == false && ig.input.pressed('jump') && this.energy > this.doubleJumpE && this.hops){
 			this.vel.y = -this.jump;
-			this.sfxJump.play();
+			//this.sfxJump.play();
 			this.hops = false;
 
 			if (!this.rageMode) {
@@ -264,7 +264,7 @@ EntityPlayer = ig.Entity.extend({
 		
 		// Sound
 		this.currentAnim = this.anims.pain;
-		this.sfxHurt.play();
+		//this.sfxHurt.play();
 	},
 
 	gainRage: function(amount) {

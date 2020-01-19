@@ -112,7 +112,7 @@ ig.Music = ig.Class.extend({
 	currentIndex: 0,
 	random: false,
 	
-	_volume: 1,
+	_volume: 0,
 	_loop: false,
 	_fadeInterval: 0,
 	_fadeTimer: null,
