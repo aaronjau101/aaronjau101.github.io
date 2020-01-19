@@ -25,7 +25,7 @@ EntityAoe = ig.Entity.extend({
 	collides: ig.Entity.COLLIDES.PASSIVE,
 		
 	animSheet: new ig.AnimationSheet( 'media/sprites/bolt.png', 64, 64 ),
-	sfxSpawn: new ig.Sound( 'media/sounds/fireball.*' ),
+	//sfxSpawn: new ig.Sound( 'media/sounds/fireball.*' ),
 	
 	bounceCounter: 0,
 	playerRef: null,
@@ -45,7 +45,7 @@ EntityAoe = ig.Entity.extend({
 			this.currentAnim.angle = Math.atan((this.pos.y - this.last.y) / (this.pos.x - this.last.x));
 		}
 		
-		this.sfxSpawn.play();
+		//this.sfxSpawn.play();
 	},
 	
 	reset: function( x, y, settings ) {
@@ -57,7 +57,7 @@ EntityAoe = ig.Entity.extend({
 		this.vel.x = settings.xvel;
 		this.vel.y = settings.yvel;
 		this.playerRef = settings.playerRef;
-		this.sfxSpawn.play();
+		//this.sfxSpawn.play();
 		
 		// Remember, this a used entity, so we have to reset our bounceCounter
 		// as well

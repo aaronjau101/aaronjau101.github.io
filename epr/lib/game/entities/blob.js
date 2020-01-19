@@ -28,7 +28,7 @@ EntityBlob = ig.Entity.extend({
 	flip: false,
 	
 	animSheet: new ig.AnimationSheet( 'media/sprites/copanim.png', 64, 128 ),
-	sfxDie: new ig.Sound( 'media/sounds/blob-die.mp3' ),
+	//sfxDie: new ig.Sound( 'media/sounds/blob-die.mp3' ),
 	
 	init: function( x, y, settings ) {
 		this.parent( x, y, settings );
@@ -49,7 +49,7 @@ EntityBlob = ig.Entity.extend({
 		
 		if (/*this.currentAnim.frame == 1 &&*/ this.currentAnim == this.anims.die)
         {
-           this.sfxDie.play();
+           //this.sfxDie.play();
            
 		   ig.game.spawnEntity(EntityCoin, this.pos.x, this.pos.y + 60); // Should fix y pos
            
