@@ -92,7 +92,7 @@ ig.module(
 			ig.music.loop = true;
 			
 			ig.music.add('media/sounds/doft.ogg', 'bok');
-			ig.music.volume = 0.1;
+			ig.music.volume = 0.01;
 
 			if(this.musicOn == true){
 				ig.music.play('bok');
@@ -559,7 +559,7 @@ ig.module(
 			ig.music.loop = true;
 			ig.music.add(this.themes, 'theme');
 			//ig.music.add( 'media/gang.ogg', 'theme' );
-			ig.music.volume = 0.1;
+			ig.music.volume = 0.01;
 			//ig.music.stop();
 			if(this.musicOn == true){
 				ig.music.play('theme');
@@ -726,7 +726,7 @@ ig.module(
 		init : function() {
 			ig.music.loop = true;
 			ig.music.add(this.themes, 'theme');
-			ig.music.volume = 0.1;
+			ig.music.volume = 0.01;
 			if(this.musicOn == true){
 				ig.music.play('theme');
 			}
