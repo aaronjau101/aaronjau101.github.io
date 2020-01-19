@@ -1,9 +1,0 @@
-{
-"TOTAL_MEMORY": 268435456,
-"dataUrl": "rubix.data.unityweb",
-"asmCodeUrl": "rubix.asm.code.unityweb",
-"asmMemoryUrl": "rubix.asm.memory.unityweb",
-"asmFrameworkUrl": "rubix.asm.framework.unityweb",
-"splashScreenStyle": "Dark",
-"backgroundColor": "#222C36"
-}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Super Rolla Ball</title>
+  <link rel="icon" href="./icon.png" type="image/icon type">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <script src="./TemplateData/UnityProgress.js"></script>  
+  <script src="./Build/UnityLoader.js"></script>
+  <script>
+    var gameInstance = UnityLoader.instantiate("gameContainer", "./Build/superrollaball.json", {onProgress: UnityProgress});
+    // Toggle an element to show or hide
+    function toggle(id) {
+        let element = document.getElementById(id);
+        if (element.className.indexOf("w3-show") == -1) {
+            element.className += " w3-show";
+        } else { 
+            element.className = element.className.replace(" w3-show", "");
+        }
+    }
+  </script>
+</head>
+<body>
+<!-- Navbar -->
+<navbar class="w3-top w3-theme-d2">
+  <!-- Navbar on all screens -->
+  <div class="w3-bar">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-green w3-padding-large" href="JavaScript:void(0);" onclick="toggle('navSmall')">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="../../index.html" class="w3-left w3-bar-item w3-button w3-hover-green w3-padding-large">
+      <image class="w3-image" src="./img/star_white.png" style="width: 22px; height: 22px; margin-right: 10px;"></image>
+      Aaron Jauregui
+    </a>
+    <!-- Navbar on bigger screens -->
+    <a href="../../about/about.html" class="w3-right w3-bar-item w3-button w3-hide-small w3-hover-green w3-padding-large">About</a>
+    <a href="../projects.html" class="w3-right w3-bar-item w3-button w3-hide-small w3-hover-green w3-padding-large">Projects</a>
+  </div>
+  <!-- Navbar on small screens -->
+  <div id="navSmall" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+    <a href="../projects.html" class="w3-bar-item w3-button w3-hover-green">Projects</a>
+    <a href="../../about/about.html" class="w3-bar-item w3-button w3-hover-green">About</a>
+  </div>
+</navbar>
+<!-- Page Content -->
+<div class="webgl-content">
+  <div id="gameContainer" style="width: 960px; height: 600px"></div>
+  <div class="footer">
+    <div class="webgl-logo"></div>
+    <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+    <div class="title">Super Rolla Ball</div>
+  </div>
+</div> 
+<!-- Footer -->
+<footer class="w3-bottom w3-container w3-theme-d2 w3-bar">
+  <div class="w3-padding-small w3-bar-item">
+    <i class="far fa-copyright"></i>
+    2020
+  </div> 
+  <div class="w3-padding-small w3-bar-item">
+    <a href="mailto:jauregui.aaron@gmail.com" title="Email" target="_blank">
+      <i class="far fa-envelope"></i>
+    </a>
+  </div> 
+  <div class="w3-padding-small w3-bar-item">
+    <a href="https://github.com/aaronjau101" title="GitHub" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+  </div> 
+  <div class="w3-padding-small w3-bar-item">
+    <a href="https://www.linkedin.com/in/aaronjauregui/" title="LinkedIn" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div> 
+</footer>
+</body>
+</html>
