@@ -14,6 +14,7 @@ function showElement(element) {
 
 //Highlight a game
 function highlight(gameID) {
+	unhighlight();
 	hideElement(document.getElementById("header"))
 	showElement(document.getElementById("projects"));
 	showElement(document.getElementById(gameID));
@@ -21,7 +22,8 @@ function highlight(gameID) {
 
 //Unighlight all games
 function unhighlight() {
-	hideElement(document.getElementById("tde"))
+	hideElement(document.getElementById("tde"));
+	hideElement(document.getElementById("srb"))
 	hideElement(document.getElementById("projects"));
 	showElement(document.getElementById("header"));
 }

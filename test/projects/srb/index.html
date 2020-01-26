@@ -8,12 +8,6 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link rel="stylesheet" href="TemplateData/style.css">
-  <script src="TemplateData/UnityProgress.js"></script>
-  <script src="Build/UnityLoader.js"></script>
-  <script>
-    var gameInstance = UnityLoader.instantiate("gameContainer", "Build/game.json", {onProgress: UnityProgress});
-  </script>
   <script type="text/javascript">
     // Toggle an element to show or hide
     function toggle(id) {
@@ -50,14 +44,67 @@
 </navbar>
 <!-- Page Content -->
 <main class="w3-container w3-padding-64">
-  <h2 class="w3-center">Super Rolla Ball</h2>
-  <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+  <!-- Banner -->
+  <div class=" w3-row w3-center">
+    <img src="img/banner.png" class="w3-image w3-auto">
+  </div>
+  <hr>
+  <!-- Project Info -->
+  <div class="w3-row w3-center" style="max-width: 960px; margin:auto;">
+    <div class="w3-third w3-center">
+      <img class="w3-image w3-padding-small" style="max-height: 324px" src="./img/srb300.png">
+      <div class="w3-panel">
+        <img class="w3-image w3-padding-small w3-content" src="./img/Unity_black.png" style="width: 70px; height: 60px;">
+        <img class="w3-image w3-padding-small w3-content" src="./img/Csharp_black.png" style="width: 70px; height: 60px;">
+        <img class="w3-image w3-padding-small w3-content" src="./img/Github_black.png" style="width: 70px; height: 60px;">
+      </div>
+      <div class="w3-panel">
+        <span class="w3-theme-d2 w3-tag w3-padding-small w3-margin-bottom">Unity</span>
+        <span class="w3-theme-d2 w3-tag w3-padding-small w3-margin-bottom">C#</span>
+        <span class="w3-theme-d2 w3-tag w3-padding-small w3-margin-bottom">Games</span>
+        <br>
+        <a href="https://www.dropbox.com/s/d0r12h36ab6vco0/SRB_Game.zip?dl=0" target="_blank">
+          <span class="w3-button w3-padding-large w3-white w3-panel">
+            <b>Download</b> 
+            <i class="fab fa-dropbox w3-margin-left"></i>
+          </span>
+        </a>
       </div>
     </div>
+    <div class="w3-twothird w3-container">
+      <div class="w3-left-align">
+        <h3>Summary</h3>
+        <p>Super Rolla Ball is a fun-packed 3D platformer. Based off Super Monkey Ball, the player is a hedgehog trying to roll its way to the finish line and collect bananas on the way. The player must try to collect trophies for fastest time, all bananas, and highest score in three levels.</p>
+        <h3>Contributions</h3>
+        <p>This project was a one-man team effort that taught me a lot. I learned how to use shader scripts to make checkered materials. I learned how to use coroutines to create timed events. I learned more about Blender to make some 3D models. My favorite part of the project was designing the levels and creating small features such as trophies.</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <!-- Video -->
+  <div class="w3-row w3-center" style="max-width: 480px; min-height:300px; margin:auto;">
+    <iframe width="100%" height="300px" src="https://www.youtube.com/embed/q_yMcbxjpG4?rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <hr>
+  <!-- Images -->
+  <div class="w3-row w3-center" style="max-width: 960px; margin:auto;">
+    <div class="w3-third w3-panel">
+      <img class="w3-image" src="./img/level1.png">
+      <br>
+      <em>Level 1</em>
+    </div>
+    <div class="w3-third w3-panel">
+      <img class="w3-image" src="./img/level2.png">
+      <br>
+      <em>Level 2</em>
+    </div>
+    <div class="w3-third w3-panel">
+      <img class="w3-image" src="./img/level3.png">
+      <br>
+      <em>Level 3</em>
+    </div>
+  </div>
+  <hr>    
 </main>
 <!-- Footer -->
 <footer class="w3-bottom w3-container w3-theme-d2 w3-bar">
