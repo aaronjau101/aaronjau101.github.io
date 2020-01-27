@@ -1,0 +1,27 @@
+Human Helpers
+- Aaron Jauregui
+- Alex Jauregui
+
+Technology Used
+- GitHub
+- GitHub Pages
+- GitHub Desktop
+- Gist
+- W3.CSS
+- HTML5
+- CSS
+- Javascript
+- JQuery
+- JSON
+- Python 3
+- Unity
+- Unreal
+- Impact.js
+- p5.js
+- Font Awesome
+- HTML Boilerplate
+- README Boilerplate
+- Youtube
+- OBS
+- Shotcut
+- Sublime
