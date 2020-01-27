@@ -2,18 +2,6 @@
 
 My portfolio website containing games, programming projects, and personal information.
 
-## Table of Contents
-
-- [Usage](#usage)
-- [Credit](#credit)
-- [Contact](#contact)
-
-## Usage
-
-My portfolio code and projects can be used as desired.
-
-Here's a [License](https://aaronjau101.github.io/LICENSE) if needed.
-
 ## Credit
 
 The following were big sources of help in making my portfolio:
@@ -31,3 +19,7 @@ The following were big sources of help in making my portfolio:
 ## Contact
 
 Email me at jauregui[dot]aaron[at]gmail[dot]com for any questions/suggestions.
+
+## License
+
+The code is available under the [MIT license](LICENSE).
