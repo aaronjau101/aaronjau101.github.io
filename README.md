@@ -12,7 +12,7 @@ My portfolio website containing games, programming projects, and personal inform
 
 My portfolio code and projects can be used as desired.
 
-Here's a [Free Public License](https://aaronjau101.github.io/) if needed.
+Here's a [License](https://aaronjau101.github.io/LICENSE) if needed.
 
 ## Credit
 
