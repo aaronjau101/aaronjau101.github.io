@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<head>
+    <title>Healer Timer and Codes</title>
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <style type="text/css">
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+          background-color: #fefefe;
+          margin: 15% auto; /* 15% from the top and centered */
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+        .close {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+    </style>
+</head>
+<body class="w3-white">
+    <div class="w3-center">
+        <div class="w3-row w3-margin-top">
+            <div title="Info" onclick="openModal('infoModal')" style="cursor: pointer;">
+                <i class="fas fa-info fa-2x w3-left w3-margin-left w3-padding-small"></i>
+            </div>
+            <div title="Settings" onclick="openModal('settingsModal')" style="cursor: pointer;">
+                <i class="fas fa-cog fa-2x w3-right w3-margin-right w3-padding-small"></i>
+            </div>
+            <!-- Info Modal -->
+            <div id="infoModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal('infoModal')">&times;</span>
+                <br>
+                <div class="w3-left-align">
+                    <h2>Information</h2>
+                    <hr>
+                    <h3>What is BA?</h3>
+                    <p>Barbarian Assault is a minigame where 5 players must defeat 10 waves of Penance enemies. There are 4 types of player roles and 4 types of Penance enemies.</p>
+                    <hr>
+                    <h3>What is a Healer?</h3>
+                    <p>Healer is one of four roles that players can choose. They are in charge of healing other players, but most importantly they must poison Penance Healers to defeat them.</p>
+                    <hr>
+                    <h3>What are Calls?</h3>
+                    <p>Every 30 seconds in a wave, players must "call" out certain information to teammates that have their complimentary role. The players in the Defender role will call out to the Healers and let them know which food will poison the Penance Healers.</p>
+                    <hr>
+                    <h3>What are Healer Codes?</h3>
+                    <p>A Healer code is a pattern showing how Healers should poison the Penance Healers. The codes are seperated by each call phase. Codes specify the order and timing to poison and repoison certain Penance Healers. They also show the necessary times to refill on poisoned food.</p>
+                    <p>Here's an example code:</p>
+                    <div class="w3-panel w3-leftbar w3-pale-green w3-border-green">
+                        <p>Call One: 1 - 1</p>
+                    </div>
+                    <p>Translation: At the start (Call One), poison the first Penance Healer once and then poison the second Penance Healer once.</p>
+                    <p>Here's an advance example code:</p>
+                    <div class="w3-panel w3-leftbar w3-pale-green w3-border-green">
+                        <p>Call Two: 1 - 1 - 1 - 2(48) - [5]</p>
+                        <p>Restock</p>
+                    </div>
+                    <p>Translation: At Call Two (30 seconds in), poison the first three Penance Healers once. Then poison the fourth healer once. Wait till the (48) second mark, to repoison the fourth healer. Then a fifth healer should appear (known as a [trailer]) and you poison it five times. After doing all that, head to the vending machine to restock on food.</p>
+                    <hr>
+                    <h3>More Information</h3>
+                    <a href="https://baservices.site/" style="text-decoration: none;" target="_blank">
+                      <span class="w3-btn w3-padding-large  w3-white w3-panel w3-border">
+                        <b>BA Services</b> 
+                        <i class="fas fa-globe"></i>
+                      </span>
+                    </a>
+                </div>
+              </div>
+            </div>
+            <!-- Settings Modal -->
+            <div id="settingsModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal('settingsModal')">&times;</span>
+                <p>Settings coming soon...</p>
+              </div>
+            </div>
+        </div>
+        <h1 >Healer Timer and Codes</h1>
+        <div class="w3-row">
+            <div title="Start Next Wave Timer" style="width: 50%; float: left; cursor: pointer" class="w3-pale-green w3-border" onclick= "startTimer()">
+                <h1> START </h1>
+            </div>
+            <div title="Reset to Wave 0" style="width: 50%; float: left; cursor: pointer" class="w3-pale-red w3-border" onclick= "reset()">
+                <h1> RESET </h1> 
+            </div>
+        </div>
+        <hr>
+        <div class="vertical-line"></div>
+        <div class="w3-row">
+            <div class="w3-border" style="width: 50%; float: left">
+                <h1>Wave</h1>
+            </div>
+            <div class="w3-border" style="width: 50%; float: left">
+                <h1>Seconds</h1>
+            </div>
+        </div>
+        
+        <div class="w3-row">
+            <div class="w3-border" style="width: 50%; float: left">
+                <h1 id="wave">0</h1>
+            </div>
+            <div class="w3-border" style="width: 50%; float: left">
+                <h1 id="timer">0</h1>
+            </div>
+        </div>
+
+        <div class="w3-row">
+            <h3 id="info" class="w3-center w3-panel"></h3>
+        </div>
+
+        <div class="w3-row">
+            <div title="Peek Next Wave" style="width: 50%; cursor: pointer; margin: auto;" class="w3-pale-yellow w3-border" onclick= "sneakPeek()">
+                <h1> SNEAK PEEK </h1>
+            </div>
+        </div>
+
+        <div class="w3-row">
+            <h3 id="sneakpeek" class="w3-center w3-panel"></h3>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    // When the user clicks on the button, open the modal
+    function openModal(id) {
+        var modal = document.getElementById(id);
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    function closeModal(id) {
+        var modal = document.getElementById(id);
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        let modals = document.getElementsByClassName("modal");
+        for(var modal of modals) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+</script>
