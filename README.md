@@ -1,5 +1,9 @@
 # Aaron Jauregui's GitHub Page
 
+[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)
+[![HitCount](http://hits.dwyl.io/aaronjau101/aaronjau101githubio.svg)](http://hits.dwyl.io/aaronjau101/aaronjau101githubio)
+
+
 My portfolio website containing games, programming projects, and personal information.
 
 ## Credit
