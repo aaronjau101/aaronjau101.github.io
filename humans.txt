@@ -3,12 +3,12 @@
 	Contact: jauregui.aaron [at] gmail.com
 
 	Graphic Designer: Alex Jauregui
-  Contact: jauregui.aaron [at] gmail.com
+	Contact: jauregui.aaron [at] gmail.com
 
 /* THANKS */
 	Inspiration: Thomas Laurenson
-  Twitter: @thomaslaurenson
-  
+	Twitter: @thomaslaurenson
+
 /* SITE */
 	Last update:2020/02/26
 	Language: English
