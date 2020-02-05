@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2016 Google Inc.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html>
+<head>
+  <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Place Like Home</title>
+
+  <!-- Material Design Theming -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+  <!-- Import and configure the Firebase SDK -->
+  <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+  <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+
+  <script type="text/javascript" src="login.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+  
+</head>
+<body>
+
+  <!-- Header section containing title -->
+  <header class="w3-container w3-teal">
+    <h1>No Place Like Home</h1>
+  </header>
+  <div id="not-signed-in" class="w3-hide w3-show">
+    <!-- Container for Sign In -->
+    <div class="w3-container w3-half w3-margin-top">
+      <div class="w3-container w3-card-4">
+        <header>Returning Users</header>
+        <p>
+          <input class="w3-input" type="text" id="email" style="width:90%" required>
+          <label>Email</label>
+        </p>
+        <p>
+          <input class="w3-input" type="password" id="password" style="width:90%" required>
+          <label>Password</label>
+        </p>
+        <p>
+          <button class="w3-button w3-section w3-teal w3-ripple" id="quickstart-sign-in" name="signin">
+            Sign In
+          </button>
+        </p>
+      </div>
+    </div>
+    <!-- Container for Sign Up -->
+    <div class="w3-container w3-half w3-margin-top">
+      <div class="w3-container w3-card-4">
+        <header>New Users</header>
+        <p>
+          <input class="w3-input" type="text" id="new-email" style="width:90%" required>
+          <label>Email</label>
+        </p>
+        <p>
+          <input class="w3-input" type="password" id="new-password" style="width:90%" required>
+          <label>Password</label>
+        </p>
+        <p>
+          <button class="w3-button w3-section w3-teal w3-ripple" id="quickstart-sign-up" name="signup">
+            Sign Up
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="signed-in" class="w3-hide">
+    <!-- Account Info -->
+    <div class="w3-container w3-half w3-margin-top">
+      <div class="w3-container w3-card-4">
+        <header>Account Information</header>
+        <div id="account-info"></div>
+        <p>
+          <button class="w3-button w3-section w3-teal w3-ripple" id="quickstart-sign-out" name="signout">
+            Sign Out
+          </button>
+        </p>
+        <p>
+          <input class="w3-input" type="text" id="username" style="width:90%" autocomplete="off" required>
+          <label>Username</label>
+        </p>
+        <p>
+          <button class="w3-button w3-section w3-teal w3-ripple" id="change-username" name="change-username">
+            Change Username
+          </button>
+        </p>
+        <p>
+          <button class="w3-button w3-section w3-teal w3-ripple" id="quickstart-verify-email" name="verify-email">
+            Send Email Verification
+          </button>
+        </p>
+        <p>
+          <button class="w3-button w3-section w3-teal w3-ripple" id="quickstart-password-reset" name="password-reset">
+            Send Password Reset Email
+          </button>
+        </p>
+      </div>
+    </div>
+    <!-- Place Display -->
+    <div class="w3-container w3-half w3-margin-top">
+      <div class="w3-container w3-card-4" id="placeDisplay">
+        <h2>Welcome <span id="displayed-username">Anon</span>!</h2>
+        <hr>
+        <h3>Current Place</h3>
+        <div id="placeCanvas"></div>
+        <h4>Cell Information</h4>
+        <div id="cellInfo"></div>
+        <h4>Choose a color</h4>
+        <input type="color" id="colorPicker" value="#ff0000" style="width:50%;">
+        <p>
+          <button class="w3-button w3-section w3-teal w3-ripple" id="quickstart-sign-up" onclick="purchaseCell()" name="signup">
+            Purchase Cell
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="place.js"></script>
+</body>
+</html>
