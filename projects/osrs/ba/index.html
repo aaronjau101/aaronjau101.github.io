@@ -99,7 +99,14 @@
             <div id="settingsModal" class="modal">
               <div class="modal-content">
                 <span class="close" onclick="closeModal('settingsModal')">&times;</span>
-                <p>Settings coming soon...</p>
+                <h2>Settings</h2>
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button">Select a Code</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-border">
+                        <div onclick="loadCodes('LHC_NO_OS.txt')" class="w3-bar-item w3-button">LHC Guide No OS</div>
+                        <div onclick="loadCodes('REG_LEECH_BEG.txt')" class="w3-bar-item w3-button">Regular Leeches (Beginner)</div>
+                    </div>
+                </div>
               </div>
             </div>
         </div>

@@ -1,0 +1,60 @@
+Regular codes in leeches (Beginner)
+-------------
+Wave 1:
+1-2
+-------------
+Wave 2:
+1-2-3
+-------------
+Wave 3:
+1-6(spam)-2
+Block last runner at 30s then rp 3rd
+-------------
+Wave 4:
+1-4-3 // 0-0-0-spam
+36s reserve spawn
+-------------
+Wave 5:
+1-4/5-2-1 // 0-0-0-1-spam
+1st call: x-spam-x-x
+2nd call: trap reserve at spawn & spam. RP 4th around 36-45
+-------------
+Wave 6:
+4-2-1/2-1
+1st call: spam-18-spam-spam
+Henke restock
+2nd call: RP 3rd & 4th healer once
+-------------
+Wave 7:
+2-4/5-1-1 // 1-1-1-1
+1st call: 21-27-x-x (first healer can't tick a 3)
+2nd call: RP 1st and 2nd ASAP (they can't tick a 3)
+RP 3rd & 4th once they're ticking 3's.
+2nd reserve should spawn at 48s. Restock after poisoning.
+Single OS and regular restock
+-------------
+Wave 8:
+1-5/6-1-1 // 1-1-1-1-1-1-1
+1st call: x-x-x-x
+2nd call: Poison 30s spawn ASAP (guess food)
+Then poison first & second healer ASAP
+RP any ticking a 3
+Poison first reserve before restocking
+-------------
+Wave 9:
+1-5/6-1-1 // 1-1-1-1-1-1-1
+1st call: Poison all healers once, spam second healer
+2nd call: Poison 30s spawn ASAP (guess food)
+Then poison first & second healer ASAP (before 36s)
+If you can't, do it after 36s spawns ASAP
+RP any ticking a 3
+Poison first reserve before restocking
+Single OS and regular restock
+-------------
+Wave 10:
+2-4/5-1-1 // 1-1-1-1
+1st call: 21-27-x-x (first healer can't tick a 3)
+2nd call: RP 1st and 2nd ASAP (they can't tick a 3)
+RP 3rd & 4th once they're ticking 3's.
+2nd reserve should spawn at 48s. Restock after poisoning.
+Single OS and regular restock

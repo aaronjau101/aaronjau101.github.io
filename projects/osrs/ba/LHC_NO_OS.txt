@@ -1,0 +1,56 @@
+LHC's Healer Guide (non-overstock)
+-------------
+Wave 1:
+Code: 1-1
+Spacing: d-d
+-------------
+Wave 2:
+Code: 1-1-2
+Spacing: d-d-21
+-------------
+Wave 3:
+Code: 1-6-2
+Spacing: d-d-d
+-------------
+Wave 4:
+Code: 1-4-3 // 0-0-0-7
+Spacing: d-d-d-d
+-------------
+Wave 5:
+Code: 1-3-2-2 // 0-0-0-0-7
+Spacing: d-18-d-27-d
+-------------
+Wave 6: 48 54
+Code: 2-3-2-2 // Henke // 0-0-0-0-6-8
+Spacing: 18-18-21-27-54(or 51 and use 7 food)-d
+Meat First: 48 54
+Code: 2-3-2-1 // Henke // 0-0-0-1-6-8
+Spacing: 18-18-21-27-54(or 51 and use 7 food)-d
+-------------
+Wave 7: 42 48 54
+Code: 2-4-2-1 // 1-1-1-1-3-1-1
+Spacing:27-33-39-36-51
+Meat First: 42 48 60
+Code: 4-2-1-1 // 1-1-1-1-3-2 // OS, rp 48, spam last
+Spacing: 27-33-d-d-51 (3rd food 1 poison tick after 48 spawns)
+-------------
+Wave 8: 48 54
+Code: 4-2-2-1 // 1-1-0-1-2-2-1
+Spacing: d-d-27-d-48(rp 5th after 48 spawns)
+Meat First: 48 54
+Code: 4-2-1-1 // 1-1-1-1-2-2-1
+Spacing: d-d-d-d-48(rp 5th after 48 spawns)
+-------------
+Wave 9: 48 66
+Code: 2-5-1-1 // 1-2-1-1-2-1-1
+Spacing: Doesn't matter
+Meat First: 48 66
+Code: 2-4-1-1 // 1-3-1-1-1-1-1
+Spacing: Doesn't matter
+-------------
+Wave 10: 42 48 60
+Code: 5-2-1-1 // 0-1-1-1-3-3 // OS, rp 48, spam last
+Spacing: 27-33-d-d-51 (3rd food 1 poison tick after 48 spawns)
+Meat First: 42 48 60
+Code: 4-2-1-1 // 1-1-1-1-3-2 // OS, rp 48, spam last
+Spacing: 27-33-d-d-51 (3rd food 1 poison tick after 48 spawns)

@@ -50,16 +50,18 @@ Load in the txt file into an array
 **************************************/
 
 
-$(document).ready(function(){
-    $.ajax({url: "codes.txt", 
-    success: function(result){
-        processData(result);
-    }
-    });
-});
+$(document).ready(loadCodes("LHC_NO_OS.txt"));
 
 var data = [];
 
+function loadCodes(textFile) {
+    $.ajax({
+        url: textFile, 
+        success: function(result){
+            processData(result);
+        }
+    });
+}
 
 function processData(allText) {
     var lines = allText.split(/\r\n|\n/);
@@ -82,141 +84,4 @@ function processData(allText) {
             data.push(t);
         }
     }
-    console.log(data);
-}   
-
-/*************************************
-Trying to organize the data into JSON
-**************************************/
-var d = -1;
-var waveStrats = [];
-
-waveStrats.push({
-    len: 2,
-    strats: [ 
-        { 
-            type: "all",
-            spawnWave: [
-                {
-                    start: 0,
-                    code: [1, 1],
-                }
-            ],
-            spacing: [d, d], 
-            eta: 30 
-        } 
-    ],
-    
-});
-
-waveStrats.push({
-    len: 3,
-    strats: [ 
-        { 
-            type: "all",
-            spawnWave: [
-                {
-                    start: 0,
-                    code: [1, 1, 2],
-                }
-            ],
-            spacing: [d, d, 21], 
-            eta: 36 
-        } 
-    ],
-    
-});
-
-waveStrats.push({
-    len: 3,
-    strats: [ 
-        { 
-            type: "all",
-            spawnWave: [
-                {
-                    start: 0,
-                    code: [1, 6, 2],
-                }
-            ],
-            spacing: [d, d, d], 
-            eta: 48
-        } 
-    ],
-    
-});
-
-waveStrats.push({
-    len: 4,
-    strats: [ 
-        { 
-            type: "all",
-            spawnWave: [
-                {
-                    start: 0,
-                    code: [1, 4, 3],
-                },
-                {
-                    start: 36,
-                    code: [0, 0, 0, 7],
-                }
-            ],
-            spacing: [d, d, d, d], 
-            eta: 48
-        } 
-    ],
-    
-});
-
-waveStrats.push({
-    len: 5,
-    strats: [ 
-        { 
-            type: "all",
-            spawnWave: [
-                {
-                    start: 0,
-                    code: [1, 3, 2, 2],
-                },
-                {
-                    start: 42,
-                    code: [0, 0, 0, 0, 7],
-                }
-            ],
-            spacing: [d, 18, d, 27, d], 
-            eta: 60
-        },
-        { 
-            type: "w-t",
-            spawnWave: [
-                {
-                    start: 0,
-                    code: [2, 3, 2, 2],
-                },
-                {
-                    start: 42,
-                    code: [0, 0, 0, 1, 9],
-                }
-            ],
-            spacing: [d, 18, 21, d, d], 
-            eta: 54,
-            note: "Destroy 1 Meat and take a Tofu"
-        },
-        { 
-            type: "t-w",
-            spawnWave: [
-                {
-                    start: 0,
-                    code: [2, 5, 2, 1],
-                },
-                {
-                    start: 42,
-                    code: [0, 0, 0, 2, 7],
-                }
-            ],
-            spacing: [d, d, 21, d, d], 
-            eta: 54,
-            note: "Destroy 1 Meat and take a Tofu"
-        } 
-    ],
-    
-});
+}
