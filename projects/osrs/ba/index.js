@@ -49,11 +49,6 @@ function sneakPeek() {
 Load in the txt file into an array
 **************************************/
 
-
-$(document).ready(loadCodes("LHC_NO_OS.txt"));
-
-var data = [];
-
 function loadCodes(textFile) {
     $.ajax({
         url: textFile, 
@@ -62,6 +57,10 @@ function loadCodes(textFile) {
         }
     });
 }
+
+$(document).ready(loadCodes("LHC_NO_OS.txt"));
+
+var data = [];
 
 function processData(allText) {
     var lines = allText.split(/\r\n|\n/);
@@ -72,7 +71,7 @@ function processData(allText) {
             var t = [];
             
             for(var j = i + 1; j < lines.length; j++){
-                if(lines[j][0] == "W" || lines[j] == "Meat first call-----") {
+                if(lines[j][0] == "W") {
                     t.push([""]);
                 }
                 if(lines[j][0] == "-") {
