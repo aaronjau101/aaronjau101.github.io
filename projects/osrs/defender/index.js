@@ -58,11 +58,14 @@ function loadCodes(textFile) {
     });
 }
 
-$(document).ready(loadCodes("LHC_NO_OS.txt"));
+$(document).ready(loadCodes("LHC_DEF.txt"));
 
-var data = [];
+var data;
 
 function processData(allText) {
+    console.log("Loading Codes");
+    data = [];
+    reset();
     var lines = allText.split(/\r\n|\n/);
     var lb = "---"
     for (var i=0; i< lines.length; i++) {

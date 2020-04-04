@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Healer Timer and Codes</title>
+    <title>Defender Timer and Codes</title>
     <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
     <script src="index.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -62,36 +62,7 @@
                 <div class="w3-left-align">
                     <h2>Information</h2>
                     <hr>
-                    <h3>What is BA?</h3>
-                    <p>Barbarian Assault is a minigame where 5 players must defeat 10 waves of Penance enemies. There are 4 types of player roles and 4 types of Penance enemies.</p>
-                    <hr>
-                    <h3>What is a Healer?</h3>
-                    <p>Healer is one of four roles that players can choose. They are in charge of healing other players, but most importantly they must poison Penance Healers to defeat them.</p>
-                    <hr>
-                    <h3>What are Calls?</h3>
-                    <p>Every 30 seconds in a wave, players must "call" out certain information to teammates that have their complimentary role. The players in the Defender role will call out to the Healers and let them know which food will poison the Penance Healers.</p>
-                    <hr>
-                    <h3>What are Healer Codes?</h3>
-                    <p>A Healer code is a pattern showing how Healers should poison the Penance Healers. The codes are seperated by each call phase. Codes specify the order and timing to poison and repoison certain Penance Healers. They also show the necessary times to refill on poisoned food.</p>
-                    <p>Here's an example code:</p>
-                    <div class="w3-panel w3-leftbar w3-pale-green w3-border-green">
-                        <p>Call One: 1 - 1</p>
-                    </div>
-                    <p>Translation: At the start (Call One), poison the first Penance Healer once and then poison the second Penance Healer once.</p>
-                    <p>Here's an advance example code:</p>
-                    <div class="w3-panel w3-leftbar w3-pale-green w3-border-green">
-                        <p>Call Two: 1 - 1 - 1 - 2(48) - [5]</p>
-                        <p>Restock</p>
-                    </div>
-                    <p>Translation: At Call Two (30 seconds in), poison the first three Penance Healers once. Then poison the fourth healer once. Wait till the (48) second mark, to repoison the fourth healer. Then a fifth healer should appear (known as a [trailer]) and you poison it five times. After doing all that, head to the vending machine to restock on food.</p>
-                    <hr>
-                    <h3>More Information</h3>
-                    <a href="https://baservices.site/" style="text-decoration: none;" target="_blank">
-                      <span class="w3-btn w3-padding-large  w3-white w3-panel w3-border">
-                        <b>BA Services</b> 
-                        <i class="fas fa-globe"></i>
-                      </span>
-                    </a>
+                    
                 </div>
               </div>
             </div>
@@ -100,17 +71,11 @@
               <div class="modal-content">
                 <span class="close" onclick="closeModal('settingsModal')">&times;</span>
                 <h2>Settings</h2>
-                <div class="w3-dropdown-hover">
-                    <button class="w3-button">Select a Code</button>
-                    <div class="w3-dropdown-content w3-bar-block w3-border">
-                        <div onclick="loadCodes('LHC_NO_OS.txt')" class="w3-bar-item w3-button">LHC Guide No OS</div>
-                        <div onclick="loadCodes('REG_LEECH_BEG.txt')" class="w3-bar-item w3-button">Regular Leeches (Beginner)</div>
-                    </div>
-                </div>
+                
               </div>
             </div>
         </div>
-        <h1 >Healer Timer and Codes</h1>
+        <h1>Defender Timer and Codes</h1>
         <div class="w3-row">
             <div title="Start Next Wave Timer" style="width: 50%; float: left; cursor: pointer" class="w3-pale-green w3-border" onclick= "startTimer()">
                 <h1> START </h1>

@@ -1,0 +1,56 @@
+LHC's Defender Guide
+-------------
+Wave 1:
+2T - 2MS - 0L
+Block last runner going west
+Multi if first is east
+-------------
+Wave 2:
+3T - 2MS - 1L
+Healer should block last
+-------------
+Wave 3:
+4T - 2MS - 1L
+Wave 1 tactics for 24 30 spawns
+After repair, block last runner
+Unless, 3rd is east then multi
+-------------
+Wave 4:
+4T - 3MS - 1L
+kill 1-3 or 2-2
+Let Healer run up first
+Stand still for healer corner trap
+-------------
+Wave 5:
+4T - 4+MS - 1L
+kill 2-3 or 1-4
+Delay for 2nd healer
+-------------
+Wave 6:
+4T - 4+MS - 2L
+kill 1-3-2 or 1-4-1 (no delay)
+kill 2-2-2 or 2-4   (if delay)
+-------------
+Wave 7:
+4T - 4+MS - 2L
+kill 1-3-2 or 1-4-1 (no delay)
+kill 2-2-2 or 2-4   (if delay)
+-------------
+Wave 8:
+4T - 4+MS - 2L
+kill 1-4-2 or 2-3-2
+kill 1-5-1 of 2-5
+want to lure 48s healer
+-------------
+Wave 9: 
+4T - 4+MS - 2L
+kill 2-5-2
+lure 54s healer west before 2nd repair
+if 48s, maybe relure
+-------------
+Wave 10:
+4T - 4MS - 1L
+Delay for 2nd runner
+kill 2-3-1
+stand north of trap for 42s healer
+run 6 seconds before last healer spawn
