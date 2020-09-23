@@ -1,0 +1,67 @@
+Regular codes in leeches OS
+-------------
+Wave 1:
+1-2
+-------------
+Wave 2:
+1-2-3
+-------------
+Wave 3:
+1-6(spam)-2
+Block last runner at 30s then rp 3rd
+-------------
+Wave 4:
+1-4-3 // 0-0-0-spam
+36s reserve spawn
+-------------
+Wave 5:
+Option 1:
+⦁ 2-7-2-1, 0-0-0-2-5
+⦁ 1st call: spam-spam-21-x
+⦁ 2nd call: 0-0-0-48
+Note: reserve spawns at 30 sec & need to be poisoned before 33 sec
+
+Option 2:
+⦁ 2-5-2-3, 0-0-0-0-7
+⦁ 1st call: spam-spam-21-30
+⦁ 2nd call: 0-0-0-0-30
+-------------
+Wave 6:
+⦁ 3-5-2-2
+⦁ 1st call: 18-spam-21-spam
+⦁ If you want to go for 60s ending, repoison 3rd healer after 24 seconds
+⦁ Destroy wrong food + 1x right click + left click = 17
+⦁ Need to repoison 4th healer once when you're back from restocking for 66 sec
+⦁ R need 7(8)-10 for 66s
+-------------
+Wave 7:
+⦁ 3-7-1-1, 2-0-1-1-2-1
+⦁ 1st call: x-21-x-x (first healer can't tick a 3)
+⦁ 2nd call: x-x-33-30-45-x
+⦁ Restock 13-13 of opposite 2nd call food -> Only stock this way if you're early for restocking, if not, better to just stock more because you'll be late to poison last reserve and you'll need to use more food on it
+⦁ 3rd call: R need 3-10
+
+After you used all of your first call food, you should go to the dispenser and destroy all of the non-2nd call food and do a regular restock.
+Then head back, repoison 4th healer, and finish the 3 reserves (3-5-7 food needed for 42-48-54 for a 78 finish assuming you will poison them in the 3s bracket that they spawned (which you will probably not so just mess around with the food and try getting them to die on the same time).
+-------------
+Wave 8:
+⦁ 3-7-1-1, 2-0-1-1-1-1-1
+⦁ 1st call: x-24-x-x -> It is better to repoison first healer after 21 seconds first call (not mandatory as long as it doesn't tick a 3), but this gives you a bit more space to repoison it second call, otherwise you have to repoison it before 36 seconds. So the longer you wait first call, the longer you have to RP it second call
+⦁ 2nd call: 30-x-30-36
+⦁ First healer can't tick a 3 first call
+⦁ Get 13-13 3rd call food (if u do this method right you should be running back up north before call change)
+⦁ R need: 2-4-6 for 84s (These numbers can even give you 78 ending, but it's really tight, so should definitely be good enough for 84)
+-------------
+Wave 9:
+⦁ 2-8-1-1, 1-0-1-1-2-1-1
+⦁ 33-x-33-39-45
+⦁ 2x restock on wave 9 is more reliable for a 96/99 finish, do 3x if you feel comfortable
+⦁ Reserves need 1-2-3-12
+-------------
+Wave 10:
+⦁ 2-5-1-1, 1-0-1-1-4-1, R: 3-8
+⦁ 1st call: 21-27-x-x
+⦁ 2nd call: 33-x-33-30-45-x
+⦁ Restock 13-13 of opposite 2nd call food
+
+These are non-os numbers because nobody really uses them. If you still want to try out OS wave 10, use same numbers as on wave 7. But use 1 food less on first healer so you get 36-48 spawns.
