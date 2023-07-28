@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Devil's Eight</title>
+  <link rel="icon" href="./icon.png" type="image/icon type">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <script type="text/javascript">
+    // Toggle an element to show or hide
+    function toggle(id) {
+        let element = document.getElementById(id);
+        if (element.className.indexOf("w3-show") == -1) {
+            element.className += " w3-show";
+        } else { 
+            element.className = element.className.replace(" w3-show", "");
+        }
+    }
+  </script>
+</head>
+<body>
+<!-- Navbar -->
+<navbar class="w3-top w3-theme-d2">
+  <!-- Navbar on all screens -->
+  <div class="w3-bar">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-green w3-padding-large" href="JavaScript:void(0);" onclick="toggle('navSmall')">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="../../index.html" class="w3-left w3-bar-item w3-button w3-hover-green w3-padding-large">
+      <image class="w3-image" src="./img/star_white.png" style="width: 22px; height: 22px; margin-right: 10px;"></image>
+      Aaron Jauregui
+    </a>
+    <!-- Navbar on bigger screens -->
+    <a href="../../about/about.html" class="w3-right w3-bar-item w3-button w3-hide-small w3-hover-green w3-padding-large">About</a>
+    <a href="../projects.html" class="w3-right w3-bar-item w3-button w3-hide-small w3-hover-green w3-padding-large">Projects</a>
+  </div>
+  <!-- Navbar on small screens -->
+  <div id="navSmall" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+    <a href="../projects.html" class="w3-bar-item w3-button w3-hover-green">Projects</a>
+    <a href="../../about/about.html" class="w3-bar-item w3-button w3-hover-green">About</a>
+  </div>
+</navbar>
+<!-- Page Content -->
+<main class="w3-container w3-padding-64">
+  <!-- Banner -->
+  <div class=" w3-row w3-center">
+    <img src="img/banner.png" class="w3-image w3-auto">
+  </div>
+  <hr>
+  <!-- Project Info -->
+  <div class="w3-row w3-center" style="max-width: 960px; margin:auto;">
+    <div class="w3-third w3-center">
+      <img class="w3-image w3-padding-small" style="max-height: 324px" src="./img/tde300.png">
+      <div class="w3-panel">
+        <img class="w3-image w3-padding-small w3-content" src="./img/Unreal_black.png" style="width: 70px; height: 60px;">
+        <img class="w3-image w3-padding-small w3-content" src="./img/C++_black.png" style="width: 70px; height: 60px;">
+        <img class="w3-image w3-padding-small w3-content" src="./img/Github_black.png" style="width: 70px; height: 60px;">
+      </div>
+      <div class="w3-panel">
+        <span class="w3-theme-d2 w3-tag w3-padding-small w3-margin-bottom">Unreal</span>
+        <span class="w3-theme-d2 w3-tag w3-padding-small w3-margin-bottom">C++</span>
+        <span class="w3-theme-d2 w3-tag w3-padding-small w3-margin-bottom">Games</span>
+        <br>
+        <a href="https://www.dropbox.com/s/1t4c1syrx49u9i3/TheDevilsEight_Build.zip?dl=0" target="_blank">
+          <span class="w3-btn w3-padding-large w3-white w3-panel w3-border">
+            <b>Download</b> 
+            <i class="fab fa-dropbox w3-margin-left"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="w3-twothird w3-container">
+      <div class="w3-left-align">
+        <h3>Summary</h3>
+        <p>The Devil's Eight is a fast paced rhythm-based platformer. Based on Dante’s Inferno, the player must fight its way through the circles of hell with each circle featuring a unique boss. The game has a novel feature that the beats of the music trigger enemy attacks. The player must time the use of a shield to block the attacks of the enemies and reflect the damage back on them.</p>
+        <h3>Contributions</h3>
+        <p>My role in this project was Lead AI Programmer. I was tasked with handling the enemy's animation and collision. I used Unreal's Blueprint Script to create each enemy's Finite State Machine, which handled fluid animations, special attack features, and collision logic. I also used C++ scripts to trigger enemy attacks at certain music beats, spawn platforms, and camera movement. I worked on the bosses Limbo, Lust, and Heresy.</p>
+        <h3>Awards</h3>
+        <p>Audio Award at The Sammy Awards 2015</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <!-- Video -->
+  <div class="w3-row w3-center" style="max-width: 480px; min-height:300px; margin:auto;">
+    <iframe width="100%" height="300px" src="https://www.youtube.com/embed/6KwtdlyFWxE?rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <hr>
+  <!-- Images -->
+  <div class="w3-row w3-center" style="max-width: 960px; margin:auto;">
+    <div class="w3-third w3-panel">
+      <img class="w3-image" src="./img/limbo.png">
+      <br>
+      <em>Limbo</em>
+    </div>
+    <div class="w3-third w3-panel">
+      <img class="w3-image" src="./img/lust.png">
+      <br>
+      <em>Lust</em>
+    </div>
+    <div class="w3-third w3-panel">
+      <img class="w3-image" src="./img/heresy.png">
+      <br>
+      <em>Heresy</em>
+    </div>
+  </div>
+  <hr>
+  <!-- GIFs -->
+    <div class="w3-row w3-center" style="max-width: 960px; margin:auto;">
+    <div class="w3-third w3-panel">
+      <img class="w3-image" src="./img/gif1.gif">
+    </div>
+    <div class="w3-third w3-panel">
+      <img class="w3-image" src="./img/gif2.gif">
+    </div>
+    <div class="w3-third w3-panel">
+      <img class="w3-image" src="./img/gif3.gif">
+    </div>
+  </div>
+</main>
+<!-- Footer -->
+<footer class="w3-bottom w3-container w3-theme-d2 w3-bar">
+  <div class="w3-padding-small w3-bar-item">
+    <i class="far fa-copyright"></i>
+    2023
+  </div> 
+  <div class="w3-padding-small w3-bar-item">
+    <a href="mailto:jauregui.aaron@gmail.com" title="Email" target="_blank">
+      <i class="far fa-envelope"></i>
+    </a>
+  </div> 
+  <div class="w3-padding-small w3-bar-item">
+    <a href="https://github.com/aaronjau101" title="GitHub" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+  </div> 
+  <div class="w3-padding-small w3-bar-item">
+    <a href="https://www.linkedin.com/in/aaronjauregui/" title="LinkedIn" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div> 
+</footer>
+</body>
+</html>
