@@ -25,7 +25,7 @@ function unhighlight() {
 	stopVideos();
 	hideElement(document.getElementById("tde"));
 	hideElement(document.getElementById("srb"));
-	hideElement(document.getElementById("epr"));
+	hideElement(document.getElementById("tc"));
 	hideElement(document.getElementById("projects"));
 	showElement(document.getElementById("header"));
 }
