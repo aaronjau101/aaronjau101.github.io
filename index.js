@@ -26,6 +26,8 @@ function unhighlight() {
 	hideElement(document.getElementById("tde"));
 	hideElement(document.getElementById("srb"));
 	hideElement(document.getElementById("tc"));
+    hideElement(document.getElementById("epr"));
+    hideElement(document.getElementById("dr"));
 	hideElement(document.getElementById("projects"));
 	showElement(document.getElementById("header"));
 }
