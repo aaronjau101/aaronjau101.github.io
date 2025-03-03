@@ -23,6 +23,7 @@ function highlight(gameID) {
 //Unighlight all games
 function unhighlight() {
 	stopVideos();
+	hideElement(document.getElementById("genies"));
 	hideElement(document.getElementById("tde"));
 	hideElement(document.getElementById("srb"));
 	hideElement(document.getElementById("tc"));
