@@ -1,3 +1,8 @@
+.highlight:hover {
+  background-color: #225c2b1a;
+  transition: background-color 0.2s;
+}
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -11,21 +16,4 @@
 #backgroundCanvas {
 	position: fixed; 
 	z-index: -1;
-}
-
-.highlight {
-  filter: url(filters.svg#grayscale);
-  /* Firefox 3.5+ */
-  filter: gray;
-  /* IE6-9 */
-  -webkit-filter: grayscale(1);
-  /* Google Chrome & Safari 6+ */
-}
-.highlight:hover{
-  filter: none;
-  -webkit-filter: none;
-}
-
-.w3-tag {
-  cursor: pointer;
 }

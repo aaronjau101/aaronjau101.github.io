@@ -19,17 +19,6 @@
   <link rel="stylesheet" type="text/css" href="index.css">
   <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js'></script>
   <script src="index.js"></script>
-  <script type="text/javascript">
-    // Toggle an element to show or hide
-    function toggle(id) {
-        let element = document.getElementById(id);
-        if (element.className.indexOf("w3-show") == -1) {
-            element.className += " w3-show";
-        } else { 
-            element.className = element.className.replace(" w3-show", "");
-        }
-    }
-  </script>
 </head>
 <body>
 <!-- Navbar -->
@@ -60,233 +49,41 @@
 <!-- Header -->
 <header id="header" class="w3-container w3-center w3-padding-64 noselect w3-hide w3-show">
   <h1 class="w3-jumbo">Aaron Jauregui</h1>
-  <p>Portfolio for Developer Relations and Game Development</p>
+  <p>Technical Writer, Developer Relations Engineer, and Game Developer</p>
   <img src="img/icons/aj_big.png" draggable="false" class="w3-circle" alt="aaronJauregui" style="width: 50%; max-width: 200px;">
 </header>
 
-<!-- Highlighted Projects -->
-<div id="projects" class="w3-container w3-center w3-padding-64 w3-content w3-padding-large w3-hide" style="max-width:848px">
-  <a onclick="unhighlight()" style="cursor: pointer;">
-    <img src="img/icons/aj_small.png" style="width: 38px; height: 38px; margin-bottom: 16px;" draggable="false" class="noselect">
-  </a>
-    <!-- Genies Dev Rel -->
-    <div id="genies" class="w3-row w3-center w3-gray w3-hide" style="min-height: 500px">
-      <span onclick="unhighlight()" style="cursor: pointer;">
-        <i class="fas fa-window-close fa-2x w3-right"></i>
-      </span>
-      <div class="w3-third">
-        <img class="w3-image w3-padding-small" style="max-height: 324px" src="img/300/genies-devrel.png">
-        <div class="w3-panel">
-          <img class="w3-image w3-padding-small w3-content" src="img/icons/Unity_black.png" style="width: 70px; height: 60px;">
-        </div>
-        <div class="w3-panel">
-          <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">Unity</span>
-          <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">Dev-Rel</span>
-        </div>
+<!-- Main Content -->
+<main class="w3-container w3-padding-64 w3-center noselect">
+  <h2 class="w3-xxlarge">Welcome to My Portfolio</h2>
+  <p>Explore my work in technical writing, developer relations, and game development.</p>
+  <div class="w3-row w3-padding-32">
+    <a href="./portfolio/technical-writing-portfolio.pdf" style="text-decoration: none; color: inherit;">
+      <div class="w3-col m4 w3-center highlight" style="border: 2px solid black; box-sizing: border-box; cursor: pointer;">
+        <h3>Technical Writing <i class="fas fa-arrow-right" aria-hidden="true" style="font-size: 0.8em;"></i></h3>
+        <p>Writing documentation, guides, and tutorials.</p>
       </div>
-      <div class="w3-twothird w3-container">
-        <div class="w3-left-align" style="min-height: 162px">
-          <p>Genies is an AI avatar and games technology company. I was apart of the Developer Relations team for two years at Genies.</p>
-        </div>
-        <iframe class="vid" width="100%" height="200" src="https://www.youtube.com/embed/zMBtZZaqzLo?si=zjSWaxh_2rPVaLxn?rel=0&enablejsapi=1&version=3&playerapiid=ytplayer" allowscriptaccess="always"frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <br>
-        <a href="./projects/genies/index.html">
-          <span class="w3-button w3-panel w3-padding-large w3-white">
-            <b>See More</b> 
-            <i class="fas fa-chevron-right w3-margin-left"></i>
-            <i class="fas fa-chevron-right"></i>
-          </span>
-        </a>
+    </a>
+    <a href="./portfolio/developer-relations-portfolio.pdf" style="text-decoration: none; color: inherit;">
+      <div class="w3-col m4 w3-center highlight" style="border: 2px solid black; box-sizing: border-box; cursor: pointer;">
+        <h3>Developer Relations <i class="fas fa-arrow-right" aria-hidden="true" style="font-size: 0.8em;"></i></h3>
+        <p>Engaging with developer communities.</p>
       </div>
-    </div>
-    <!-- Manticore Dev Rel -->
-    <div id="dr" class="w3-row w3-center w3-gray w3-hide" style="min-height: 500px">
-      <span onclick="unhighlight()" style="cursor: pointer;">
-        <i class="fas fa-window-close fa-2x w3-right"></i>
-      </span>
-      <div class="w3-third">
-        <img class="w3-image w3-padding-small" style="max-height: 324px" src="img/300/devrel.png">
-        <div class="w3-panel">
-          <img class="w3-image w3-padding-small w3-content" src="img/icons/Core_black.png" style="width: 70px; height: 60px;">
-          <img class="w3-image w3-padding-small w3-content" src="img/icons/Lua_black.png" style="width: 70px; height: 60px;">
-        </div>
-        <div class="w3-panel">
-          <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">Core</span>
-          <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">Lua</span>
-          <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">Dev-Rel</span>
-        </div>
+    </a>
+    <a href="./projects/projects.html" style="text-decoration: none; color: inherit;">
+      <div class="w3-col m4 w3-center highlight" style="border: 2px solid black; box-sizing: border-box; cursor: pointer;">
+        <h3>Game Development <i class="fas fa-arrow-right" aria-hidden="true" style="font-size: 0.8em;"></i></h3>
+        <p>Creating immersive gaming experiences.</p>
       </div>
-      <div class="w3-twothird w3-container">
-        <div class="w3-left-align" style="min-height: 162px">
-          <p>Created by Manticore Games, Core is a 3D, Lua-based platform that developers can use to create games and metaverse experiences. I was apart of the Developer Relations team for two years at Manticore Games.</p>
-        </div>
-        <iframe class="vid" width="100%" height="200" src="https://www.youtube.com/embed/-BgBRrcY7s8?si=lrYcJQzdnf0EnOXh?rel=0&enablejsapi=1&version=3&playerapiid=ytplayer" allowscriptaccess="always"frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <br>
-        <a href="./projects/dr/index.html">
-          <span class="w3-button w3-panel w3-padding-large w3-white">
-            <b>See More</b> 
-            <i class="fas fa-chevron-right w3-margin-left"></i>
-            <i class="fas fa-chevron-right"></i>
-          </span>
-        </a>
-      </div>
-    </div>
-  <!-- TD8 -->
-  <div id="tde" class="w3-row w3-center w3-gray w3-hide" style="min-height: 500px">
-    <span onclick="unhighlight()" style="cursor: pointer;">
-      <i class="fas fa-window-close fa-2x w3-right"></i>
-    </span>
-    <div class="w3-third">
-      <img class="w3-image w3-padding-small" style="max-height: 324px" src="img/300/tde.png">
-      <div class="w3-panel">
-        <img class="w3-image w3-padding-small w3-content" src="img/icons/Unreal_black.png" style="width: 70px; height: 60px;">
-        <img class="w3-image w3-padding-small w3-content" src="img/icons/C++_black.png" style="width: 70px; height: 60px;">
-        <img class="w3-image w3-padding-small w3-content" src="img/icons/Github_black.png" style="width: 70px; height: 60px;">
-      </div>
-      <div class="w3-panel">
-        <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">Unreal</span>
-        <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">C++</span>
-        <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">Games</span>
-      </div>
-    </div>
-    <div class="w3-twothird w3-container">
-      <div class="w3-left-align" style="min-height: 162px">
-        <p>The Devil's Eight is a fast paced rhythm-based platformer. Based on Dante’s Inferno, the player must fight its way through the circles of hell with each circle featuring a unique boss. The game has a novel feature that the beats of the music trigger enemy attacks. The player must time the use of a shield to block the attacks of the enemies and reflect the damage back on them.</p>
-      </div>
-      <iframe class="vid" width="100%" height="200" src="https://www.youtube.com/embed/6KwtdlyFWxE?rel=0&enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowscriptaccess="always" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <br>
-      <a href="./projects/tde/index.html">
-        <span class="w3-button w3-panel w3-padding-large w3-white">
-          <b>See More</b> 
-          <i class="fas fa-chevron-right w3-margin-left"></i>
-          <i class="fas fa-chevron-right"></i>
-        </span>
-      </a>
-    </div>
+    </a>
   </div>
-  <!-- SRB -->
-  <div id="srb" class="w3-row w3-center w3-gray w3-hide" style="min-height: 500px">
-    <span onclick="unhighlight()" style="cursor: pointer;">
-      <i class="fas fa-window-close fa-2x w3-right"></i>
-    </span>
-    <div class="w3-third">
-      <img class="w3-image w3-padding-small" style="max-height: 324px" src="img/300/srb.png">
-      <div class="w3-panel">
-        <img class="w3-image w3-padding-small w3-content" src="img/icons/Unity_black.png" style="width: 70px; height: 60px;">
-        <img class="w3-image w3-padding-small w3-content" src="img/icons/Csharp_black.png" style="width: 70px; height: 60px;">
-        <img class="w3-image w3-padding-small w3-content" src="img/icons/Github_black.png" style="width: 70px; height: 60px;">
-      </div>
-      <div class="w3-panel">
-        <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">Unity</span>
-        <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">C#</span>
-        <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">Games</span>
-      </div>
-    </div>
-    <div class="w3-twothird w3-container">
-      <div class="w3-left-align" style="min-height: 162px">
-        <p>Super Rolla Ball is a fun-packed 3D platformer. Based off Super Monkey Ball, the player is a hedgehog trying to roll its way to the finish line and collect bananas on the way. The player must try to collect trophies for fastest time, all bananas, and highest score in three levels.</p>
-      </div>
-      <iframe class="vid" width="100%" height="200" src="https://www.youtube.com/embed/q_yMcbxjpG4?rel=0&enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowscriptaccess="always" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <br>
-      <a href="./projects/srb/index.html">
-        <span class="w3-button w3-panel w3-padding-large w3-white">
-          <b>See More</b> 
-          <i class="fas fa-chevron-right w3-margin-left"></i>
-          <i class="fas fa-chevron-right"></i>
-        </span>
-      </a>
-    </div>
-  </div>
-  <!-- EPR -->
-  <div id="epr" class="w3-row w3-center w3-gray w3-hide" style="min-height: 500px">
-    <span onclick="unhighlight()" style="cursor: pointer;">
-      <i class="fas fa-window-close fa-2x w3-right"></i>
-    </span>
-    <div class="w3-third">
-      <img class="w3-image w3-padding-small" style="max-height: 324px" src="img/300/epr.png">
-      <div class="w3-panel">
-        <img class="w3-image w3-padding-small w3-content" src="img/icons/JS_black.png" style="width: 70px; height: 60px;">
-      </div>
-      <div class="w3-panel">
-        <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">JavaScript</span>
-        <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">Games</span>
-      </div>
-    </div>
-    <div class="w3-twothird w3-container">
-      <div class="w3-left-align" style="min-height: 162px">
-        <p>Elastic Polymer Rampage (EPR) is a sidescrolling shooter game made with Impact.js. Based off the movie Rubber, the player is a maniacal tire going on a killing rampage. It must defeat dozens of cops in the desert and avoid getting a tire leak.</p>
-      </div>
-      <iframe class="vid" width="100%" height="200" src="https://www.youtube.com/embed/AOdOxadAcCE?rel=0&enablejsapi=1&version=3&playerapiid=ytplayer" allowscriptaccess="always"frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <br>
-      <a href="./projects/epr/index.html">
-        <span class="w3-button w3-panel w3-padding-large w3-white">
-          <b>See More</b> 
-          <i class="fas fa-chevron-right w3-margin-left"></i>
-          <i class="fas fa-chevron-right"></i>
-        </span>
-      </a>
-    </div>
-  </div>
-  <!-- Tree Chopper -->
-  <div id="tc" class="w3-row w3-center w3-gray w3-hide" style="min-height: 500px">
-    <span onclick="unhighlight()" style="cursor: pointer;">
-      <i class="fas fa-window-close fa-2x w3-right"></i>
-    </span>
-    <div class="w3-third">
-      <img class="w3-image w3-padding-small" style="max-height: 324px" src="img/300/tc.png">
-      <div class="w3-panel">
-        <img class="w3-image w3-padding-small w3-content" src="img/icons/Roblox_black.png" style="width: 70px; height: 60px;">
-        <img class="w3-image w3-padding-small w3-content" src="img/icons/Lua_black.png" style="width: 70px; height: 60px;">
-      </div>
-      <div class="w3-panel">
-        <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">Roblox</span>
-        <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">Lua</span>
-        <span class="w3-theme-d2 w3-padding-small w3-margin-bottom">Games</span>
-      </div>
-    </div>
-    <div class="w3-twothird w3-container">
-      <div class="w3-left-align" style="min-height: 162px">
-        <p>Tree Chopper is a Roblox game where the player must chop logs, bank them, and upgrade their axe. The game features talking NPCs and a tutorial quest.</p>
-      </div>
-      <iframe class="vid" width="100%" height="200" src="https://www.youtube.com/embed/bsu2vC8y2DY?rel=0&enablejsapi=1&version=3&playerapiid=ytplayer" allowscriptaccess="always"frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <br>
-      <a href="./projects/tc/index.html">
-        <span class="w3-button w3-panel w3-padding-large w3-white">
-          <b>See More</b> 
-          <i class="fas fa-chevron-right w3-margin-left"></i>
-          <i class="fas fa-chevron-right"></i>
-        </span>
-      </a>
-    </div>
-  </div>
-</div> 
-
-<!-- Highlighted Projects Menu 1st Row -->
-<div class="w3-content w3-padding-large noselect" style="max-width:1000px">
-  <div class="w3-row w3-center">
-    <div class="w3-third">
-      <a onclick="highlight('genies')" style="cursor: pointer;">
-        <img class="w3-image w3-padding-large highlight" style="max-height: 240px" src="img/300/genies-devrel.png" draggable="false">
-      </a>
-    </div>
-    <div class="w3-third">
-      <a onclick="highlight('dr')" style="cursor: pointer;">
-        <img class="w3-image w3-padding-large highlight" style="max-height: 240px" src="img/300/devrel.png" draggable="false">
-      </a>
-    </div>
-    <div class="w3-third">
-      <a onclick="highlight('tde')" style="cursor: pointer;">
-        <img class="w3-image w3-padding-large highlight" style="max-height: 240px" src="img/300/tde.png" draggable="false">
-      </a>
-    </div>
-  </div>
-</div>
+</main>
 
 <!-- Footer -->
 <footer class="w3-bottom w3-container w3-theme-d2 w3-bar">
   <div class="w3-padding-small w3-bar-item">
     <i class="far fa-copyright"></i>
-    2023
+    2025
   </div> 
   <div class="w3-padding-small w3-bar-item">
     <a href="mailto:jauregui.aaron@gmail.com" title="Email" target="_blank">
